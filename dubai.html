@@ -29,6 +29,42 @@
 
     <section class="projects" id="featured">
         <div class="grid">
+            <!-- Project: Binghatti Wraith -->
+<div class="card" id="binghattiWraithCard">
+    <div class="slider-container">
+        <div class="slides">
+            <img src="images7/slide1.png" class="slide active" alt="Binghatti Wraith 1" onclick="openModal('binghattiWraithModal', 0)">
+            <img src="images7/slide2.png" class="slide" alt="Binghatti Wraith 2" onclick="openModal('binghattiWraithModal', 1)">
+            <img src="images7/slide3.png" class="slide" alt="Binghatti Wraith 3" onclick="openModal('binghattiWraithModal', 2)">
+            <img src="images7/slide4.png" class="slide" alt="Binghatti Wraith 4" onclick="openModal('binghattiWraithModal', 3)">
+            <img src="images7/slide5.png" class="slide" alt="Binghatti Wraith 5" onclick="openModal('binghattiWraithModal', 4)">
+            <img src="images7/slide6.png" class="slide" alt="Binghatti Wraith 6" onclick="openModal('binghattiWraithModal', 5)">
+            <img src="images7/slide7.png" class="slide" alt="Binghatti Wraith 7" onclick="openModal('binghattiWraithModal', 6)">
+            <img src="images7/slide8.png" class="slide" alt="Binghatti Wraith 8" onclick="openModal('binghattiWraithModal', 7)">
+            <img src="images7/slide9.png" class="slide" alt="Binghatti Wraith 9" onclick="openModal('binghattiWraithModal', 8)">
+            <img src="images7/slide10.png" class="slide" alt="Binghatti Wraith 10" onclick="openModal('binghattiWraithModal', 9)">
+            <img src="images7/slide11.png" class="slide" alt="Binghatti Wraith 11" onclick="openModal('binghattiWraithModal', 10)">
+            <img src="images7/slide12.png" class="slide" alt="Binghatti Wraith 12" onclick="openModal('binghattiWraithModal', 11)">
+            <img src="images7/slide13.png" class="slide" alt="Binghatti Wraith 13" onclick="openModal('binghattiWraithModal', 12)">
+            <img src="images7/slide14.png" class="slide" alt="Binghatti Wraith 14" onclick="openModal('binghattiWraithModal', 13)">
+            <img src="images7/slide15.png" class="slide" alt="Binghatti Wraith 15" onclick="openModal('binghattiWraithModal', 14)">
+            <img src="images7/slide16.png" class="slide" alt="Binghatti Wraith 16" onclick="openModal('binghattiWraithModal', 15)">
+            <img src="images7/slide17.png" class="slide" alt="Binghatti Wraith 17" onclick="openModal('binghattiWraithModal', 16)">
+            <img src="images7/slide18.png" class="slide" alt="Binghatti Wraith 18" onclick="openModal('binghattiWraithModal', 17)">
+            <img src="images7/slide19.png" class="slide" alt="Binghatti Wraith 19" onclick="openModal('binghattiWraithModal', 18)">
+            <img src="images7/slide20.png" class="slide" alt="Binghatti Wraith 20" onclick="openModal('binghattiWraithModal', 19)">
+        </div>
+        <button class="prev" onclick="moveCardSlide(this, -1)">&#10094;</button>
+        <button class="next" onclick="moveCardSlide(this, 1)">&#10095;</button>
+    </div>
+    <div class="card-info">
+        <h3>Binghatti Wraith</h3>
+        <p>Sculpted Architectural Landmark in Al Jaddaf</p>
+        <span class="price">Starting Price: 1,299,999 AED</span>
+        <span class="sub-price">Al Jaddaf • 26+ Resort Amenities</span>
+        <button onclick="openModal('binghattiWraithModal', 0)" class="btn-card">Inquire & View Details</button>
+    </div>
+</div>
             <!-- Project: Vitalia Palm Jumeirah Residences -->
 <div class="card" id="vitaliaCard">
     <div class="slider-container">
@@ -412,6 +448,49 @@
             </div>
             <div class="modal-cta">
                 <a href="#contact" onclick="closeModal('vitaliaModal')" class="btn-gold block">Request VIP Consultation</a>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- Modal: Binghatti Wraith Details -->
+<div id="binghattiWraithModal" class="lightbox-modal">
+    <div class="lightbox-container">
+        <span class="close-lightbox" onclick="closeModal('binghattiWraithModal')">&times;</span>
+        <div class="lightbox-slider">
+            <button class="modal-prev" onclick="moveModalSlide(-1)">&#10094;</button>
+            <div class="lightbox-img-wrapper">
+                <img class="lightboxImg" src="" alt="Binghatti Wraith View">
+            </div>
+            <button class="modal-next" onclick="moveModalSlide(1)">&#10095;</button>
+        </div>
+
+        <div class="lightbox-description">
+            <h2>Binghatti Wraith</h2>
+            <p class="intro-p">
+                A 19-storey architectural tower in Al Jaddaf with permanent 360-degree views. Featuring marble finishes, walnut wood accents, Corian countertops, and over 26 resort-style amenities.
+            </p>
+            <div class="features-amenities-grid">
+                <div class="feature-box">
+                    <h3>Unit Types & Parking Spec</h3>
+                    <ul>
+                        <li><strong>Studio, 1 & 2 Bed Apartments:</strong> 1 Parking Space</li>
+                        <li><strong>3 Bed Apartments:</strong> 2 Parking Spaces</li>
+                        <li><strong>Starting Price:</strong> AED 1,299,999</li>
+                        <li><strong>Location:</strong> Al Jaddaf, Dubai Creek</li>
+                    </ul>
+                </div>
+                <div class="feature-box">
+                    <h3>Resort Amenities (26+)</h3>
+                    <ul>
+                        <li>Infinity Pool, Jacuzzi & Pool Bar</li>
+                        <li>Padel Court & Half-Basketball Court</li>
+                        <li>Modern Gym, Yoga Deck & Scenic Walking Track</li>
+                        <li>BBQ Area, Kids' Pool & Aqua Splash Zone</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="modal-cta">
+                <a href="#contact" onclick="closeModal('binghattiWraithModal')" class="btn-gold block">Request VIP Consultation</a>
             </div>
         </div>
     </div>
