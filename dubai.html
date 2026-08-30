@@ -62,6 +62,41 @@
                     <button onclick="openModal('valiaModal', 0)" class="btn-card">Inquire & View Details</button>
                 </div>
             </div>
+            <!-- Project: Mr. C Residences Downtown (19 Photos) -->
+<div class="card" id="mrCResidencesCard">
+    <div class="slider-container">
+        <div class="slides">
+            <img src="images4/slide1.jpg" class="slide active" alt="Mr. C Residences 1" onclick="openModal('mrCResidencesModal', 0)">
+            <img src="images4/slide2.jpg" class="slide" alt="Mr. C Residences 2" onclick="openModal('mrCResidencesModal', 1)">
+            <img src="images4/slide3.jpg" class="slide" alt="Mr. C Residences 3" onclick="openModal('mrCResidencesModal', 2)">
+            <img src="images4/slide4.jpg" class="slide" alt="Mr. C Residences 4" onclick="openModal('mrCResidencesModal', 3)">
+            <img src="images4/slide5.jpg" class="slide" alt="Mr. C Residences 5" onclick="openModal('mrCResidencesModal', 4)">
+            <img src="images4/slide6.jpg" class="slide" alt="Mr. C Residences 6" onclick="openModal('mrCResidencesModal', 5)">
+            <img src="images4/slide7.jpg" class="slide" alt="Mr. C Residences 7" onclick="openModal('mrCResidencesModal', 6)">
+            <img src="images4/slide8.jpg" class="slide" alt="Mr. C Residences 8" onclick="openModal('mrCResidencesModal', 7)">
+            <img src="images4/slide9.jpg" class="slide" alt="Mr. C Residences 9" onclick="openModal('mrCResidencesModal', 8)">
+            <img src="images4/slide10.jpg" class="slide" alt="Mr. C Residences 10" onclick="openModal('mrCResidencesModal', 9)">
+            <img src="images4/slide11.jpg" class="slide" alt="Mr. C Residences 11" onclick="openModal('mrCResidencesModal', 10)">
+            <img src="images4/slide12.jpg" class="slide" alt="Mr. C Residences 12" onclick="openModal('mrCResidencesModal', 11)">
+            <img src="images4/slide13.jpg" class="slide" alt="Mr. C Residences 13" onclick="openModal('mrCResidencesModal', 12)">
+            <img src="images4/slide14.jpg" class="slide" alt="Mr. C Residences 14" onclick="openModal('mrCResidencesModal', 13)">
+            <img src="images4/slide15.jpg" class="slide" alt="Mr. C Residences 15" onclick="openModal('mrCResidencesModal', 14)">
+            <img src="images4/slide16.jpg" class="slide" alt="Mr. C Residences 16" onclick="openModal('mrCResidencesModal', 15)">
+            <img src="images4/slide17.jpg" class="slide" alt="Mr. C Residences 17" onclick="openModal('mrCResidencesModal', 16)">
+            <img src="images4/slide18.jpg" class="slide" alt="Mr. C Residences 18" onclick="openModal('mrCResidencesModal', 17)">
+            <img src="images4/slide19.jpg" class="slide" alt="Mr. C Residences 19" onclick="openModal('mrCResidencesModal', 18)">
+        </div>
+        <button class="prev" onclick="moveCardSlide(this, -1)">&#10094;</button>
+        <button class="next" onclick="moveCardSlide(this, 1)">&#10095;</button>
+    </div>
+    <div class="card-info">
+        <h3>Mr. C Residences Downtown</h3>
+        <p>Ultra-Luxury European Living & Italian Craftsmanship</p>
+        <span class="price">Starting Price: 8M AED</span>
+        <span class="sub-price">30 / 70% Payment Plan • Downtown Dubai</span>
+        <button onclick="openModal('mrCResidencesModal', 0)" class="btn-card">Inquire & View Details</button>
+    </div>
+</div>
 
             <div class="card" id="greenzCard">
                 <div class="slider-container">
@@ -176,6 +211,50 @@
             </div>
         </div>
     </div>
+    <!-- Modal: Mr. C Residences Downtown Details -->
+    <div id="mrCResidencesModal" class="lightbox-modal">
+        <div class="lightbox-container">
+            <span class="close-lightbox" onclick="closeModal('mrCResidencesModal')">&times;</span>
+            <div class="lightbox-slider">
+                <button class="modal-prev" onclick="moveModalSlide(-1)">&#10094;</button>
+                <div class="lightbox-img-wrapper">
+                    <img class="lightboxImg" src="" alt="Mr. C Residences View">
+                </div>
+                <button class="modal-next" onclick="moveModalSlide(1)">&#10095;</button>
+            </div>
+
+            <div class="lightbox-description">
+                <h2>Mr. C Residences Downtown</h2>
+                <p class="intro-p">
+                    A branded residential masterpiece embodying the Cipriani family's hospitality legacy. Masterfully composed interiors by 1508 London featuring Calacatta marble, Gaggenau appliances, Loro Piana fabrics, and bespoke Italian kitchens with private plunge pools overlooking the Downtown Dubai skyline and Canal.
+                </p>
+                <div class="features-amenities-grid">
+                    <div class="feature-box">
+                        <h3>Unit Types & Parking Spec</h3>
+                        <ul>
+                            <li><strong>2 Bed (68 units):</strong> From 2,240 sq.ft (2 Parking Spaces)</li>
+                            <li><strong>3.5 Bed (66 units):</strong> From 3,051 sq.ft (2 Parking Spaces)</li>
+                            <li><strong>4.5 Bed (29 units):</strong> From 3,193 sq.ft (3 Parking Spaces)</li>
+                            <li><strong>Starting Price:</strong> AED 8,000,000</li>
+                            <li><strong>Payment Plan:</strong> 30% / 70%</li>
+                        </ul>
+                    </div>
+                    <div class="feature-box">
+                        <h3>Luxury Amenities & Features</h3>
+                        <ul>
+                            <li>Bellini Bar by Mr. C & Private Dining</li>
+                            <li>Indoor & Outdoor Pools, Technogym & Golf Simulator</li>
+                            <li>Holistic Spa (Steam, Sauna, Salt & Oxygen Rooms)</li>
+                            <li>Private Cinema, Residents' Library & Little C's Kids Club</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="modal-cta">
+                    <a href="#contact" onclick="closeModal('mrCResidencesModal')" class="btn-gold block">Request VIP Consultation</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <section class="contact-section" id="contact">
         <div class="form-container">
@@ -196,3 +275,4 @@
     <script src="script.js"></script>
 </body>
 </html>
+
