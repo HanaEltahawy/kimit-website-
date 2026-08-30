@@ -1,90 +1,132 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kimit Real Estate</title>
+    <title>Kimit Real Estate Broker | Luxury Dubai & Coastal Properties</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- الهيدر والقائمة الرئيسية -->
-    <header class="header">
-        <div class="logo">KIMIT <span>Real Estate</span></div>
-        <nav class="nav">
-            <a href="#projects">المشاريع</a>
-            <a href="#about">عن الشركة</a>
-            <a href="#contact" class="btn-contact">تواصل معنا</a>
+    <!-- Header Navigation -->
+    <header class="navbar">
+        <div class="logo">KIMIT <span>REAL ESTATE</span></div>
+        <nav>
+            <a href="#featured">Projects</a>
+            <a href="#why-us">Why Us</a>
+            <a href="#contact" class="btn-primary">Contact Us</a>
         </nav>
     </header>
 
-    <!-- قسم المشاريع الرئيسي -->
-    <section class="projects-section" id="projects">
-        <h2 class="section-title">أحدث المشاريع العقارية</h2>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span class="badge">Ultra Luxury Living</span>
+            <h1>Discover Premium Properties in Dubai & Premier Coasts</h1>
+            <p>Exclusive Off-Plan & Ready Investments | High ROI & Golden Visa Eligibility</p>
+            <div class="hero-btns">
+                <a href="#contact" class="btn-gold">Request Brochure</a>
+                <a href="https://wa.me/971000000000" class="btn-outline">WhatsApp Consultation</a>
+            </div>
+        </div>
+    </section>
 
-        <div class="card">
-            <!-- معرض الصور (Slider الـ 29 صورة) -->
-            <div class="slider-container">
-                <div class="slides">
-                    <img src="images/slide1.png" class="slide active" alt="Slide 1">
-                    <img src="images/slide2.png" class="slide" alt="Slide 2">
-                    <img src="images/slide3.png" class="slide" alt="Slide 3">
-                    <img src="images/slide4.png" class="slide" alt="Slide 4">
-                    <img src="images/slide5.png" class="slide" alt="Slide 5">
-                    <img src="images/slide6.png" class="slide" alt="Slide 6">
-                    <img src="images/slide7.png" class="slide" alt="Slide 7">
-                    <img src="images/slide8.png" class="slide" alt="Slide 8">
-                    <img src="images/slide9.png" class="slide" alt="Slide 9">
-                    <img src="images/slide10.png" class="slide" alt="Slide 10">
-                    <img src="images/slide11.png" class="slide" alt="Slide 11">
-                    <img src="images/slide12.png" class="slide" alt="Slide 12">
-                    <img src="images/slide13.png" class="slide" alt="Slide 13">
-                    <img src="images/slide14.png" class="slide" alt="Slide 14">
-                    <img src="images/slide15.png" class="slide" alt="Slide 15">
-                    <img src="images/slide16.png" class="slide" alt="Slide 16">
-                    <img src="images/slide17.png" class="slide" alt="Slide 17">
-                    <img src="images/slide18.png" class="slide" alt="Slide 18">
-                    <img src="images/slide19.png" class="slide" alt="Slide 19">
-                    <img src="images/slide20.png" class="slide" alt="Slide 20">
-                    <img src="images/slide21.png" class="slide" alt="Slide 21">
-                    <img src="images/slide22.png" class="slide" alt="Slide 22">
-                    <img src="images/slide23.png" class="slide" alt="Slide 23">
-                    <img src="images/slide24.png" class="slide" alt="Slide 24">
-                    <img src="images/slide25.png" class="slide" alt="Slide 25">
-                    <img src="images/slide26.png" class="slide" alt="Slide 26">
-                    <img src="images/slide27.png" class="slide" alt="Slide 27">
-                    <img src="images/slide28.png" class="slide" alt="Slide 28">
-                    <img src="images/slide29.png" class="slide" alt="Slide 29">
+    <!-- Highlights Strip -->
+    <section class="highlights">
+        <div class="item"><strong>0%</strong> Capital Tax</div>
+        <div class="item"><strong>Up to 10%</strong> High ROI</div>
+        <div class="item"><strong>Golden Visa</strong> Approved</div>
+        <div class="item"><strong>Flexible</strong> Payment Plans</div>
+    </section>
+
+    <!-- Featured Projects Grid -->
+    <section class="projects" id="featured">
+        <h2>Featured Luxury Projects</h2>
+        <div class="grid">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80" alt="Dubai Villa">
+                <div class="card-info">
+                    <h3>Palm Jumeirah Luxury Villa</h3>
+                    <p>Dubai Waterfront • Emaar / Nakheel</p>
+                    <span class="price">Starting from AED 4,500,000</span>
+                    <a href="#contact" class="btn-card">Inquire Now</a>
                 </div>
-                <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
-                <button class="next" onclick="moveSlide(1)">&#10095;</button>
+            </div>
+            
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80" alt="Ras El Hekma Resort">
+                <div class="card-info">
+                    <h3>Ras El Hekma Coastal Resort</h3>
+                    <p>North Coast • Modon Developments</p>
+                    <span class="price">10% Down Payment • 8 Years Installments</span>
+                    <a href="#contact" class="btn-card">Inquire Now</a>
+                </div>
             </div>
 
-            <!-- تفاصيل المشروع والبيانات -->
-            <div class="content">
-                <span class="tag">مشروع مميز</span>
-                <h3>Greenz by Danube</h3>
-                <p class="subtitle">وحدات سكنية فاخرة مفروشة بالكامل</p>
-                <p class="description">
-                    تجربة سكنية فريدة تدمج بين الطبيعة الخلابة والتصميم العصري، مع توفير كافة الخدمات والمرافق الأساسية والترفيهية.
-                </p>
-
-                <div class="info-group">
-                    <div class="info-title">مميزات المشروع:</div>
-                    <ul class="info-list">
-                        <li>تشطيب كامل وأثاث فاخر</li>
-                        <li>مساحات خضراء وإطلالات ممتازة</li>
-                        <li>مواقع استراتيجية وسهولة الوصول</li>
-                    </ul>
+            <!-- الكارت الجديد المضاف بالـ 29 صورة -->
+            <div class="card">
+                <div class="slider-container">
+                    <div class="slides">
+                        <img src="images/slide1.png" class="slide active" alt="Slide 1">
+                        <img src="images/slide2.png" class="slide" alt="Slide 2">
+                        <img src="images/slide3.png" class="slide" alt="Slide 3">
+                        <img src="images/slide4.png" class="slide" alt="Slide 4">
+                        <img src="images/slide5.png" class="slide" alt="Slide 5">
+                        <img src="images/slide6.png" class="slide" alt="Slide 6">
+                        <img src="images/slide7.png" class="slide" alt="Slide 7">
+                        <img src="images/slide8.png" class="slide" alt="Slide 8">
+                        <img src="images/slide9.png" class="slide" alt="Slide 9">
+                        <img src="images/slide10.png" class="slide" alt="Slide 10">
+                        <img src="images/slide11.png" class="slide" alt="Slide 11">
+                        <img src="images/slide12.png" class="slide" alt="Slide 12">
+                        <img src="images/slide13.png" class="slide" alt="Slide 13">
+                        <img src="images/slide14.png" class="slide" alt="Slide 14">
+                        <img src="images/slide15.png" class="slide" alt="Slide 15">
+                        <img src="images/slide16.png" class="slide" alt="Slide 16">
+                        <img src="images/slide17.png" class="slide" alt="Slide 17">
+                        <img src="images/slide18.png" class="slide" alt="Slide 18">
+                        <img src="images/slide19.png" class="slide" alt="Slide 19">
+                        <img src="images/slide20.png" class="slide" alt="Slide 20">
+                        <img src="images/slide21.png" class="slide" alt="Slide 21">
+                        <img src="images/slide22.png" class="slide" alt="Slide 22">
+                        <img src="images/slide23.png" class="slide" alt="Slide 23">
+                        <img src="images/slide24.png" class="slide" alt="Slide 24">
+                        <img src="images/slide25.png" class="slide" alt="Slide 25">
+                        <img src="images/slide26.png" class="slide" alt="Slide 26">
+                        <img src="images/slide27.png" class="slide" alt="Slide 27">
+                        <img src="images/slide28.png" class="slide" alt="Slide 28">
+                        <img src="images/slide29.png" class="slide" alt="Slide 29">
+                    </div>
+                    <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+                    <button class="next" onclick="moveSlide(1)">&#10095;</button>
                 </div>
-
-                <div class="price-box">
-                    <div class="price">أنظمة سداد ميسرة</div>
-                    <div class="payment-terms">مقدمات تبدأ من 10% وأقساط على عدة سنوات</div>
+                <div class="card-info">
+                    <h3>Greenz by Danube</h3>
+                    <p>Fully Furnished Luxury Apartments</p>
+                    <span class="price">Flexible Payment Plan</span>
+                    <a href="#contact" class="btn-card">Inquire Now</a>
                 </div>
-
-                <a href="#contact" class="cta-btn">تواصل للاستفسار والحجز</a>
             </div>
+        </div>
+    </section>
+
+    <!-- Lead Form Section -->
+    <section class="contact-section" id="contact">
+        <div class="form-container">
+            <h2>Get VIP Investment Consultation</h2>
+            <p>Leave your details and our senior property consultants will reach out directly.</p>
+            <form>
+                <input type="text" placeholder="Full Name" required>
+                <input type="tel" placeholder="Phone Number / WhatsApp" required>
+                <select>
+                    <option>Select Preferred Location</option>
+                    <option>Dubai (Off-Plan / Ready)</option>
+                    <option>Ras El Hekma / North Coast</option>
+                </select>
+                <button type="submit" class="btn-gold block">Register Interest</button>
+            </form>
         </div>
     </section>
 
