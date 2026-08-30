@@ -1,63 +1,71 @@
-let currentSlideIndex = 0;
-const slides = document.querySelectorAll('.slider-container .slide');
-const totalSlides = slides.length;
-
-function showSlide(index) {
-    if (slides.length === 0) return;
-    slides.forEach(slide => slide.classList.remove('active'));
-    currentSlideIndex = (index + totalSlides) % totalSlides;
-    slides[currentSlideIndex].classList.add('active');
+// Function for Card Sliders (Independent for each card)
+function moveCardSlide(button, direction) {
+    const container = button.closest('.slider-container');
+    const slides = container.querySelectorAll('.slide');
+    let activeIndex = Array.from(slides).findIndex(s => s.classList.contains('active'));
+    
+    slides[activeIndex].classList.remove('active');
+    let newIndex = (activeIndex + direction + slides.length) % slides.length;
+    slides[newIndex].classList.add('active');
 }
 
-function moveSlide(direction) {
-    showSlide(currentSlideIndex + direction);
-}
+// Modal Lightbox Logic (Supports multiple project modals)
+let activeModalId = null;
+let activeModalSlideIndex = 0;
 
-// Lightbox Modal Functions
-let modalSlideIndex = 0;
-
-function openLightbox(index) {
-    const modal = document.getElementById('lightboxModal');
+function openModal(modalId, slideIndex = 0) {
+    activeModalId = modalId;
+    activeModalSlideIndex = slideIndex;
+    const modal = document.getElementById(modalId);
     if (!modal) return;
-    modalSlideIndex = index;
+
     updateModalImage();
     modal.style.display = 'flex';
     document.body.style.overflow = 'hidden';
 }
 
-function closeLightbox() {
-    const modal = document.getElementById('lightboxModal');
+function closeModal(modalId) {
+    const modal = document.getElementById(modalId || activeModalId);
     if (modal) {
         modal.style.display = 'none';
         document.body.style.overflow = 'auto';
     }
+    activeModalId = null;
 }
 
 function moveModalSlide(direction) {
-    modalSlideIndex = (modalSlideIndex + direction + totalSlides) % totalSlides;
+    if (!activeModalId) return;
+    const cardId = activeModalId.replace('Modal', 'Card');
+    const cardSlides = document.querySelectorAll(`#${cardId} .slide`);
+    if (cardSlides.length === 0) return;
+
+    activeModalSlideIndex = (activeModalSlideIndex + direction + cardSlides.length) % cardSlides.length;
     updateModalImage();
 }
 
 function updateModalImage() {
-    const lightboxImg = document.getElementById('lightboxImg');
-    if (lightboxImg && slides[modalSlideIndex]) {
-        lightboxImg.src = slides[modalSlideIndex].src;
+    if (!activeModalId) return;
+    const modal = document.getElementById(activeModalId);
+    const cardId = activeModalId.replace('Modal', 'Card');
+    const cardSlides = document.querySelectorAll(`#${cardId} .slide`);
+    const imgTarget = modal.querySelector('.lightboxImg');
+
+    if (imgTarget && cardSlides[activeModalSlideIndex]) {
+        imgTarget.src = cardSlides[activeModalSlideIndex].src;
     }
 }
 
-// Close lightbox when clicking outside the box
+// Close modal when clicking on dark backdrop
 window.onclick = function(event) {
-    const modal = document.getElementById('lightboxModal');
-    if (event.target === modal) {
-        closeLightbox();
+    if (event.target.classList.contains('lightbox-modal')) {
+        closeModal(event.target.id);
     }
 };
 
-// Keyboard Arrow and Esc Navigation
+// Keyboard Arrow and Escape Key Navigation
 document.addEventListener('keydown', function(e) {
-    const modal = document.getElementById('lightboxModal');
-    if (modal && modal.style.display === 'flex') {
-        if (e.key === 'Escape') closeLightbox();
+    if (activeModalId) {
+        if (e.key === 'Escape') closeModal();
         if (e.key === 'ArrowRight') moveModalSlide(1);
         if (e.key === 'ArrowLeft') moveModalSlide(-1);
     }
