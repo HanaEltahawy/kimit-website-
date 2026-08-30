@@ -104,23 +104,84 @@
                 </div>
                 <div class="card-info">
                     <h3>Greenz by Danube</h3>
-                    <p>Fully Furnished Luxury Apartments</p>
+                    <p>Fully Furnished Luxury Villas</p>
                     <span class="price">Flexible Payment Plan</span>
                     <span class="sub-price">Starting Price 3.5M AED</span>
-                    <a href="#contact" class="btn-card">Inquire Now</a>
+                    <button onclick="openLightbox(0)" class="btn-card">Inquire & View Details</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Lightbox Modal -->
+    <!-- Lightbox Modal with Full Details & Gallery -->
     <div id="lightboxModal" class="lightbox-modal">
-        <span class="close-lightbox" onclick="closeLightbox()">&times;</span>
-        <button class="modal-prev" onclick="moveModalSlide(-1)">&#10094;</button>
-        <div class="lightbox-content">
-            <img id="lightboxImg" src="" alt="Zoomed Image">
+        <div class="lightbox-container">
+            <span class="close-lightbox" onclick="closeLightbox()">&times;</span>
+            
+            <!-- Top Image Slideshow -->
+            <div class="lightbox-slider">
+                <button class="modal-prev" onclick="moveModalSlide(-1)">&#10094;</button>
+                <div class="lightbox-img-wrapper">
+                    <img id="lightboxImg" src="" alt="Property View">
+                </div>
+                <button class="modal-next" onclick="moveModalSlide(1)">&#10095;</button>
+            </div>
+
+            <!-- Description Below Images -->
+            <div class="lightbox-description">
+                <h2>Greenz by Danube - Luxury Villa</h2>
+                
+                <p class="intro-p">
+                    This villa in Greenz by Danube offers a modern twin-villa layout within a planned residential community in Dubai. The home is designed over multiple levels with curved balconies, floor-to-ceiling glazing, and an open-plan living and dining area. It is offered for sale as a residential villa with a practical layout suited to families seeking community facilities and landscaped surroundings.
+                </p>
+
+                <div class="features-amenities-grid">
+                    <div class="feature-box">
+                        <h3>Key Features</h3>
+                        <ul>
+                            <li>Open-plan living area</li>
+                            <li>Modern kitchen</li>
+                            <li>Private in-home elevator</li>
+                            <li>Floating staircase feature</li>
+                            <li>Multiple balconies</li>
+                            <li>Primary en-suite bedroom</li>
+                            <li>Floor-to-ceiling glazing</li>
+                            <li>Private driveway parking</li>
+                        </ul>
+                    </div>
+
+                    <div class="feature-box">
+                        <h3>Amenities</h3>
+                        <ul>
+                            <li>Swimming pool</li>
+                            <li>Indoor lap pool</li>
+                            <li>Gym or health club</li>
+                            <li>Rooftop lounge areas</li>
+                            <li>Kids play area</li>
+                            <li>Family hub/playground</li>
+                            <li>Sports hub with courts</li>
+                            <li>Lawn or garden</li>
+                            <li>Barbeque area</li>
+                            <li>Community fountain features</li>
+                            <li>Daycare-style kids room</li>
+                            <li>Shuttle service to metro</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="location-community-info">
+                    <p>Located in a master-planned villa community, this property benefits from landscaped parks, walking paths, and central amenity hubs. The wider development layout includes dedicated sports facilities, family zones, and wellness areas, creating a practical setting for daily life. Access roads connect to key parts of Dubai, with links towards major business and leisure districts.</p>
+                    
+                    <p>The community design incorporates multiple green pockets, water features, and recreational zones arranged around a central hub. Residents can make use of jogging or walking tracks, seating areas, and open lawns for casual outdoor time. Retail and dining-style frontages are shown within the project, adding convenience for everyday needs.</p>
+
+                    <p>Within Greenz by Danube, visual material indicates a mosque, community entrance gates, and organised internal roads for easy navigation. The project also shows buggy and shuttle services within the development and to the nearest metro, supporting public transport connectivity. Overall, the villa combines a contemporary architectural style with access to a broad range of shared amenities in a planned residential environment.</p>
+                </div>
+
+                <div class="modal-cta">
+                    <a href="#contact" onclick="closeLightbox()" class="btn-gold block">Request VIP Consultation</a>
+                </div>
+            </div>
         </div>
-        <button class="modal-next" onclick="moveModalSlide(1)">&#10095;</button>
     </div>
 
     <!-- Lead Form Section -->
