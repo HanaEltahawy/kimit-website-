@@ -159,20 +159,16 @@ form input, form select { width: 100%; padding: 14px; margin-bottom: 15px; backg
     border-bottom-right-radius: 16px;
 }
 /* WhatsApp Consultation Button Hover & Pop-Up Effect */
-.btn-outline {
-    display: inline-block;
-    padding: 12px 28px;
-    border: 1px solid #d4af37;
-    color: #d4af37;
-    text-decoration: none;
-    border-radius: 4px;
-    font-weight: 600;
-    transition: all 0.3s ease; /* تنعيم الحركة */
+.btn-outline,
+.hero-btns .btn-outline {
+    display: inline-block !important;
+    transition: all 0.3s ease !important;
 }
 
-.btn-outline:hover {
-    background-color: #d4af37; /* يتغير لون الخلفية للذهبي */
-    color: #000000; /* يتحول لون النص للأسود */
-    transform: translateY(-4px) scale(1.03); /* تأثير البروز والتكبير (Pop-up) */
-    box-shadow: 0 8px 20px rgba(212, 175, 55, 0.45); /* إضاءة ذهبية ناعمة تحته */
+.btn-outline:hover,
+.hero-btns .btn-outline:hover {
+    background-color: #d4af37 !important;
+    color: #000000 !important;
+    transform: translateY(-5px) scale(1.04) !important;
+    box-shadow: 0 8px 22px rgba(212, 175, 55, 0.5) !important;
 }
