@@ -3,87 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kimit Real Estate Broker | Luxury Dubai & Coastal Properties</title>
+    <title>Kimit Real Estate</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <!-- Header Navigation -->
-    <header class="navbar">
+    <header class="header">
         <div class="logo">KIMIT <span>REAL ESTATE</span></div>
-        <nav>
-            <a href="#featured">Projects</a>
+        <nav class="nav">
+            <a href="#projects">Projects</a>
             <a href="#why-us">Why Us</a>
-            <a href="#contact" class="btn-primary">Contact Us</a>
+            <a href="#contact" class="btn-contact">Contact Us</a>
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <span class="badge">Ultra Luxury Living</span>
-            <h1>Discover Premium Properties in Dubai & Premier Coasts</h1>
-            <p>Exclusive Off-Plan & Ready Investments | High ROI & Golden Visa Eligibility</p>
-            <div class="hero-btns">
-                <a href="#contact" class="btn-gold">Request Brochure</a>
-                <a href="https://wa.me/971000000000" class="btn-outline">WhatsApp Consultation</a>
-            </div>
-        </div>
-    </section>
+    <!-- Main Featured Projects Section -->
+    <section id="projects" class="projects-section">
+        <h2 class="section-title">Featured Luxury Projects</h2>
 
-    <!-- Highlights Strip -->
-    <section class="highlights">
-        <div class="item"><strong>0%</strong> Capital Tax</div>
-        <div class="item"><strong>Up to 10%</strong> High ROI</div>
-        <div class="item"><strong>Golden Visa</strong> Approved</div>
-        <div class="item"><strong>Flexible</strong> Payment Plans</div>
-    </section>
-
-    <!-- Featured Projects Grid -->
-    <section class="projects" id="featured">
-        <h2>Featured Luxury Projects</h2>
-        <div class="grid">
+        <div class="projects-container">
+            <!-- Greenz by Danube Card -->
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80" alt="Dubai Villa">
-                <div class="card-info">
-                    <h3>Palm Jumeirah Luxury Villa</h3>
-                    <p>Dubai Waterfront • Emaar / Nakheel</p>
-                    <span class="price">Starting from AED 4,500,000</span>
-                    <a href="#contact" class="btn-card">Inquire Now</a>
+                <!-- Image Slider (29 Images) -->
+                <div class="slider-container">
+                    <div class="slides">
+                        <img src="images/slide1.png" class="slide active" alt="Greenz Danube 1">
+                        <img src="images/slide2.png" class="slide" alt="Greenz Danube 2">
+                        <img src="images/slide3.png" class="slide" alt="Greenz Danube 3">
+                        <img src="images/slide4.png" class="slide" alt="Greenz Danube 4">
+                        <img src="images/slide5.png" class="slide" alt="Greenz Danube 5">
+                        <img src="images/slide6.png" class="slide" alt="Greenz Danube 6">
+                        <img src="images/slide7.png" class="slide" alt="Greenz Danube 7">
+                        <img src="images/slide8.png" class="slide" alt="Greenz Danube 8">
+                        <img src="images/slide9.png" class="slide" alt="Greenz Danube 9">
+                        <img src="images/slide10.png" class="slide" alt="Greenz Danube 10">
+                        <img src="images/slide11.png" class="slide" alt="Greenz Danube 11">
+                        <img src="images/slide12.png" class="slide" alt="Greenz Danube 12">
+                        <img src="images/slide13.png" class="slide" alt="Greenz Danube 13">
+                        <img src="images/slide14.png" class="slide" alt="Greenz Danube 14">
+                        <img src="images/slide15.png" class="slide" alt="Greenz Danube 15">
+                        <img src="images/slide16.png" class="slide" alt="Greenz Danube 16">
+                        <img src="images/slide17.png" class="slide" alt="Greenz Danube 17">
+                        <img src="images/slide18.png" class="slide" alt="Greenz Danube 18">
+                        <img src="images/slide19.png" class="slide" alt="Greenz Danube 19">
+                        <img src="images/slide20.png" class="slide" alt="Greenz Danube 20">
+                        <img src="images/slide21.png" class="slide" alt="Greenz Danube 21">
+                        <img src="images/slide22.png" class="slide" alt="Greenz Danube 22">
+                        <img src="images/slide23.png" class="slide" alt="Greenz Danube 23">
+                        <img src="images/slide24.png" class="slide" alt="Greenz Danube 24">
+                        <img src="images/slide25.png" class="slide" alt="Greenz Danube 25">
+                        <img src="images/slide26.png" class="slide" alt="Greenz Danube 26">
+                        <img src="images/slide27.png" class="slide" alt="Greenz Danube 27">
+                        <img src="images/slide28.png" class="slide" alt="Greenz Danube 28">
+                        <img src="images/slide29.png" class="slide" alt="Greenz Danube 29">
+                    </div>
+                    <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+                    <button class="next" onclick="moveSlide(1)">&#10095;</button>
+                </div>
+
+                <!-- Card Content -->
+                <div class="content">
+                    <div class="tag">DANUBE PROPERTIES</div>
+                    <h3>GREENZ BY DANUBE</h3>
+                    <p class="subtitle">GREEN-CENTRIC LUXURY COMMUNITY</p>
+                    <p class="description">Luxury Branded Townhouses & Villas in Dubai | Fully Furnished with Italian Dolce Vita Furnishing</p>
+
+                    <div class="info-group">
+                        <div class="info-title">Location & Connectivity</div>
+                        <ul class="info-list">
+                            <li><span>🚆</span> 5 Mins to Upcoming Metro Blue Line</li>
+                            <li><span>🛣️</span> 1 Min to Emirates Road | 2 Mins to Dubai-Al Ain Road</li>
+                            <li><span>🏙️</span> 10 Mins to Silicon Central Mall | 18 Mins to Downtown Dubai</li>
+                        </ul>
+                    </div>
+
+                    <div class="price-box">
+                        <div class="price">Starting AED 3.5 Million</div>
+                        <div class="payment-terms">1% Monthly Post-Handover | Handover: Q4 2029</div>
+                    </div>
+
+                    <div class="info-group">
+                        <div class="info-title">Amenities (400,000 Sq. Ft.)</div>
+                        <ul class="info-list">
+                            <li><span>⛲</span> Musical Fountain & Private Beach Hub</li>
+                            <li><span>🏃</span> 3.75 km Continuous Jogging Track</li>
+                            <li><span>🏋️</span> 20,000 Sq. Ft. Gym & Panoramic Wellness Hub</li>
+                        </ul>
+                    </div>
+
+                    <a href="#contact" class="cta-btn">Inquire Now</a>
                 </div>
             </div>
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80" alt="Ras El Hekma Resort">
-                <div class="card-info">
-                    <h3>Ras El Hekma Coastal Resort</h3>
-                    <p>North Coast • Modon Developments</p>
-                    <span class="price">10% Down Payment • 8 Years Installments</span>
-                    <a href="#contact" class="btn-card">Inquire Now</a>
-                </div>
-            </div>
         </div>
     </section>
 
-    <!-- Lead Form Section -->
-    <section class="contact-section" id="contact">
-        <div class="form-container">
-            <h2>Get VIP Investment Consultation</h2>
-            <p>Leave your details and our senior property consultants will reach out directly.</p>
-            <form>
-                <input type="text" placeholder="Full Name" required>
-                <input type="tel" placeholder="Phone Number / WhatsApp" required>
-                <select>
-                    <option>Select Preferred Location</option>
-                    <option>Dubai (Off-Plan / Ready)</option>
-                    <option>Ras El Hekma / North Coast</option>
-                </select>
-                <button type="submit" class="btn-gold block">Register Interest</button>
-            </form>
-        </div>
-    </section>
-
+    <!-- JavaScript File Linking -->
+    <script src="script.js"></script>
 </body>
 </html>
 
