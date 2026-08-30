@@ -29,6 +29,38 @@
 
     <section class="projects" id="featured">
         <div class="grid">
+            <!-- Project: Vitalia Palm Jumeirah Residences -->
+<div class="card" id="vitaliaCard">
+    <div class="slider-container">
+        <div class="slides">
+            <img src="images6/slide1.png" class="slide active" alt="Vitalia Palm 1" onclick="openModal('vitaliaModal', 0)">
+            <img src="images6/slide2.png" class="slide" alt="Vitalia Palm 2" onclick="openModal('vitaliaModal', 1)">
+            <img src="images6/slide3.png" class="slide" alt="Vitalia Palm 3" onclick="openModal('vitaliaModal', 2)">
+            <img src="images6/slide4.png" class="slide" alt="Vitalia Palm 4" onclick="openModal('vitaliaModal', 3)">
+            <img src="images6/slide5.png" class="slide" alt="Vitalia Palm 5" onclick="openModal('vitaliaModal', 4)">
+            <img src="images6/slide6.png" class="slide" alt="Vitalia Palm 6" onclick="openModal('vitaliaModal', 5)">
+            <img src="images6/slide7.png" class="slide" alt="Vitalia Palm 7" onclick="openModal('vitaliaModal', 6)">
+            <img src="images6/slide8.png" class="slide" alt="Vitalia Palm 8" onclick="openModal('vitaliaModal', 7)">
+            <img src="images6/slide9.png" class="slide" alt="Vitalia Palm 9" onclick="openModal('vitaliaModal', 8)">
+            <img src="images6/slide10.png" class="slide" alt="Vitalia Palm 10" onclick="openModal('vitaliaModal', 9)">
+            <img src="images6/slide11.png" class="slide" alt="Vitalia Palm 11" onclick="openModal('vitaliaModal', 10)">
+            <img src="images6/slide12.png" class="slide" alt="Vitalia Palm 12" onclick="openModal('vitaliaModal', 11)">
+            <img src="images6/slide13.png" class="slide" alt="Vitalia Palm 13" onclick="openModal('vitaliaModal', 12)">
+            <img src="images6/slide14.png" class="slide" alt="Vitalia Palm 14" onclick="openModal('vitaliaModal', 13)">
+            <img src="images6/slide15.png" class="slide" alt="Vitalia Palm 15" onclick="openModal('vitaliaModal', 14)">
+            <img src="images6/slide16.png" class="slide" alt="Vitalia Palm 16" onclick="openModal('vitaliaModal', 15)">
+        </div>
+        <button class="prev" onclick="moveCardSlide(this, -1)">&#10094;</button>
+        <button class="next" onclick="moveCardSlide(this, 1)">&#10095;</button>
+    </div>
+    <div class="card-info">
+        <h3>Vitalia Palm Jumeirah Residences</h3>
+        <p>Boutique Beachfront Luxury & Italian Craftsmanship</p>
+        <span class="price">Starting Price: 8,900,000 AED</span>
+        <span class="sub-price">Palm Jumeirah • Waterfront Living</span>
+        <button onclick="openModal('vitaliaModal', 0)" class="btn-card">Inquire & View Details</button>
+    </div>
+</div>
             <!-- Project: Damac Islands -->
 <div class="card" id="damacIslandsCard">
     <div class="slider-container">
@@ -337,6 +369,49 @@
             </div>
             <div class="modal-cta">
                 <a href="#contact" onclick="closeModal('damacIslandsModal')" class="btn-gold block">Request VIP Consultation</a>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- Modal: Vitalia Palm Jumeirah Details -->
+<div id="vitaliaModal" class="lightbox-modal">
+    <div class="lightbox-container">
+        <span class="close-lightbox" onclick="closeModal('vitaliaModal')">&times;</span>
+        <div class="lightbox-slider">
+            <button class="modal-prev" onclick="moveModalSlide(-1)">&#10094;</button>
+            <div class="lightbox-img-wrapper">
+                <img class="lightboxImg" src="" alt="Vitalia Palm Jumeirah View">
+            </div>
+            <button class="modal-next" onclick="moveModalSlide(1)">&#10095;</button>
+        </div>
+
+        <div class="lightbox-description">
+            <h2>Vitalia Palm Jumeirah Residences</h2>
+            <p class="intro-p">
+                A masterpiece of contemporary European design on Palm Jumeirah. Italian elegance seamlessly merges with island living, featuring 3-metre ceilings, Dekton Marmorio flooring, natural wood parquet, and bespoke Snaidero kitchens fitted with Miele appliances.
+            </p>
+            <div class="features-amenities-grid">
+                <div class="feature-box">
+                    <h3>Units & Parking Spec</h3>
+                    <ul>
+                        <li><strong>2 Bed Apartments:</strong> 1 Parking Space</li>
+                        <li><strong>3 & 4 Bed Duplexes / Penthouses:</strong> 2 Parking Spaces</li>
+                        <li><strong>Starting Price:</strong> AED 8,900,000</li>
+                        <li><strong>Location:</strong> Palm Jumeirah Beachfront</li>
+                    </ul>
+                </div>
+                <div class="feature-box">
+                    <h3>Luxury Specs & Interiors</h3>
+                    <ul>
+                        <li>Snaidero Custom Cabinetry & Miele Appliances</li>
+                        <li>Dekton Marmorio & Natural Wood Parquet</li>
+                        <li>Smart Home Automation System</li>
+                        <li>Private Beachfront Access & Panoramic Sea Views</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="modal-cta">
+                <a href="#contact" onclick="closeModal('vitaliaModal')" class="btn-gold block">Request VIP Consultation</a>
             </div>
         </div>
     </div>
