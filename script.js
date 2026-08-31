@@ -70,7 +70,7 @@ document.addEventListener('keydown', function(e) {
         if (e.key === 'ArrowLeft') moveModalSlide(-1);
     }
 });
-const scriptURL = 'https://script.google.com/macros/s/AKfycbwYAIYbK4-vwg-_hujtfiIFjuWqdXwShEEiEFFL_cVIXUuqjLqfpXFwRFmiGNQF_Hk/exec';
+const scriptURL = 'https://script.google.com/macros/s/AKfycbx_EDZNscvPPt3ZlzH382WYR83rsrMs9_3Sft7eoAb0RgYKyllyBKXy1-jOwinHNv7B/exec';
 
 const leadForm = document.getElementById('leadForm');
 if (leadForm) {
