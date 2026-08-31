@@ -28,34 +28,6 @@
     </section>
 
     <section class="projects" id="featured">
-        <!-- Property Filter Bar -->
-<div class="filter-bar">
-   <select id="filterLocation" onchange="filterProperties()">
-        <option value="all">All Locations (كل المناطق)</option>
-        <option value="dubai-islands">Dubai Islands</option>
-        <option value="palm-jumeirah">Palm Jumeirah</option>
-        <option value="mina-rashid">Mina Rashid / Maritime City</option>
-        <option value="jumeirah-islands">Jumeirah Islands / Emirates Hills</option>
-        <option value="mbr-city">Sobha Hartland II / MBR City</option>
-        <option value="downtown-dubai">Downtown Dubai</option>
-        <option value="al-jaddaf">Al Jaddaf</option>
-        <option value="dubailand">Dubailand / Damac Islands</option>
-    </select>
-    <select id="filterBeds" onchange="filterProperties()">
-        <option value="all">All Bedrooms (عدد الغرف)</option>
-        <option value="1">1 Bed</option>
-        <option value="2">2 Bed</option>
-        <option value="3">3 Bed</option>
-        <option value="4">4+ Bed</option>
-    </select>
-
-    <select id="filterPrice" onchange="filterProperties()">
-        <option value="all">All Prices (نطاق السعر)</option>
-        <option value="under-3m">Under 3M AED</option>
-        <option value="3m-10m">3M - 10M AED</option>
-        <option value="above-10m">Above 10M AED</option>
-    </select>
-</div>
         <div class="grid">
             <!-- Project: Portside Square by Ellington -->
 <div class="card" id="portsideSquareCard" data-location="mina-rashid" data-beds="1 2 3 4" data-price="2439828">
@@ -1231,48 +1203,8 @@
 </section>
 
     <script src="script.js"></script>
+    </body>
+</html>
     
 
-    <script>
-    function filterProperties() {
-        const loc = document.getElementById('filterLocation').value;
-        const beds = document.getElementById('filterBeds').value;
-        const price = document.getElementById('filterPrice').value;
-
-        const cards = document.querySelectorAll('.card');
-
-        cards.forEach(card => {
-            const cardLoc = card.getAttribute('data-location') || '';
-            const cardBeds = (card.getAttribute('data-beds') || '').split(' ');
-            const cardPrice = parseInt(card.getAttribute('data-price') || '0', 10);
-
-            const matchLoc = (loc === 'all' || cardLoc === loc);
-
-            let matchBeds = (beds === 'all');
-            if (!matchBeds) {
-                if (beds === '4') {
-                    matchBeds = cardBeds.some(b => parseInt(b, 10) >= 4);
-                } else {
-                    matchBeds = cardBeds.includes(beds);
-                }
-            }
-
-            let matchPrice = false;
-            if (price === 'all') matchPrice = true;
-            else if (price === 'under-3m' && cardPrice < 3000000) matchPrice = true;
-            else if (price === '3m-10m' && cardPrice >= 3000000 && cardPrice <= 10000000) matchPrice = true;
-            else if (price === 'above-10m' && cardPrice > 10000000) matchPrice = true;
-
-            if (matchLoc && matchBeds && matchPrice) {
-                card.style.display = 'block';
-            } else {
-                card.style.display = 'none';
-            }
-        });
-    }
-    </script>
-
-</body>
-</html>
-
-
+    
