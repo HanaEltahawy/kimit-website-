@@ -168,6 +168,38 @@ form input, form select { width: 100%; padding: 14px; margin-bottom: 15px; backg
 .btn-outline:hover,
 .hero-btns .btn-outline:hover {
     background-color: #d4af37 !important;
+    /* Filter Bar Styling */
+.filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin: 20px auto 35px auto;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    border-radius: 8px;
+    max-width: 1000px;
+}
+
+.filter-bar select {
+    background-color: #121212;
+    color: #d4af37;
+    border: 1px solid #d4af37;
+    padding: 12px 16px;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    outline: none;
+    cursor: pointer;
+    flex: 1 1 220px;
+    transition: all 0.3s ease;
+}
+
+.filter-bar select:hover,
+.filter-bar select:focus {
+    background-color: #d4af37;
+    color: #000;
+}
     color: #000000 !important;
     transform: translateY(-5px) scale(1.04) !important;
     box-shadow: 0 8px 22px rgba(212, 175, 55, 0.5) !important;
