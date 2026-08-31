@@ -28,9 +28,37 @@
     </section>
 
     <section class="projects" id="featured">
+        <!-- Property Filter Bar -->
+<div class="filter-bar">
+   <select id="filterLocation" onchange="filterProperties()">
+        <option value="all">All Locations (كل المناطق)</option>
+        <option value="dubai-islands">Dubai Islands</option>
+        <option value="palm-jumeirah">Palm Jumeirah</option>
+        <option value="mina-rashid">Mina Rashid / Maritime City</option>
+        <option value="jumeirah-islands">Jumeirah Islands / Emirates Hills</option>
+        <option value="mbr-city">Sobha Hartland II / MBR City</option>
+        <option value="downtown-dubai">Downtown Dubai</option>
+        <option value="al-jaddaf">Al Jaddaf</option>
+        <option value="dubailand">Dubailand / Damac Islands</option>
+    </select>
+    <select id="filterBeds" onchange="filterProperties()">
+        <option value="all">All Bedrooms (عدد الغرف)</option>
+        <option value="1">1 Bed</option>
+        <option value="2">2 Bed</option>
+        <option value="3">3 Bed</option>
+        <option value="4">4+ Bed</option>
+    </select>
+
+    <select id="filterPrice" onchange="filterProperties()">
+        <option value="all">All Prices (نطاق السعر)</option>
+        <option value="under-3m">Under 3M AED</option>
+        <option value="3m-10m">3M - 10M AED</option>
+        <option value="above-10m">Above 10M AED</option>
+    </select>
+</div>
         <div class="grid">
             <!-- Project: Portside Square by Ellington -->
-<div class="card" id="portsideSquareCard">
+<div class="card" id="portsideSquareCard" data-location="mina-rashid" data-beds="1 2 3 4" data-price="2439828">
     <div class="slider-container">
         <div class="slides">
             <img src="images15/slide1.png" class="slide active" alt="Portside Square 1" onclick="openModal('portsideSquareModal', 0)">
@@ -75,7 +103,7 @@
     </div>
 </div>
             <!-- Project: The Meriva Collection -->
-<div class="card" id="merivaCollectionCard">
+<div class="card" id="merivaCollectionCard" data-location="dubai-islands" data-beds="1 2 3 4" data-price="3007828">
     <div class="slider-container">
         <div class="slides">
             <img src="images14/slide1.png" class="slide active" alt="The Meriva Collection 1" onclick="openModal('merivaCollectionModal', 0)">
@@ -120,7 +148,7 @@
     </div>
 </div>
             <!-- Project: Ellington Ocean House -->
-<div class="card" id="oceanHouseCard">
+<div class="card" id="oceanHouseCard" data-location="palm-jumeirah" data-beds="2 3 4" data-price="11097828">
     <div class="slider-container">
         <div class="slides">
             <img src="images13/slide1.png" class="slide active" alt="Ocean House 1" onclick="openModal('oceanHouseModal', 0)">
@@ -155,7 +183,7 @@
     </div>
 </div>
             <!-- Project: Eltiera Views by Ellington -->
-<div class="card" id="eltieraViewsCard">
+<div class="card" id="eltieraViewsCard" data-location="jumeirah-islands" data-beds="1 2 3 4" data-price="2170828">
     <div class="slider-container">
         <div class="slides">
             <img src="images12/slide1.png" class="slide active" alt="Eltiera Views 1" onclick="openModal('eltieraViewsModal', 0)">
@@ -205,7 +233,7 @@
     </div>
 </div>
             <!-- Project: Skyvue Altier by Sobha -->
-<div class="card" id="skyvueAltierCard">
+<div class="card" id="skyvueAltierCard" data-location="mbr-city" data-beds="1 2 3" data-price="1834987">
     <div class="slider-container">
         <div class="slides">
             <img src="images11/slide1.png" class="slide active" alt="Skyvue Altier 1" onclick="openModal('skyvueAltierModal', 0)">
@@ -243,7 +271,7 @@
     </div>
 </div>
             <!-- Project: Allegro Park -->
-<div class="card" id="allegroParkCard">
+<div class="card" id="allegroParkCard" data-location="dubai-islands" data-beds="1 2 3" data-price="2007347">
     <div class="slider-container">
         <div class="slides">
             <img src="images10/slide1.png" class="slide active" alt="Allegro Park 1" onclick="openModal('allegroParkModal', 0)">
@@ -286,7 +314,7 @@
     </div>
 </div>
             <!-- Project: Royal Yacht Club Residence -->
-<div class="card" id="royalYachtClubCard">
+<div class="card" id="royalYachtClubCard" data-location="dubai-islands" data-beds="1 2 3 4" data-price="2411735">
     <div class="slider-container">
         <div class="slides">
             <img src="images9/slide1.png" class="slide active" alt="Royal Yacht Club 1" onclick="openModal('royalYachtClubModal', 0)">
@@ -323,7 +351,7 @@
     </div>
 </div>
             <!-- Project: Mercedes-Benz Places by Binghatti -->
-<div class="card" id="mercedesBenzPlacesCard">
+<div class="card" id="mercedesBenzPlacesCard" data-location="downtown-dubai" data-beds="2 3 4 5" data-price="8800000">
     <div class="slider-container">
         <div class="slides">
             <img src="images8/slide1.png" class="slide active" alt="Mercedes-Benz Places 1" onclick="openModal('mercedesBenzPlacesModal', 0)">
@@ -357,7 +385,7 @@
     </div>
 </div>
             <!-- Project: Binghatti Wraith -->
-<div class="card" id="binghattiWraithCard">
+<div class="card" id="binghattiWraithCard" data-location="al-jaddaf" data-beds="1 2 3" data-price="799999">
     <div class="slider-container">
         <div class="slides">
             <img src="images7/slide1.png" class="slide active" alt="Binghatti Wraith 1" onclick="openModal('binghattiWraithModal', 0)">
@@ -393,7 +421,7 @@
     </div>
 </div>
             <!-- Project: Vitalia Palm Jumeirah Residences -->
-<div class="card" id="vitaliaCard">
+<div class="card" id="vitaliaCard" data-location="palm-jumeirah" data-beds="1 2 3 4" data-price="5000000">
     <div class="slider-container">
         <div class="slides">
             <img src="images6/slide1.png" class="slide active" alt="Vitalia Palm 1" onclick="openModal('vitaliaModal', 0)">
@@ -425,7 +453,7 @@
     </div>
 </div>
             <!-- Project: Damac Islands -->
-<div class="card" id="damacIslandsCard">
+<div class="card" id="damacIslandsCard" data-location="dubailand" data-beds="4 5 6 7" data-price="2500000">
     <div class="slider-container">
         <div class="slides">
             <img src="images5/slide1.png" class="slide active" alt="Damac Islands 1" onclick="openModal('damacIslandsModal', 0)">
@@ -500,7 +528,7 @@
                 </div>
             </div>
             <!-- Project: Mr. C Residences Downtown -->
-<div class="card" id="mrCResidencesCard">
+<div class="card" id="mrCResidencesCard" data-location="downtown-dubai" data-beds="2 3 4 5" data-price="18000000">
     <div class="slider-container">
         <div class="slides">
             <img src="images4/slide1.png" class="slide active" alt="Mr. C Residences 1" onclick="openModal('mrCResidencesModal', 0)">
