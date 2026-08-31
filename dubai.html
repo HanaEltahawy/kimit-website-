@@ -1208,6 +1208,13 @@ document.addEventListener("DOMContentLoaded", function() {
     imgs.forEach(img => img.setAttribute('loading', 'lazy'));
 });
 </script>
+<script>
+function openConsultation(projectName) {
+  document.getElementById('project').value = projectName;
+  document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+}
+</script>
+
     </body>
 </html>
     
