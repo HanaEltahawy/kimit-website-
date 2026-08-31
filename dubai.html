@@ -29,6 +29,49 @@
 
     <section class="projects" id="featured">
         <div class="grid">
+            <!-- Project: Allegro Park -->
+<div class="card" id="allegroParkCard">
+    <div class="slider-container">
+        <div class="slides">
+            <img src="images10/slide1.png" class="slide active" alt="Allegro Park 1" onclick="openModal('allegroParkModal', 0)">
+            <img src="images10/slide2.png" class="slide" alt="Allegro Park 2" onclick="openModal('allegroParkModal', 1)">
+            <img src="images10/slide3.png" class="slide" alt="Allegro Park 3" onclick="openModal('allegroParkModal', 2)">
+            <img src="images10/slide4.png" class="slide" alt="Allegro Park 4" onclick="openModal('allegroParkModal', 3)">
+            <img src="images10/slide5.png" class="slide" alt="Allegro Park 5" onclick="openModal('allegroParkModal', 4)">
+            <img src="images10/slide6.png" class="slide" alt="Allegro Park 6" onclick="openModal('allegroParkModal', 5)">
+            <img src="images10/slide7.png" class="slide" alt="Allegro Park 7" onclick="openModal('allegroParkModal', 6)">
+            <img src="images10/slide8.png" class="slide" alt="Allegro Park 8" onclick="openModal('allegroParkModal', 7)">
+            <img src="images10/slide9.png" class="slide" alt="Allegro Park 9" onclick="openModal('allegroParkModal', 8)">
+            <img src="images10/slide10.png" class="slide" alt="Allegro Park 10" onclick="openModal('allegroParkModal', 9)">
+            <img src="images10/slide11.png" class="slide" alt="Allegro Park 11" onclick="openModal('allegroParkModal', 10)">
+            <img src="images10/slide12.png" class="slide" alt="Allegro Park 12" onclick="openModal('allegroParkModal', 11)">
+            <img src="images10/slide13.png" class="slide" alt="Allegro Park 13" onclick="openModal('allegroParkModal', 12)">
+            <img src="images10/slide14.png" class="slide" alt="Allegro Park 14" onclick="openModal('allegroParkModal', 13)">
+            <img src="images10/slide15.png" class="slide" alt="Allegro Park 15" onclick="openModal('allegroParkModal', 14)">
+            <img src="images10/slide16.png" class="slide" alt="Allegro Park 16" onclick="openModal('allegroParkModal', 15)">
+            <img src="images10/slide17.png" class="slide" alt="Allegro Park 17" onclick="openModal('allegroParkModal', 16)">
+            <img src="images10/slide18.png" class="slide" alt="Allegro Park 18" onclick="openModal('allegroParkModal', 17)">
+            <img src="images10/slide19.png" class="slide" alt="Allegro Park 19" onclick="openModal('allegroParkModal', 18)">
+            <img src="images10/slide20.png" class="slide" alt="Allegro Park 20" onclick="openModal('allegroParkModal', 19)">
+            <img src="images10/slide21.png" class="slide" alt="Allegro Park 21" onclick="openModal('allegroParkModal', 20)">
+            <img src="images10/slide22.png" class="slide" alt="Allegro Park 22" onclick="openModal('allegroParkModal', 21)">
+            <img src="images10/slide23.png" class="slide" alt="Allegro Park 23" onclick="openModal('allegroParkModal', 22)">
+            <img src="images10/slide24.png" class="slide" alt="Allegro Park 24" onclick="openModal('allegroParkModal', 23)">
+            <img src="images10/slide25.png" class="slide" alt="Allegro Park 25" onclick="openModal('allegroParkModal', 24)">
+            <img src="images10/slide26.png" class="slide" alt="Allegro Park 26" onclick="openModal('allegroParkModal', 25)">
+            <img src="images10/slide27.png" class="slide" alt="Allegro Park 27" onclick="openModal('allegroParkModal', 26)">
+        </div>
+        <button class="prev" onclick="moveCardSlide(this, -1)">&#10094;</button>
+        <button class="next" onclick="moveCardSlide(this, 1)">&#10095;</button>
+    </div>
+    <div class="card-info">
+        <h3>Allegro Park</h3>
+        <p>Luxury Waterfront & Parkside Serenity Living</p>
+        <span class="price">Starting Price: 2,007,347 AED</span>
+        <span class="sub-price">Dubai Islands / Palm Deira</span>
+        <button onclick="openModal('allegroParkModal', 0)" class="btn-card">Inquire & View Details</button>
+    </div>
+</div>
             <!-- Project: Royal Yacht Club Residence -->
 <div class="card" id="royalYachtClubCard">
     <div class="slider-container">
@@ -648,6 +691,49 @@
             </div>
             <div class="modal-cta">
                 <a href="#contact" onclick="closeModal('royalYachtClubModal')" class="btn-gold block">Request VIP Consultation</a>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- Modal: Allegro Park Details -->
+<div id="allegroParkModal" class="lightbox-modal">
+    <div class="lightbox-container">
+        <span class="close-lightbox" onclick="closeModal('allegroParkModal')">&times;</span>
+        <div class="lightbox-slider">
+            <button class="modal-prev" onclick="moveModalSlide(-1)">&#10094;</button>
+            <div class="lightbox-img-wrapper">
+                <img class="lightboxImg" src="" alt="Allegro Park View">
+            </div>
+            <button class="modal-next" onclick="moveModalSlide(1)">&#10095;</button>
+        </div>
+
+        <div class="lightbox-description">
+            <h2>Allegro Park</h2>
+            <p class="intro-p">
+                A true retreat of luxury and tranquility set on Dubai Islands, combining minimalist modern architecture with lush greenery and sea breezes. Featuring panoramic floor-to-ceiling windows, spacious balconies, and premium resort-style amenities.
+            </p>
+            <div class="features-amenities-grid">
+                <div class="feature-box">
+                    <h3>Project Overview & Highlights</h3>
+                    <ul>
+                        <li><strong>Starting Price:</strong> AED 2,007,347</li>
+                        <li><strong>Location:</strong> Dubai Islands / Palm Deira</li>
+                        <li><strong>Design:</strong> Modern Minimalist & Unfurnished</li>
+                        <li><strong>Environment:</strong> Eco-Friendly Waterfront & Parkside</li>
+                    </ul>
+                </div>
+                <div class="feature-box">
+                    <h3>Iconic Amenities</h3>
+                    <ul>
+                        <li>Rooftop Infinity Pool with Panoramic Views</li>
+                        <li>Unique Beach-Edge Pools & Open-Air Cinema</li>
+                        <li>Private Fitness Center & Dedicated Wellness Area</li>
+                        <li>Lush Landscaped Parks & Direct Shoreline Access</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="modal-cta">
+                <a href="#contact" onclick="closeModal('allegroParkModal')" class="btn-gold block">Request VIP Consultation</a>
             </div>
         </div>
     </div>
