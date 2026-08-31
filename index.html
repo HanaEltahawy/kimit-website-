@@ -479,5 +479,11 @@
 </section>
 
     <script src="script.js"></script>
+    <script>
+document.addEventListener("DOMContentLoaded", function() {
+    const imgs = document.querySelectorAll('.slides img:not(.active)');
+    imgs.forEach(img => img.setAttribute('loading', 'lazy'));
+});
+</script>
 </body>
 </html>
