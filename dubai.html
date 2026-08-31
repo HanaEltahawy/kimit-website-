@@ -29,6 +29,41 @@
 
     <section class="projects" id="featured">
         <div class="grid">
+            <!-- Project: Ellington Ocean House -->
+<div class="card" id="oceanHouseCard">
+    <div class="slider-container">
+        <div class="slides">
+            <img src="images13/slide1.png" class="slide active" alt="Ocean House 1" onclick="openModal('oceanHouseModal', 0)">
+            <img src="images13/slide2.png" class="slide" alt="Ocean House 2" onclick="openModal('oceanHouseModal', 1)">
+            <img src="images13/slide3.png" class="slide" alt="Ocean House 3" onclick="openModal('oceanHouseModal', 2)">
+            <img src="images13/slide4.png" class="slide" alt="Ocean House 4" onclick="openModal('oceanHouseModal', 3)">
+            <img src="images13/slide5.png" class="slide" alt="Ocean House 5" onclick="openModal('oceanHouseModal', 4)">
+            <img src="images13/slide6.png" class="slide" alt="Ocean House 6" onclick="openModal('oceanHouseModal', 5)">
+            <img src="images13/slide7.png" class="slide" alt="Ocean House 7" onclick="openModal('oceanHouseModal', 6)">
+            <img src="images13/slide8.png" class="slide" alt="Ocean House 8" onclick="openModal('oceanHouseModal', 7)">
+            <img src="images13/slide9.png" class="slide" alt="Ocean House 9" onclick="openModal('oceanHouseModal', 8)">
+            <img src="images13/slide10.png" class="slide" alt="Ocean House 10" onclick="openModal('oceanHouseModal', 9)">
+            <img src="images13/slide11.png" class="slide" alt="Ocean House 11" onclick="openModal('oceanHouseModal', 10)">
+            <img src="images13/slide12.png" class="slide" alt="Ocean House 12" onclick="openModal('oceanHouseModal', 11)">
+            <img src="images13/slide13.png" class="slide" alt="Ocean House 13" onclick="openModal('oceanHouseModal', 12)">
+            <img src="images13/slide14.png" class="slide" alt="Ocean House 14" onclick="openModal('oceanHouseModal', 13)">
+            <img src="images13/slide15.png" class="slide" alt="Ocean House 15" onclick="openModal('oceanHouseModal', 14)">
+            <img src="images13/slide16.png" class="slide" alt="Ocean House 16" onclick="openModal('oceanHouseModal', 15)">
+            <img src="images13/slide17.png" class="slide" alt="Ocean House 17" onclick="openModal('oceanHouseModal', 16)">
+            <img src="images13/slide18.png" class="slide" alt="Ocean House 18" onclick="openModal('oceanHouseModal', 17)">
+            <img src="images13/slide19.png" class="slide" alt="Ocean House 19" onclick="openModal('oceanHouseModal', 18)">
+        </div>
+        <button class="prev" onclick="moveCardSlide(this, -1)">&#10094;</button>
+        <button class="next" onclick="moveCardSlide(this, 1)">&#10095;</button>
+    </div>
+    <div class="card-info">
+        <h3>Ocean House</h3>
+        <p>Developer: Ellington | Ultra Luxury Palm Living</p>
+        <span class="price">Starting Price: 11,097,828 AED</span>
+        <span class="sub-price">Palm Jumeirah</span>
+        <button onclick="openModal('oceanHouseModal', 0)" class="btn-card">Inquire & View Details</button>
+    </div>
+</div>
             <!-- Project: Eltiera Views by Ellington -->
 <div class="card" id="eltieraViewsCard">
     <div class="slider-container">
@@ -909,6 +944,51 @@
             </div>
             <div class="modal-cta">
                 <a href="#contact" onclick="closeModal('eltieraViewsModal')" class="btn-gold block">Request VIP Consultation</a>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- Modal: Ellington Ocean House Details -->
+<div id="oceanHouseModal" class="lightbox-modal">
+    <div class="lightbox-container">
+        <span class="close-lightbox" onclick="closeModal('oceanHouseModal')">&times;</span>
+        <div class="lightbox-slider">
+            <button class="modal-prev" onclick="moveModalSlide(-1)">&#10094;</button>
+            <div class="lightbox-img-wrapper">
+                <img class="lightboxImg" src="" alt="Ocean House">
+            </div>
+            <button class="modal-next" onclick="moveModalSlide(1)">&#10095;</button>
+        </div>
+
+        <div class="lightbox-description">
+            <h2>Ocean House by Ellington</h2>
+            <p class="intro-p">
+                An ultra-exclusive collection of 88 ocean-inspired luxury residences on Palm Jumeirah. Featuring soft fluid curves, organic architectural lines, panoramic Gulf views, and bespoke resort amenities.
+            </p>
+            <div class="features-amenities-grid">
+                <div class="feature-box">
+                    <h3>Inventory & Parking Spec</h3>
+                    <ul>
+                        <li><strong>Developer:</strong> Ellington Properties</li>
+                        <li><strong>2 Bed (1,642 sqft):</strong> 1 Parking Space</li>
+                        <li><strong>3 Bed (3,233 sqft):</strong> 2 Parking Spaces</li>
+                        <li><strong>4 Bed (5,352 sqft):</strong> 3 Parking Spaces</li>
+                        <li><strong>5 & 6 Bed (Up to 14,037 sqft):</strong> 4 Parking Spaces</li>
+                        <li><strong>Starting Price:</strong> AED 11,097,828</li>
+                    </ul>
+                </div>
+                <div class="feature-box">
+                    <h3>Iconic Lifestyle Amenities</h3>
+                    <ul>
+                        <li>Wellness Spa Center, Fully Equipped Gym & Serene Pool</li>
+                        <li>Landscaped Leisure Zones & Outdoor BBQ Areas</li>
+                        <li>Children's Playground & Family Facilities</li>
+                        <li>Private Beachfront & Direct Arabian Gulf Views</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="modal-cta">
+                <a href="#contact" onclick="closeModal('oceanHouseModal')" class="btn-gold block">Request VIP Consultation</a>
             </div>
         </div>
     </div>
