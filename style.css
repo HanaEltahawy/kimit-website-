@@ -183,3 +183,8 @@ form input, form select { width: 100%; padding: 14px; margin-bottom: 15px; backg
     content-visibility: auto;
     contain-intrinsic-size: 1px 400px;
 }
+/* Prevent loading hidden slider images on start */
+.slide:not(.active) {
+    display: none !important;
+}
+
