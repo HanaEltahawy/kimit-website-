@@ -1231,6 +1231,48 @@
 </section>
 
     <script src="script.js"></script>
+    
+
+    <script>
+    function filterProperties() {
+        const loc = document.getElementById('filterLocation').value;
+        const beds = document.getElementById('filterBeds').value;
+        const price = document.getElementById('filterPrice').value;
+
+        const cards = document.querySelectorAll('.card');
+
+        cards.forEach(card => {
+            const cardLoc = card.getAttribute('data-location') || '';
+            const cardBeds = (card.getAttribute('data-beds') || '').split(' ');
+            const cardPrice = parseInt(card.getAttribute('data-price') || '0', 10);
+
+            const matchLoc = (loc === 'all' || cardLoc === loc);
+
+            let matchBeds = (beds === 'all');
+            if (!matchBeds) {
+                if (beds === '4') {
+                    matchBeds = cardBeds.some(b => parseInt(b, 10) >= 4);
+                } else {
+                    matchBeds = cardBeds.includes(beds);
+                }
+            }
+
+            let matchPrice = false;
+            if (price === 'all') matchPrice = true;
+            else if (price === 'under-3m' && cardPrice < 3000000) matchPrice = true;
+            else if (price === '3m-10m' && cardPrice >= 3000000 && cardPrice <= 10000000) matchPrice = true;
+            else if (price === 'above-10m' && cardPrice > 10000000) matchPrice = true;
+
+            if (matchLoc && matchBeds && matchPrice) {
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    }
+    </script>
+
 </body>
 </html>
+
 
