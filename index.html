@@ -461,20 +461,22 @@
             <p style="margin: 6px 0; font-size: 0.95rem;"><strong>EMAIL:</strong> <a href="mailto:Info@kimituae.com" style="color: #d4af37; text-decoration: none; margin-left: 5px;">Info@kimituae.com</a></p>
         </div>
 
-        <form>
-            <input type="text" placeholder="Full Name" required>
-            <input type="tel" placeholder="Phone Number / WhatsApp" required>
-            <select>
-                <option>Select Preferred Location / Project</option>
-                <option>Dubai</option>
-                <option>Sharjah</option>
-                <option>Ras Alkhaimah</option>
-            </select>
-            <!-- Request / Comment Box -->
-            <textarea placeholder="Your Request / Comment or Notes" rows="4" style="width: 100%; padding: 12px; margin-bottom: 15px; border-radius: 6px; border: 1px solid #333; background: #111; color: #fff; box-sizing: border-box; font-family: inherit; resize: vertical;"></textarea>
-            
-            <button type="submit" class="btn-gold block">Register Interest</button>
-        </form>
+        <form id="leadForm">
+      <input type="text" id="fullName" placeholder="Full Name" required>
+      <input type="tel" id="phone" placeholder="Phone Number / WhatsApp" required>
+      <select id="project" required>
+        <option value="" disabled selected>Select Preferred Location / Project</option>
+        <option value="Dubai">Dubai</option>
+        <option value="Sharjah">Sharjah</option>
+        <option value="Ras Alkhaimah">Ras Alkhaimah</option>
+      </select>
+      
+      <!-- Request / Comment Box -->
+      <textarea id="notes" placeholder="Your Request / Comment or Notes" rows="4" style="width:100%; padding: 12px; margin-bottom: 15px; border-radius: 6px; border: 1px solid #333; background: #111; color: #fff;"></textarea>
+      
+      <button type="submit" id="submitBtn">Register Interest</button>
+      <p id="formStatus" style="display:none; color: #d4af37; margin-top: 10px; text-align: center;"></p>
+    </form>
     </div>
 </section>
 
