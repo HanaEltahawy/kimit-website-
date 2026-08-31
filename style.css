@@ -178,3 +178,8 @@ form input, form select { width: 100%; padding: 14px; margin-bottom: 15px; backg
 .hero-btns .btn-outline * {
     color: inherit !important;
 }
+/* Freeze rendering off-screen project cards for ultra performance */
+.card {
+    content-visibility: auto;
+    contain-intrinsic-size: 1px 400px;
+}
