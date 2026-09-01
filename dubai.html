@@ -1256,53 +1256,81 @@ document.addEventListener("DOMContentLoaded", function() {
     const imgs = document.querySelectorAll('.slides img:not(.active)');
     imgs.forEach(img => img.setAttribute('loading', 'lazy'));
 });
-        // استبدلي هذا الرابط برابط Google Script الخاص بك
-    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbydkLqGrL8GPNiYrRfW1VDRsoPDjutLGKuwJK3rl5G-tDgiIhUGHtx9qRHkoi9Ay_FSAQ/exec';
+        const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbydkLqGrL8GPNiYrRfW1VDRsoPDjutLGKuwJK3rl5G-tDgiIhUGHtx9qRHkoi9Ay_FSAQ/exec';
 
-    function openVipModal(projectName) {
-      document.getElementById('vipProjectInput').value = projectName;
-      document.getElementById('vip-modal-title').innerText = 'VIP Consultation: ' + projectName;
-      document.getElementById('vip-consultation-modal').classList.add('active');
-    }
+// دالة لإعادة التمرير وإلغاء أي حظر على الصفحة
+function enableScroll() {
+  document.body.style.overflow = 'unset';
+  document.body.style.pointerEvents = 'auto';
+  document.documentElement.style.overflow = 'unset';
+  document.body.classList.remove('modal-open', 'no-scroll', 'stop-scrolling');
+  document.documentElement.classList.remove('modal-open', 'no-scroll', 'stop-scrolling');
+}
 
-    function closeVipModal(e) {
-      if (e) e.stopPropagation();
-      document.getElementById('vip-consultation-modal').classList.remove('active');
-      document.getElementById('vipForm').reset();
-    }
-
-    function submitVipForm(e) {
-      e.preventDefault();
-      const btn = document.getElementById('vipSubmitBtn');
-      btn.innerText = 'Submitting...';
-      btn.disabled = true;
-
-      const formData = new FormData(e.target);
-
-      fetch(GOOGLE_SCRIPT_URL, {
-        method: 'POST',
-        body: formData
-      })
-      .then(() => {
-        alert('Thank you! Your VIP consultation request has been received.');
-        closeVipModal();
-        btn.innerText = 'Submit Request';
-        btn.disabled = false;
-      })
-      .catch(() => {
-        // يتم التسجيل حتى لو حدث تنبيه CORS بسيط
-        alert('Thank you! Your request has been submitted.');
-        closeVipModal();
-        btn.innerText = 'Submit Request';
-        btn.disabled = false;
-      });
-    }
-        function closeModal(modalId) {
+function closeModal(modalId) {
   const modal = document.getElementById(modalId);
   if (modal) {
     modal.style.display = 'none';
     modal.classList.remove('active');
   }
+  enableScroll();
+}
+
+function openVipModal(projectName) {
+  document.querySelectorAll('.lightbox-modal').forEach(m => {
+    m.style.display = 'none';
+    m.classList.remove('active');
+  });
+
+  const vipModal = document.getElementById('vip-consultation-modal');
+  if (vipModal) {
+    document.getElementById('vipProjectInput').value = projectName;
+    document.getElementById('vip-modal-title').innerText = 'VIP Consultation: ' + projectName;
+    vipModal.classList.add('active');
+    vipModal.style.display = 'flex';
+  }
+}
+
+function closeVipModal(e) {
+  if (e && e.stopPropagation) e.stopPropagation();
+  
+  document.querySelectorAll('.lightbox-modal, .modal-overlay').forEach(m => {
+    m.style.display = 'none';
+    m.classList.remove('active');
+  });
+
+  const form = document.getElementById('vipForm');
+  if (form) form.reset();
+
+  enableScroll();
+}
+
+function submitVipForm(e) {
+  e.preventDefault();
+  const btn = document.getElementById('vipSubmitBtn');
+  btn.innerText = 'Submitting...';
+  btn.disabled = true;
+
+  const formData = new FormData(e.target);
+
+  fetch(GOOGLE_SCRIPT_URL, {
+    method: 'POST',
+    body: formData
+  })
+  .then(() => {
+    alert('Thank you! Your VIP consultation request has been received.');
+    closeVipModal();
+    btn.innerText = 'Submit Request';
+    btn.disabled = false;
+    enableScroll();
+  })
+  .catch(() => {
+    alert('Thank you! Your request has been submitted.');
+    closeVipModal();
+    btn.innerText = 'Submit Request';
+    btn.disabled = false;
+    enableScroll();
+  });
 }
 </script>
     function closeModal(modalId) {
