@@ -7,7 +7,7 @@
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="stylesheet" href="style.css">
   <style>
-    /* Fixed Header Flexbox Styles */
+    /* Navigation Header */
     .header {
       display: flex !important;
       justify-content: space-between !important;
@@ -51,34 +51,219 @@
       font-weight: 600;
       transition: 0.3s;
     }
-    .btn-nav:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(223, 180, 91, 0.3);
-    }
 
-    /* Hero Badge */
-    .hero-badge {
-      display: inline-block;
-      border: 1px solid #dfb45b;
-      color: #dfb45b;
-      font-size: 11px;
-      letter-spacing: 2px;
-      padding: 4px 14px;
-      border-radius: 20px;
-      text-transform: uppercase;
-      margin-bottom: 15px;
-      font-weight: 600;
+    /* Grid & Cards Section */
+    .projects {
+      padding: 60px 20px;
+      max-width: 1280px;
+      margin: 0 auto;
     }
-
-    /* Full Image View Fix */
+    .grid {
+      display: grid !important;
+      grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)) !important;
+      gap: 30px !important;
+    }
+    .project-card {
+      background: #0b0e14 !important;
+      border: 1px solid rgba(255, 255, 255, 0.08) !important;
+      border-radius: 12px !important;
+      overflow: hidden !important;
+      display: flex !important;
+      flex-direction: column !important;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    }
     .slider-container {
-      background-color: #000 !important;
+      position: relative !important;
+      width: 100% !important;
+      height: 250px !important;
+      overflow: hidden !important;
+      background: #000;
     }
     .slider-container img.slide {
-      object-fit: contain !important;
-      background-color: #000 !important;
       width: 100% !important;
       height: 100% !important;
+      object-fit: cover !important;
+      display: none;
+    }
+    .slider-container img.slide.active {
+      display: block !important;
+    }
+    .slider-container .prev, .slider-container .next {
+      position: absolute !important;
+      top: 50% !important;
+      transform: translateY(-50%) !important;
+      background: rgba(0, 0, 0, 0.6) !important;
+      color: #dfb45b !important;
+      border: 1px solid rgba(223, 180, 91, 0.5) !important;
+      border-radius: 50% !important;
+      width: 34px !important;
+      height: 34px !important;
+      cursor: pointer !important;
+      z-index: 10 !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+    }
+    .slider-container .prev { left: 12px !important; }
+    .slider-container .next { right: 12px !important; }
+
+    .card-info {
+      padding: 24px !important;
+      display: flex !important;
+      flex-direction: column !important;
+      flex-grow: 1 !important;
+    }
+    .card-info h3 {
+      color: #fff !important;
+      font-size: 20px !important;
+      margin: 0 0 8px 0 !important;
+    }
+    .card-info .developer {
+      color: #a0aec0 !important;
+      font-size: 13px !important;
+      margin-bottom: 15px !important;
+    }
+    .card-info .price {
+      color: #dfb45b !important;
+      font-weight: 700 !important;
+      font-size: 15px !important;
+      margin-bottom: 6px !important;
+    }
+    .card-info .location {
+      color: #718096 !important;
+      font-size: 13px !important;
+      margin-bottom: 22px !important;
+    }
+    .btn-card {
+      display: block !important;
+      text-align: center !important;
+      padding: 12px !important;
+      border: 1px solid #dfb45b !important;
+      color: #dfb45b !important;
+      border-radius: 6px !important;
+      text-decoration: none !important;
+      font-weight: 600 !important;
+      margin-top: auto !important;
+      transition: 0.3s !important;
+    }
+    .btn-card:hover {
+      background: #dfb45b !important;
+      color: #000 !important;
+    }
+
+    /* Modal Overlay Styles */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.85);
+      backdrop-filter: blur(8px);
+      z-index: 2000;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .modal-overlay.active {
+      display: flex;
+    }
+    .modal-content {
+      background: #0d1117;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 12px;
+      max-width: 820px;
+      width: 100%;
+      max-height: 90vh;
+      overflow-y: auto;
+      position: relative;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+      color: #e2e8f0;
+    }
+    .close-modal {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      font-size: 30px;
+      color: #dfb45b;
+      cursor: pointer;
+      z-index: 30;
+      line-height: 1;
+    }
+    .modal-body {
+      padding: 30px;
+    }
+    .modal-body h2 {
+      font-size: 26px;
+      color: #dfb45b;
+      margin-bottom: 12px;
+    }
+    .modal-section-title {
+      font-size: 17px;
+      color: #fff;
+      margin: 25px 0 10px 0;
+      font-weight: 700;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      padding-bottom: 6px;
+    }
+    .modal-text {
+      color: #a0aec0;
+      font-size: 14px;
+      line-height: 1.7;
+      margin-bottom: 15px;
+    }
+    .modal-grid-specs {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin: 25px 0;
+    }
+    @media (max-width: 650px) {
+      .modal-grid-specs { grid-template-columns: 1fr; }
+    }
+    .spec-card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 8px;
+      padding: 20px;
+    }
+    .spec-card h4 {
+      color: #dfb45b;
+      font-size: 15px;
+      margin-bottom: 12px;
+    }
+    .spec-card ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .spec-card li {
+      font-size: 13px;
+      color: #cbd5e0;
+      margin-bottom: 8px;
+      line-height: 1.5;
+    }
+    .btn-modal-action {
+      display: block;
+      width: 100%;
+      background: linear-gradient(135deg, #dfb45b 0%, #c9a050 100%);
+      color: #000;
+      text-align: center;
+      padding: 14px;
+      border-radius: 6px;
+      font-weight: 700;
+      text-decoration: none;
+      margin-top: 25px;
+      transition: 0.3s;
+    }
+    .btn-modal-action:hover {
+      box-shadow: 0 4px 15px rgba(223, 180, 91, 0.4);
     }
   </style>
 </head>
@@ -97,7 +282,7 @@
   <!-- Hero Section -->
   <section class="hero" style="background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('images3/rak-bg.jpg') center/cover no-repeat; text-align: center; padding: 80px 20px 60px;">
     <div class="hero-content">
-      <span class="hero-badge">EXCLUSIVE PORTFOLIO</span>
+      <span style="display: inline-block; border: 1px solid #dfb45b; color: #dfb45b; font-size: 11px; letter-spacing: 2px; padding: 4px 14px; border-radius: 20px; text-transform: uppercase; margin-bottom: 15px; font-weight: 600;">EXCLUSIVE PORTFOLIO</span>
       <h1 style="font-size: 38px; color: #fff; margin-bottom: 10px;">Ras Al Khaimah Offplan Projects</h1>
       <p style="color: #a0aec0; font-size: 16px;">Premium Off-Plan Investments in High-ROI Locations</p>
     </div>
@@ -108,8 +293,8 @@
     <div class="grid">
 
       <!-- Shoreline Project Card -->
-      <div class="project-card">
-        <div class="slider-container">
+      <div class="project-card" onclick="openShorelineModal()">
+        <div class="slider-container" onclick="event.stopPropagation()">
           <button class="prev" onclick="moveCardSlide(this, -1)">&#10094;</button>
           <div class="slides">
             <img src="images16/slide1.png" class="slide active" alt="Shoreline 1">
@@ -153,19 +338,123 @@
         </div>
 
         <div class="card-info">
-          <h3>Shoreline</h3>
-          <p class="developer">Developer: DAMAC | Luxury Beachfront Living</p>
-          <p class="price">Starting Price: <span>4,515,000 AED</span></p>
+          <h3>Shoreline by DAMAC</h3>
+          <p class="developer">Developer: DAMAC Properties | Luxury Beachfront</p>
+          <p class="price">Starting Price: 4,515,000 AED</p>
           <p class="location">Al Marjan Island, Ras Al Khaimah</p>
-          <a href="#contact" onclick="openConsultation('Shoreline - DAMAC RAK')" class="btn-card block">Inquire & View Details</a>
+          <a href="javascript:void(0)" class="btn-card">Inquire & View Details</a>
         </div>
       </div>
 
     </div>
   </section>
 
+  <!-- POPUP MODAL FOR SHORELINE -->
+  <div class="modal-overlay" id="shoreline-modal" onclick="closeShorelineModal(event)">
+    <div class="modal-content" onclick="event.stopPropagation()">
+      <span class="close-modal" onclick="closeShorelineModal(event)">&times;</span>
+      
+      <!-- Slider Inside Modal -->
+      <div class="slider-container" style="height: 380px;">
+        <button class="prev" onclick="moveCardSlide(this, -1)">&#10094;</button>
+        <div class="slides">
+          <img src="images16/slide1.png" class="slide active" alt="Shoreline Detail 1">
+          <img src="images16/slide2.png" class="slide" alt="Shoreline Detail 2">
+          <img src="images16/slide3.png" class="slide" alt="Shoreline Detail 3">
+          <img src="images16/slide4.png" class="slide" alt="Shoreline Detail 4">
+          <img src="images16/slide5.png" class="slide" alt="Shoreline Detail 5">
+          <img src="images16/slide6.png" class="slide" alt="Shoreline Detail 6">
+          <img src="images16/slide7.png" class="slide" alt="Shoreline Detail 7">
+          <img src="images16/slide8.png" class="slide" alt="Shoreline Detail 8">
+          <img src="images16/slide9.png" class="slide" alt="Shoreline Detail 9">
+          <img src="images16/slide10.png" class="slide" alt="Shoreline Detail 10">
+          <img src="images16/slide11.png" class="slide" alt="Shoreline Detail 11">
+          <img src="images16/slide12.png" class="slide" alt="Shoreline Detail 12">
+          <img src="images16/slide13.png" class="slide" alt="Shoreline Detail 13">
+          <img src="images16/slide14.png" class="slide" alt="Shoreline Detail 14">
+          <img src="images16/slide15.png" class="slide" alt="Shoreline Detail 15">
+          <img src="images16/slide16.png" class="slide" alt="Shoreline Detail 16">
+          <img src="images16/slide17.png" class="slide" alt="Shoreline Detail 17">
+          <img src="images16/slide18.png" class="slide" alt="Shoreline Detail 18">
+          <img src="images16/slide19.png" class="slide" alt="Shoreline Detail 19">
+          <img src="images16/slide20.png" class="slide" alt="Shoreline Detail 20">
+          <img src="images16/slide21.png" class="slide" alt="Shoreline Detail 21">
+          <img src="images16/slide22.png" class="slide" alt="Shoreline Detail 22">
+          <img src="images16/slide23.png" class="slide" alt="Shoreline Detail 23">
+          <img src="images16/slide24.png" class="slide" alt="Shoreline Detail 24">
+          <img src="images16/slide25.png" class="slide" alt="Shoreline Detail 25">
+          <img src="images16/slide26.png" class="slide" alt="Shoreline Detail 26">
+          <img src="images16/slide27.png" class="slide" alt="Shoreline Detail 27">
+          <img src="images16/slide28.png" class="slide" alt="Shoreline Detail 28">
+          <img src="images16/slide29.png" class="slide" alt="Shoreline Detail 29">
+          <img src="images16/slide30.png" class="slide" alt="Shoreline Detail 30">
+          <img src="images16/slide31.png" class="slide" alt="Shoreline Detail 31">
+          <img src="images16/slide32.png" class="slide" alt="Shoreline Detail 32">
+          <img src="images16/slide33.png" class="slide" alt="Shoreline Detail 33">
+          <img src="images16/slide34.png" class="slide" alt="Shoreline Detail 34">
+          <img src="images16/slide35.png" class="slide" alt="Shoreline Detail 35">
+          <img src="images16/slide36.png" class="slide" alt="Shoreline Detail 36">
+        </div>
+        <button class="next" onclick="moveCardSlide(this, 1)">&#10095;</button>
+      </div>
+
+      <div class="modal-body">
+        <h2>Shoreline by DAMAC</h2>
+
+        <div class="modal-section-title">Project General Facts</div>
+        <p class="modal-text">
+          Shoreline is a thoughtfully designed residential development that combines the comfort of private living with the atmosphere of a luxury resort. The project is centered around the concept of creating a permanent holiday lifestyle, where elegant architecture and carefully planned living spaces provide both relaxation and sophistication. Its design philosophy is heavily influenced by nature, particularly the fluidity of water and the organic beauty of sand dunes, resulting in a harmonious environment that blends contemporary architecture with natural inspiration.
+        </p>
+        <p class="modal-text">
+          The development offers a resort-style living experience focused on wellness, leisure, and tranquility. Carefully designed communal spaces create a relaxing atmosphere where residents can enjoy the balance between luxury and comfort. The project's water-inspired concept extends throughout the shared areas, enhancing the sense of serenity and exclusivity. Landscaped surroundings, thoughtfully planned recreational facilities, and hospitality-oriented amenities contribute to a lifestyle that prioritizes relaxation while maintaining the conveniences of modern residential living.
+        </p>
+        <p class="modal-text">
+          The interiors feature modern finishing with high-quality materials, reflecting the project's refined and contemporary character. Soft forms, elegant details, and a carefully selected palette complement the nature-inspired design concept, creating welcoming and sophisticated living spaces. Each residence includes an equipped kitchen with appliances, while the apartments are delivered unfurnished, allowing homeowners the flexibility to personalize their interiors according to their individual preferences and lifestyle requirements.
+        </p>
+
+        <div class="modal-section-title">Location Description & Benefits</div>
+        <p class="modal-text">
+          Al Marjan Island is one of the most prestigious coastal destinations in the United Arab Emirates, offering an exceptional combination of natural beauty, modern infrastructure, and resort-style living. This purpose-built island archipelago is known for its crystal-clear waters, expansive beaches, and thoughtfully designed waterfront communities, creating an atmosphere of tranquility and exclusivity that attracts both residents and international investors.
+        </p>
+        <p class="modal-text">
+          The island benefits from proximity to one of the region’s most exciting upcoming leisure destinations, the renowned Wynn Al Marjan Island Resort. The arrival of this world-class resort and entertainment destination is expected to further elevate the island’s global profile, bringing a vibrant mix of luxury hospitality, fine dining, and premium entertainment experiences. At the same time, the surrounding emirate of Ras Al Khaimah is celebrated for its diverse natural landscapes, ranging from scenic mountain ranges to vast deserts and protected coastlines, creating a truly unique environment that blends adventure with relaxation.
+        </p>
+        <p class="modal-text">
+          Connectivity is another significant advantage of the area. The island enjoys convenient access to Ras Al Khaimah International Airport, as well as quick links to major transportation routes leading to Dubai and other key emirates. This accessibility allows residents to enjoy a peaceful seaside lifestyle while remaining closely connected to the region’s main business, cultural, and entertainment hubs. Combined with the island’s growing collection of luxury resorts, waterfront promenades, marinas, and leisure attractions, the location offers an exceptional environment for both lifestyle living and long-term investment potential.
+        </p>
+
+        <div class="modal-grid-specs">
+          <div class="spec-card">
+            <h4>Inventory & Parking Spec</h4>
+            <ul>
+              <li>✓ <strong>Developer:</strong> DAMAC Properties</li>
+              <li>✓ <strong>1 Bed & 2 Bed:</strong> 1 Parking Space</li>
+              <li>✓ <strong>3 Bed & 4 Bed:</strong> 2 Parking Spaces</li>
+              <li>✓ <strong>5 Bed:</strong> 3 Parking Spaces</li>
+              <li>✓ <strong>Starting Price:</strong> AED 4,515,000</li>
+              <li>✓ <strong>Location:</strong> Al Marjan Island, RAK</li>
+            </ul>
+          </div>
+
+          <div class="spec-card">
+            <h4>Iconic Lifestyle Amenities</h4>
+            <ul>
+              <li>✓ Resort-Style Wellness & Leisure Pools</li>
+              <li>✓ Direct Beach & Waterfront Promenade Access</li>
+              <li>✓ Landscaped Gardens & Serene Outdoor Spaces</li>
+              <li>✓ Proximity to Wynn Al Marjan Resort</li>
+              <li>✓ Equipped Kitchens with Premium Appliances</li>
+            </ul>
+          </div>
+        </div>
+
+        <a href="#contact" onclick="closeShorelineModal(); openConsultation('Shoreline - DAMAC RAK');" class="btn-modal-action">Request VIP Consultation</a>
+      </div>
+    </div>
+  </div>
+
   <!-- Lead Form Section -->
-  <section class="contact-section" id="contact">
+  <section class="contact-section" id="contact" style="padding: 60px 20px;">
     <div class="form-container">
       <h2>Get VIP Investment Consultation</h2>
       <p>Leave your details and our senior property consultants will reach out directly.</p>
@@ -181,7 +470,7 @@
     </div>
   </section>
 
-  <!-- Slider Script -->
+  <!-- JavaScript Controls -->
   <script>
     function moveCardSlide(button, direction) {
       const container = button.closest('.slider-container');
@@ -200,6 +489,17 @@
       if (activeIndex === -1) activeIndex = 0;
       let newIndex = (activeIndex + direction + slides.length) % slides.length;
       slides[newIndex].classList.add('active');
+    }
+
+    function openShorelineModal() {
+      document.getElementById('shoreline-modal').classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeShorelineModal(e) {
+      if (e) e.stopPropagation();
+      document.getElementById('shoreline-modal').classList.remove('active');
+      document.body.style.overflow = 'auto';
     }
   </script>
   <script src="script.js"></script>
