@@ -6,6 +6,21 @@
   <title>Ras Al Khaimah Projects - Kimit Real Estate</title>
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* Hero Tag Styling */
+    .hero-badge {
+      display: inline-block;
+      border: 1px solid #dfb45b;
+      color: #dfb45b;
+      font-size: 11px;
+      letter-spacing: 2px;
+      padding: 4px 14px;
+      border-radius: 20px;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+  </style>
 </head>
 <body>
 
@@ -19,216 +34,73 @@
     </nav>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero" style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images3/rak-bg.jpg') center/cover no-repeat;">
+  <!-- Hero Section (Matches Dubai Header) -->
+  <section class="hero" style="background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('images3/rak-bg.jpg') center/cover no-repeat; text-align: center; padding: 80px 20px 60px;">
     <div class="hero-content">
-      <h1>Ras Al Khaimah Offplan Projects</h1>
-      <p>Exclusive Beachfront Investments & High-Yield Properties in RAK</p>
+      <span class="hero-badge">EXCLUSIVE PORTFOLIO</span>
+      <h1 style="font-size: 38px; color: #fff; margin-bottom: 10px;">Ras Al Khaimah Offplan Projects</h1>
+      <p style="color: #a0aec0; font-size: 16px;">Premium Off-Plan Investments in High-ROI Locations</p>
     </div>
   </section>
 
-  <!-- Featured RAK Projects Section -->
-  <section class="projects" id="featured" style="padding: 40px 20px;">
-    <style>
-      .rak-card-wrapper {
-        max-width: 850px;
-        margin: 0 auto;
-        background: #0d1117;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        border-radius: 12px;
-        overflow: hidden;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-      }
-      .rak-slider {
-        position: relative;
-        width: 100%;
-        height: 420px;
-        overflow: hidden;
-        background: #000;
-      }
-      .rak-slider .slides {
-        width: 100%;
-        height: 100%;
-      }
-      .rak-slider img.slide {
-        display: none;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-      .rak-slider img.slide.active {
-        display: block;
-      }
-      .rak-slider .prev, .rak-slider .next {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        background: rgba(0,0,0,0.6);
-        color: #dfb45b;
-        border: 1px solid #dfb45b;
-        border-radius: 50%;
-        width: 40px;
-        height: 40px;
-        cursor: pointer;
-        font-size: 18px;
-        z-index: 10;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: 0.3s;
-      }
-      .rak-slider .prev:hover, .rak-slider .next:hover {
-        background: #dfb45b;
-        color: #000;
-      }
-      .rak-slider .prev { left: 15px; }
-      .rak-slider .next { right: 15px; }
-      
-      .rak-info {
-        padding: 25px 30px;
-      }
-      .rak-info h3 {
-        font-size: 24px;
-        color: #fff;
-        margin-bottom: 8px;
-        font-weight: 700;
-      }
-      .rak-info .project-desc {
-        color: #a0aec0;
-        font-size: 14px;
-        line-height: 1.6;
-        margin-bottom: 25px;
-        border-bottom: 1px solid rgba(255,255,255,0.1);
-        padding-bottom: 15px;
-      }
-      .rak-specs-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 20px;
-        margin-bottom: 25px;
-      }
-      @media (max-width: 650px) {
-        .rak-specs-grid { grid-template-columns: 1fr; }
-      }
-      .rak-spec-box {
-        background: rgba(255, 255, 255, 0.03);
-        border: 1px solid rgba(255, 255, 255, 0.08);
-        border-radius: 8px;
-        padding: 20px;
-      }
-      .rak-spec-box h4 {
-        color: #dfb45b;
-        font-size: 16px;
-        margin-bottom: 15px;
-        font-weight: 600;
-      }
-      .rak-spec-box ul {
-        list-style: none !important;
-        padding: 0 !important;
-        margin: 0 !important;
-      }
-      .rak-spec-box li {
-        color: #e2e8f0;
-        font-size: 13px;
-        margin-bottom: 10px;
-        line-height: 1.4;
-      }
-      .rak-spec-box li strong {
-        color: #fff;
-      }
-      .rak-btn {
-        display: block;
-        width: 100%;
-        background: linear-gradient(135deg, #dfb45b 0%, #c9a050 100%);
-        color: #000;
-        font-weight: 700;
-        text-align: center;
-        padding: 14px;
-        border-radius: 6px;
-        text-decoration: none;
-        font-size: 15px;
-        transition: 0.3s;
-      }
-      .rak-btn:hover {
-        background: linear-gradient(135deg, #e5be6b 0%, #dfb45b 100%);
-        transform: translateY(-2px);
-      }
-    </style>
+  <!-- Projects Grid Section -->
+  <section class="projects" id="featured">
+    <div class="grid">
 
-    <div class="rak-card-wrapper">
-      <div class="rak-slider">
-        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
-        <div class="slides">
-          <img src="images16/slide1.png" class="slide active" alt="Shoreline 1">
-          <img src="images16/slide2.png" class="slide" alt="Shoreline 2">
-          <img src="images16/slide3.png" class="slide" alt="Shoreline 3">
-          <img src="images16/slide4.png" class="slide" alt="Shoreline 4">
-          <img src="images16/slide5.png" class="slide" alt="Shoreline 5">
-          <img src="images16/slide6.png" class="slide" alt="Shoreline 6">
-          <img src="images16/slide7.png" class="slide" alt="Shoreline 7">
-          <img src="images16/slide8.png" class="slide" alt="Shoreline 8">
-          <img src="images16/slide9.png" class="slide" alt="Shoreline 9">
-          <img src="images16/slide10.png" class="slide" alt="Shoreline 10">
-          <img src="images16/slide11.png" class="slide" alt="Shoreline 11">
-          <img src="images16/slide12.png" class="slide" alt="Shoreline 12">
-          <img src="images16/slide13.png" class="slide" alt="Shoreline 13">
-          <img src="images16/slide14.png" class="slide" alt="Shoreline 14">
-          <img src="images16/slide15.png" class="slide" alt="Shoreline 15">
-          <img src="images16/slide16.png" class="slide" alt="Shoreline 16">
-          <img src="images16/slide17.png" class="slide" alt="Shoreline 17">
-          <img src="images16/slide18.png" class="slide" alt="Shoreline 18">
-          <img src="images16/slide19.png" class="slide" alt="Shoreline 19">
-          <img src="images16/slide20.png" class="slide" alt="Shoreline 20">
-          <img src="images16/slide21.png" class="slide" alt="Shoreline 21">
-          <img src="images16/slide22.png" class="slide" alt="Shoreline 22">
-          <img src="images16/slide23.png" class="slide" alt="Shoreline 23">
-          <img src="images16/slide24.png" class="slide" alt="Shoreline 24">
-          <img src="images16/slide25.png" class="slide" alt="Shoreline 25">
-          <img src="images16/slide26.png" class="slide" alt="Shoreline 26">
-          <img src="images16/slide27.png" class="slide" alt="Shoreline 27">
-          <img src="images16/slide28.png" class="slide" alt="Shoreline 28">
-          <img src="images16/slide29.png" class="slide" alt="Shoreline 29">
-          <img src="images16/slide30.png" class="slide" alt="Shoreline 30">
-          <img src="images16/slide31.png" class="slide" alt="Shoreline 31">
-          <img src="images16/slide32.png" class="slide" alt="Shoreline 32">
-          <img src="images16/slide33.png" class="slide" alt="Shoreline 33">
-          <img src="images16/slide34.png" class="slide" alt="Shoreline 34">
-          <img src="images16/slide35.png" class="slide" alt="Shoreline 35">
-          <img src="images16/slide36.png" class="slide" alt="Shoreline 36">
-        </div>
-        <button class="next" onclick="moveSlide(1)">&#10095;</button>
-      </div>
-
-      <div class="rak-info">
-        <h3>Shoreline by DAMAC</h3>
-        <p class="project-desc">
-          A thoughtfully designed waterfront development on Al Marjan Island combining private living with a luxury resort atmosphere, located near the upcoming Wynn Resort.
-        </p>
-
-        <div class="rak-specs-grid">
-          <div class="rak-spec-box">
-            <h4>Inventory & Specs</h4>
-            <ul>
-              <li>✓ <strong>Developer:</strong> DAMAC Properties</li>
-              <li>✓ <strong>Starting Price:</strong> AED 4,515,000</li>
-              <li>✓ <strong>Location:</strong> Al Marjan Island, RAK</li>
-              <li>✓ <strong>Finishing:</strong> High-End with Equipped Kitchen</li>
-            </ul>
+      <!-- Shoreline Project Card -->
+      <div class="project-card">
+        <div class="slider-container">
+          <button class="prev" onclick="moveCardSlide(this, -1)">&#10094;</button>
+          <div class="slides">
+            <img src="images16/slide1.png" class="slide active" alt="Shoreline 1">
+            <img src="images16/slide2.png" class="slide" alt="Shoreline 2">
+            <img src="images16/slide3.png" class="slide" alt="Shoreline 3">
+            <img src="images16/slide4.png" class="slide" alt="Shoreline 4">
+            <img src="images16/slide5.png" class="slide" alt="Shoreline 5">
+            <img src="images16/slide6.png" class="slide" alt="Shoreline 6">
+            <img src="images16/slide7.png" class="slide" alt="Shoreline 7">
+            <img src="images16/slide8.png" class="slide" alt="Shoreline 8">
+            <img src="images16/slide9.png" class="slide" alt="Shoreline 9">
+            <img src="images16/slide10.png" class="slide" alt="Shoreline 10">
+            <img src="images16/slide11.png" class="slide" alt="Shoreline 11">
+            <img src="images16/slide12.png" class="slide" alt="Shoreline 12">
+            <img src="images16/slide13.png" class="slide" alt="Shoreline 13">
+            <img src="images16/slide14.png" class="slide" alt="Shoreline 14">
+            <img src="images16/slide15.png" class="slide" alt="Shoreline 15">
+            <img src="images16/slide16.png" class="slide" alt="Shoreline 16">
+            <img src="images16/slide17.png" class="slide" alt="Shoreline 17">
+            <img src="images16/slide18.png" class="slide" alt="Shoreline 18">
+            <img src="images16/slide19.png" class="slide" alt="Shoreline 19">
+            <img src="images16/slide20.png" class="slide" alt="Shoreline 20">
+            <img src="images16/slide21.png" class="slide" alt="Shoreline 21">
+            <img src="images16/slide22.png" class="slide" alt="Shoreline 22">
+            <img src="images16/slide23.png" class="slide" alt="Shoreline 23">
+            <img src="images16/slide24.png" class="slide" alt="Shoreline 24">
+            <img src="images16/slide25.png" class="slide" alt="Shoreline 25">
+            <img src="images16/slide26.png" class="slide" alt="Shoreline 26">
+            <img src="images16/slide27.png" class="slide" alt="Shoreline 27">
+            <img src="images16/slide28.png" class="slide" alt="Shoreline 28">
+            <img src="images16/slide29.png" class="slide" alt="Shoreline 29">
+            <img src="images16/slide30.png" class="slide" alt="Shoreline 30">
+            <img src="images16/slide31.png" class="slide" alt="Shoreline 31">
+            <img src="images16/slide32.png" class="slide" alt="Shoreline 32">
+            <img src="images16/slide33.png" class="slide" alt="Shoreline 33">
+            <img src="images16/slide34.png" class="slide" alt="Shoreline 34">
+            <img src="images16/slide35.png" class="slide" alt="Shoreline 35">
+            <img src="images16/slide36.png" class="slide" alt="Shoreline 36">
           </div>
-
-          <div class="rak-spec-box">
-            <h4>Iconic Lifestyle Amenities</h4>
-            <ul>
-              <li>✓ Resort-Style Wellness & Leisure Pools</li>
-              <li>✓ Direct Beach & Promenade Access</li>
-              <li>✓ Landscaped Gardens & Serene Spaces</li>
-              <li>✓ Close Proximity to Wynn Resort</li>
-            </ul>
-          </div>
+          <button class="next" onclick="moveCardSlide(this, 1)">&#10095;</button>
         </div>
 
-        <a href="#contact" onclick="openConsultation('Shoreline - DAMAC RAK')" class="rak-btn">Request VIP Consultation</a>
+        <div class="card-info">
+          <h3>Shoreline</h3>
+          <p class="developer">Developer: DAMAC | Luxury Beachfront Living</p>
+          <p class="price">Starting Price: <span>4,515,000 AED</span></p>
+          <p class="location">Al Marjan Island, Ras Al Khaimah</p>
+          <a href="#contact" onclick="openConsultation('Shoreline - DAMAC RAK')" class="btn-card block">Inquire & View Details</a>
+        </div>
       </div>
+
     </div>
   </section>
 
@@ -241,14 +113,35 @@
         <input type="text" placeholder="Full Name" required>
         <input type="tel" placeholder="Phone Number / WhatsApp" required>
         <select>
-          <option>Ras Al Khaimah (Al Marjan Island)</option>
-          <option>RAK Off-Plan Projects</option>
+          <option>Shoreline by DAMAC (RAK)</option>
+          <option>Ras Al Khaimah Off-Plan</option>
         </select>
         <button type="submit" class="btn-submit">Submit Request</button>
       </form>
     </div>
   </section>
 
+  <!-- Dedicated Slider Controller Script -->
+  <script>
+    function moveCardSlide(button, direction) {
+      const container = button.closest('.slider-container');
+      if (!container) return;
+      const slides = container.querySelectorAll('.slide');
+      if (!slides.length) return;
+
+      let activeIndex = -1;
+      slides.forEach((slide, index) => {
+        if (slide.classList.contains('active')) {
+          activeIndex = index;
+          slide.classList.remove('active');
+        }
+      });
+
+      if (activeIndex === -1) activeIndex = 0;
+      let newIndex = (activeIndex + direction + slides.length) % slides.length;
+      slides[newIndex].classList.add('active');
+    }
+  </script>
   <script src="script.js"></script>
 </body>
 </html>
