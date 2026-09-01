@@ -1306,11 +1306,14 @@ document.addEventListener("DOMContentLoaded", function() {
 }
 </script>
     function closeModal(modalId) {
+  function closeModal(modalId) {
   const modal = document.getElementById(modalId);
   if (modal) {
     modal.style.display = 'none';
     modal.classList.remove('active');
   }
+  document.body.style.overflow = 'auto';
+  document.body.style.pointerEvents = 'auto';
 }
     
 
@@ -1328,6 +1331,26 @@ function openVipModal(projectName) {
     document.getElementById('vip-modal-title').innerText = 'VIP Consultation: ' + projectName;
     vipModal.classList.add('active');
   }
+}
+    function closeVipModal(e) {
+  if (e) e.stopPropagation();
+  
+  const vipModal = document.getElementById('vip-consultation-modal');
+  if (vipModal) {
+    vipModal.classList.remove('active');
+    vipModal.style.display = 'none';
+  }
+
+  document.querySelectorAll('.lightbox-modal, .modal-overlay').forEach(m => {
+    m.style.display = 'none';
+    m.classList.remove('active');
+  });
+
+  document.body.style.overflow = 'auto';
+  document.body.style.pointerEvents = 'auto';
+
+  const form = document.getElementById('vipForm');
+  if (form) form.reset();
 }
     </script>
     </body>
