@@ -624,6 +624,46 @@
           <div class="btn-card">View Details & Floor Plans</div>
         </div>
       </div>
+      <!-- 3. Soto Grande Card -->
+      <div class="project-card" onclick="openSotoGrandeModal()">
+        <div class="slider-container" onclick="event.stopPropagation()">
+          <span class="tag-badge">Al Hamra</span>
+          <span class="slide-counter"><span class="current-slide">1</span> / 21</span>
+          <button class="prev" onclick="moveCardSlide(this, -1)">&#10094;</button>
+          <div class="slides">
+            <img src="images18/slide1.png" class="slide active" alt="Soto Grande 1">
+            <img src="images18/slide2.png" class="slide" alt="Soto Grande 2">
+            <img src="images18/slide3.png" class="slide" alt="Soto Grande 3">
+            <img src="images18/slide4.png" class="slide" alt="Soto Grande 4">
+            <img src="images18/slide5.png" class="slide" alt="Soto Grande 5">
+            <img src="images18/slide6.png" class="slide" alt="Soto Grande 6">
+            <img src="images18/slide7.png" class="slide" alt="Soto Grande 7">
+            <img src="images18/slide8.png" class="slide" alt="Soto Grande 8">
+            <img src="images18/slide9.png" class="slide" alt="Soto Grande 9">
+            <img src="images18/slide10.png" class="slide" alt="Soto Grande 10">
+            <img src="images18/slide11.png" class="slide" alt="Soto Grande 11">
+            <img src="images18/slide12.png" class="slide" alt="Soto Grande 12">
+            <img src="images18/slide13.png" class="slide" alt="Soto Grande 13">
+            <img src="images18/slide14.png" class="slide" alt="Soto Grande 14">
+            <img src="images18/slide15.png" class="slide" alt="Soto Grande 15">
+            <img src="images18/slide16.png" class="slide" alt="Soto Grande 16">
+            <img src="images18/slide17.png" class="slide" alt="Soto Grande 17">
+            <img src="images18/slide18.png" class="slide" alt="Soto Grande 18">
+            <img src="images18/slide19.png" class="slide" alt="Soto Grande 19">
+            <img src="images18/slide20.png" class="slide" alt="Soto Grande 20">
+            <img src="images18/slide21.png" class="slide" alt="Soto Grande 21">
+          </div>
+          <button class="next" onclick="moveCardSlide(this, 1)">&#10095;</button>
+        </div>
+
+        <div class="card-info">
+          <h3>Soto Grande by Ellington</h3>
+          <p class="developer">Developer: Ellington | Waterfront & Golf</p>
+          <p class="price">Starting AED 1,709,828</p>
+          <p class="location">📍 Al Jazeera Al Hamra, Ras Al Khaimah</p>
+          <div class="btn-card">View Details & Floor Plans</div>
+        </div>
+      </div>
 
     </div>
   </section>
@@ -827,6 +867,7 @@
         <input type="text" placeholder="Full Name" required>
         <input type="tel" placeholder="Phone Number / WhatsApp" required>
         <select>
+          <option>Soto Grande by Ellington (RAK)</option>
           <option>Costa Mare by Ellington (RAK)</option>
           <option>Shoreline by DAMAC (RAK)</option>
           <option>Ras Al Khaimah Off-Plan Investment</option>
@@ -835,6 +876,86 @@
       </form>
     </div>
   </section>
+  <!-- Modal 3: Soto Grande -->
+  <div class="modal-overlay" id="sotogrande-modal" onclick="closeSotoGrandeModal(event)">
+    <div class="modal-content" onclick="event.stopPropagation()">
+      <span class="close-modal" onclick="closeSotoGrandeModal(event)">&times;</span>
+      
+      <div class="slider-container" style="height: 380px !important;">
+        <span class="slide-counter"><span class="current-slide">1</span> / 21</span>
+        <button class="prev" onclick="moveCardSlide(this, -1)">&#10094;</button>
+        <div class="slides">
+          <img src="images18/slide1.png" class="slide active" alt="Soto Grande Detail 1">
+          <img src="images18/slide2.png" class="slide" alt="Soto Grande Detail 2">
+          <img src="images18/slide3.png" class="slide" alt="Soto Grande Detail 3">
+          <img src="images18/slide4.png" class="slide" alt="Soto Grande Detail 4">
+          <img src="images18/slide5.png" class="slide" alt="Soto Grande Detail 5">
+          <img src="images18/slide6.png" class="slide" alt="Soto Grande Detail 6">
+          <img src="images18/slide7.png" class="slide" alt="Soto Grande Detail 7">
+          <img src="images18/slide8.png" class="slide" alt="Soto Grande Detail 8">
+          <img src="images18/slide9.png" class="slide" alt="Soto Grande Detail 9">
+          <img src="images18/slide10.png" class="slide" alt="Soto Grande Detail 10">
+          <img src="images18/slide11.png" class="slide" alt="Soto Grande Detail 11">
+          <img src="images18/slide12.png" class="slide" alt="Soto Grande Detail 12">
+          <img src="images18/slide13.png" class="slide" alt="Soto Grande Detail 13">
+          <img src="images18/slide14.png" class="slide" alt="Soto Grande Detail 14">
+          <img src="images18/slide15.png" class="slide" alt="Soto Grande Detail 15">
+          <img src="images18/slide16.png" class="slide" alt="Soto Grande Detail 16">
+          <img src="images18/slide17.png" class="slide" alt="Soto Grande Detail 17">
+          <img src="images18/slide18.png" class="slide" alt="Soto Grande Detail 18">
+          <img src="images18/slide19.png" class="slide" alt="Soto Grande Detail 19">
+          <img src="images18/slide20.png" class="slide" alt="Soto Grande Detail 20">
+          <img src="images18/slide21.png" class="slide" alt="Soto Grande Detail 21">
+        </div>
+        <button class="next" onclick="moveCardSlide(this, 1)">&#10095;</button>
+      </div>
+
+      <div class="modal-body">
+        <h2>Soto Grande by Ellington</h2>
+
+        <div class="modal-section-title">Project General Facts</div>
+        <p class="modal-text">
+          Soto Grande is an architectural landmark in Ras Al Khaimah, located in the vibrant coastal community of Al Hamra. Developed by Ellington, the project combines modern design with timeless sophistication, offering a refined lifestyle surrounded by ocean horizons, lagoons, and lush golf fairways.
+        </p>
+        <p class="modal-text">
+          Featuring studios, 1-3 bedroom apartments, and exclusive 4-bedroom penthouses, each residence is semi-furnished with open layouts, premium finishes, equipped kitchens, and generous balconies capturing views of the Arabian Gulf and Al Hamra Golf Course.
+        </p>
+
+        <div class="modal-section-title">Location Description & Benefits</div>
+        <p class="modal-text">
+          Al Hamra Village is a picturesque waterfront community featuring pristine beaches, an 18-hole championship Golf Club, Al Hamra Marina & Yacht Club, Al Hamra Mall, and luxury resorts like Waldorf Astoria and Ritz-Carlton.
+        </p>
+
+        <div class="modal-grid-specs">
+          <div class="spec-card">
+            <h4>Inventory & Parking Spec</h4>
+            <ul>
+              <li>✓ <strong>Studio (58 units):</strong> from 421 sqft | 1 Parking</li>
+              <li>✓ <strong>1 Bed (259 units):</strong> from 740 sqft | 1 Parking</li>
+              <li>✓ <strong>2 Bed (152 units):</strong> from 1,103 sqft | 1 Parking</li>
+              <li>✓ <strong>2.5 Bed (78 units):</strong> from 1,241 sqft</li>
+              <li>✓ <strong>3 Bed (52 units):</strong> from 1,745 sqft | 2 Parkings</li>
+              <li>✓ <strong>4 Bed (3 units):</strong> from 3,108 sqft | 2 Parkings</li>
+              <li>✓ <strong>Starting Price:</strong> AED 1,709,828</li>
+            </ul>
+          </div>
+
+          <div class="spec-card">
+            <h4>Amenities & Features</h4>
+            <ul>
+              <li>✓ Direct Beach Access & Leisure Decks</li>
+              <li>✓ Swimming Pools & Private Dining with Plunge Pools</li>
+              <li>✓ Fitness Studio, Yoga & Pilates Areas</li>
+              <li>✓ Padel & Badminton Courts, Games Room</li>
+              <li>✓ Semi-Furnished with Equipped Kitchens</li>
+            </ul>
+          </div>
+        </div>
+
+        <a href="#contact" onclick="closeSotoGrandeModal(event);" class="btn-modal-action">Request VIP Consultation</a>
+      </div>
+    </div>
+  </div>
 
   <script>
     function moveCardSlide(button, direction) {
@@ -884,6 +1005,18 @@
       document.getElementById('costamare-modal').classList.remove('active');
       document.body.style.overflow = 'auto';
     }
+    /* Soto Grande Modal */
+    function openSotoGrandeModal() {
+      document.getElementById('sotogrande-modal').classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeSotoGrandeModal(e) {
+      if (e) e.stopPropagation();
+      document.getElementById('sotogrande-modal').classList.remove('active');
+      document.body.style.overflow = 'auto';
+    }
   </script>
+  
 </body>
 </html>
