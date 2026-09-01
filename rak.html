@@ -664,6 +664,51 @@
           <div class="btn-card">View Details & Floor Plans</div>
         </div>
       </div>
+      <!-- 4. Address Residences Al Marjan Card -->
+      <div class="project-card" onclick="openAddressMarjanModal()">
+        <div class="slider-container" onclick="event.stopPropagation()">
+          <span class="tag-badge">Al Marjan Island</span>
+          <span class="slide-counter"><span class="current-slide">1</span> / 26</span>
+          <button class="prev" onclick="moveCardSlide(this, -1)">&#10094;</button>
+          <div class="slides">
+            <img src="images19/slide1.png" class="slide active" alt="Address Residences 1">
+            <img src="images19/slide2.png" class="slide" alt="Address Residences 2">
+            <img src="images19/slide3.png" class="slide" alt="Address Residences 3">
+            <img src="images19/slide4.png" class="slide" alt="Address Residences 4">
+            <img src="images19/slide5.png" class="slide" alt="Address Residences 5">
+            <img src="images19/slide6.png" class="slide" alt="Address Residences 6">
+            <img src="images19/slide7.png" class="slide" alt="Address Residences 7">
+            <img src="images19/slide8.png" class="slide" alt="Address Residences 8">
+            <img src="images19/slide9.png" class="slide" alt="Address Residences 9">
+            <img src="images19/slide10.png" class="slide" alt="Address Residences 10">
+            <img src="images19/slide11.png" class="slide" alt="Address Residences 11">
+            <img src="images19/slide12.png" class="slide" alt="Address Residences 12">
+            <img src="images19/slide13.png" class="slide" alt="Address Residences 13">
+            <img src="images19/slide14.png" class="slide" alt="Address Residences 14">
+            <img src="images19/slide15.png" class="slide" alt="Address Residences 15">
+            <img src="images19/slide16.png" class="slide" alt="Address Residences 16">
+            <img src="images19/slide17.png" class="slide" alt="Address Residences 17">
+            <img src="images19/slide18.png" class="slide" alt="Address Residences 18">
+            <img src="images19/slide19.png" class="slide" alt="Address Residences 19">
+            <img src="images19/slide20.png" class="slide" alt="Address Residences 20">
+            <img src="images19/slide21.png" class="slide" alt="Address Residences 21">
+            <img src="images19/slide22.png" class="slide" alt="Address Residences 22">
+            <img src="images19/slide23.png" class="slide" alt="Address Residences 23">
+            <img src="images19/slide24.png" class="slide" alt="Address Residences 24">
+            <img src="images19/slide25.png" class="slide" alt="Address Residences 25">
+            <img src="images19/slide26.png" class="slide" alt="Address Residences 26">
+          </div>
+          <button class="next" onclick="moveCardSlide(this, 1)">&#10095;</button>
+        </div>
+
+        <div class="card-info">
+          <h3>Address Residences Al Marjan Island</h3>
+          <p class="developer">Developer: Emaar | Luxury Beachfront</p>
+          <p class="price">Starting AED 8,483,888</p>
+          <p class="location">📍 Al Marjan Island, Ras Al Khaimah</p>
+          <div class="btn-card">View Details & Floor Plans</div>
+        </div>
+      </div>
 
     </div>
   </section>
@@ -867,6 +912,7 @@
         <input type="text" placeholder="Full Name" required>
         <input type="tel" placeholder="Phone Number / WhatsApp" required>
         <select>
+          <option>Address Residences by Emaar (RAK)</option>
           <option>Soto Grande by Ellington (RAK)</option>
           <option>Costa Mare by Ellington (RAK)</option>
           <option>Shoreline by DAMAC (RAK)</option>
@@ -956,6 +1002,87 @@
       </div>
     </div>
   </div>
+  <div class="modal-overlay" id="addressmarjan-modal" onclick="closeAddressMarjanModal(event)">
+    <div class="modal-content" onclick="event.stopPropagation()">
+      <span class="close-modal" onclick="closeAddressMarjanModal(event)">&times;</span>
+      
+      <div class="slider-container" style="height: 380px !important;">
+        <span class="slide-counter"><span class="current-slide">1</span> / 26</span>
+        <button class="prev" onclick="moveCardSlide(this, -1)">&#10094;</button>
+        <div class="slides">
+          <img src="images19/slide1.png" class="slide active" alt="Address Residences Detail 1">
+          <img src="images19/slide2.png" class="slide" alt="Address Residences Detail 2">
+          <img src="images19/slide3.png" class="slide" alt="Address Residences Detail 3">
+          <img src="images19/slide4.png" class="slide" alt="Address Residences Detail 4">
+          <img src="images19/slide5.png" class="slide" alt="Address Residences Detail 5">
+          <img src="images19/slide6.png" class="slide" alt="Address Residences Detail 6">
+          <img src="images19/slide7.png" class="slide" alt="Address Residences Detail 7">
+          <img src="images19/slide8.png" class="slide" alt="Address Residences Detail 8">
+          <img src="images19/slide9.png" class="slide" alt="Address Residences Detail 9">
+          <img src="images19/slide10.png" class="slide" alt="Address Residences Detail 10">
+          <img src="images19/slide11.png" class="slide" alt="Address Residences Detail 11">
+          <img src="images19/slide12.png" class="slide" alt="Address Residences Detail 12">
+          <img src="images19/slide13.png" class="slide" alt="Address Residences Detail 13">
+          <img src="images19/slide14.png" class="slide" alt="Address Residences Detail 14">
+          <img src="images19/slide15.png" class="slide" alt="Address Residences Detail 15">
+          <img src="images19/slide16.png" class="slide" alt="Address Residences Detail 16">
+          <img src="images19/slide17.png" class="slide" alt="Address Residences Detail 17">
+          <img src="images19/slide18.png" class="slide" alt="Address Residences Detail 18">
+          <img src="images19/slide19.png" class="slide" alt="Address Residences Detail 19">
+          <img src="images19/slide20.png" class="slide" alt="Address Residences Detail 20">
+          <img src="images19/slide21.png" class="slide" alt="Address Residences Detail 21">
+          <img src="images19/slide22.png" class="slide" alt="Address Residences Detail 22">
+          <img src="images19/slide23.png" class="slide" alt="Address Residences Detail 23">
+          <img src="images19/slide24.png" class="slide" alt="Address Residences Detail 24">
+          <img src="images19/slide25.png" class="slide" alt="Address Residences Detail 25">
+          <img src="images19/slide26.png" class="slide" alt="Address Residences Detail 26">
+        </div>
+        <button class="next" onclick="moveCardSlide(this, 1)">&#10095;</button>
+      </div>
+
+      <div class="modal-body">
+        <h2>Address Residences Al Marjan Island by Emaar</h2>
+
+        <div class="modal-section-title">Project General Facts</div>
+        <p class="modal-text">
+          Address Residences Al Marjan Island is a resort-style development by Address Hotels + Resorts (Emaar) located directly by the Arabian Sea. As part of the vibrant View community, it offers signature hospitality service, direct beach access, and seamless urban connectivity in Ras Al Khaimah.
+        </p>
+        <p class="modal-text">
+          Featuring sleek 1- to 3-bedroom apartments, exclusive 4-bedroom penthouses, and spacious townhouses. Each home highlights floor-to-ceiling windows, neutral sophisticated interiors, equipped kitchens, and large balconies showcasing panoramas of the sea.
+        </p>
+
+        <div class="modal-section-title">Location Description & Benefits</div>
+        <p class="modal-text">
+          Al Marjan Island is a world-renowned man-made archipelago spanning 5.4 km of pristine white sandy beaches, luxury resorts, waterfront dining, and upscale retail destinations.
+        </p>
+
+        <div class="modal-grid-specs">
+          <div class="spec-card">
+            <h4>Property & Parking Overview</h4>
+            <ul>
+              <li>✓ <strong>1 & 2 Bed Residences:</strong> 1 Parking Slot</li>
+              <li>✓ <strong>2, 3 Bed & 4 Bed Penthouses/Townhouses:</strong> 2 Parking Slots</li>
+              <li>✓ <strong>Finishing:</strong> Neutral tones, natural light & equipped kitchens</li>
+              <li>✓ <strong>Starting Price:</strong> AED 8,483,888</li>
+            </ul>
+          </div>
+
+          <div class="spec-card">
+            <h4>World-Class Amenities</h4>
+            <ul>
+              <li>✓ Direct Beachfront Access & Private Beach</li>
+              <li>✓ The Restaurant at Address & Specialty Dining Outlets</li>
+              <li>✓ Infinity Scenic Pool & Cutting-edge Spa</li>
+              <li>✓ Modern Fitness Centre & Well-being Areas</li>
+              <li>✓ Full Resort Services by Address Hotels + Resorts</li>
+            </ul>
+          </div>
+        </div>
+
+        <a href="#contact" onclick="closeAddressMarjanModal(event);" class="btn-modal-action">Request VIP Consultation</a>
+      </div>
+    </div>
+  </div>
 
   <script>
     function moveCardSlide(button, direction) {
@@ -1016,6 +1143,25 @@
       document.getElementById('sotogrande-modal').classList.remove('active');
       document.body.style.overflow = 'auto';
     }
+    /* سطر 1060 - 1064 */
+function closeSotoGrandeModal(e) {
+  if (e) e.stopPropagation();
+  document.getElementById('sotogrande-modal').classList.remove('active');
+  document.body.style.overflow = 'auto';
+}
+
+/* Address Residences Al Marjan Modal - ضع الكود هنا ابتداءً من السطر 1065 */
+function openAddressMarjanModal() {
+  document.getElementById('addressmarjan-modal').classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeAddressMarjanModal(e) {
+  if (e) e.stopPropagation();
+  document.getElementById('addressmarjan-modal').classList.remove('active');
+  document.body.style.overflow = 'auto';
+}
+
   </script>
   
 </body>
