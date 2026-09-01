@@ -33,8 +33,10 @@
     <section class="projects" id="featured">
         <div class="grid">
 
-            <!-- RAK Project Card Example -->
-            <div class="slider-container">
+           <!-- Shoreline Project Card -->
+      <div class="project-card">
+        <div class="slider-container">
+          <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
           <div class="slides">
             <img src="images16/slide1.png" class="slide active" alt="Shoreline by DAMAC - 1">
             <img src="images16/slide2.png" class="slide" alt="Shoreline by DAMAC - 2">
@@ -73,27 +75,40 @@
             <img src="images16/slide35.png" class="slide" alt="Shoreline by DAMAC - 35">
             <img src="images16/slide36.png" class="slide" alt="Shoreline by DAMAC - 36">
           </div>
+          <button class="next" onclick="moveSlide(1)">&#10095;</button>
         </div>
+
         <div class="card-info">
-          <h3>Shoreline</h3>
-          <p>Developer: <strong>DAMAC</strong></p>
-          <span class="price">Starting from: 4,515,000 AED</span>
-          <span class="sub-price">📍 Al Marjan Island, Ras Al Khaimah</span>
-          <p style="font-size: 14px; color: #666; margin: 10px 0;">
-            Luxury resort-style living on Al Marjan Island near the upcoming Wynn Resort. Features nature-inspired architecture, serene waterfront views, equipped kitchens, and world-class amenities.
+          <h3>Shoreline by DAMAC</h3>
+          <p class="project-desc">
+            A thoughtfully designed waterfront development on Al Marjan Island combining private living with a luxury resort atmosphere, located near the upcoming Wynn Resort.
           </p>
-          <a href="#contact" onclick="openConsultation('Shoreline - DAMAC RAK')" class="btn-card block" style="text-align: center; text-decoration: none;">Register Interest</a>
+
+          <div class="specs-grid">
+            <div class="spec-box">
+              <h4>Inventory & Specs</h4>
+              <ul>
+                <li>✓ <strong>Developer:</strong> DAMAC Properties</li>
+                <li>✓ <strong>Starting Price:</strong> AED 4,515,000</li>
+                <li>✓ <strong>Location:</strong> Al Marjan Island, RAK</li>
+                <li>✓ <strong>Finishing:</strong> High-End with Equipped Kitchen</li>
+              </ul>
+            </div>
+
+            <div class="spec-box">
+              <h4>Iconic Lifestyle Amenities</h4>
+              <ul>
+                <li>✓ Resort-Style Wellness & Leisure Pools</li>
+                <li>✓ Direct Beach & Promenade Access</li>
+                <li>✓ Landscaped Gardens & Serene Spaces</li>
+                <li>✓ Close Proximity to Wynn Resort</li>
+              </ul>
+            </div>
+          </div>
+
+          <a href="#contact" onclick="openConsultation('Shoreline - DAMAC RAK')" class="btn-primary block">Request VIP Consultation</a>
         </div>
-        <div class="card-info">
-          <h3>Shoreline</h3>
-          <p>Developer: <strong>DAMAC</strong></p>
-          <span class="price">Starting from: 4,515,000 AED</span>
-          <span class="sub-price">📍 Al Marjan Island, Ras Al Khaimah</span>
-          <p style="font-size: 14px; color: #666; margin: 10px 0;">
-            Luxury resort-style living on Al Marjan Island near the upcoming Wynn Resort. Features nature-inspired architecture, serene waterfront views, equipped kitchens, and world-class amenities.
-          </p>
-          <a href="#contact" onclick="openConsultation('Shoreline - DAMAC RAK')" class="btn-card block" style="text-align: center; text-decoration: none;">Register Interest</a>
-        </div>
+      </div>
 
         </div>
     </section>
