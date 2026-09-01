@@ -119,7 +119,7 @@
     }
 
     /* ==========================================
-       PROJECTS SECTION & CENTERED GRID
+       PROJECTS SECTION & GRID
        ========================================== */
     .projects {
       padding: 60px 20px !important;
@@ -136,7 +136,6 @@
       font-weight: 700;
     }
     
-    /* Centered Grid prevents left-side alignment for single card */
     .grid {
       display: grid !important;
       grid-template-columns: repeat(auto-fit, minmax(340px, 420px)) !important;
@@ -156,6 +155,7 @@
       flex-direction: column !important;
       transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease !important;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      cursor: pointer;
     }
     .project-card:hover {
       transform: translateY(-7px) !important;
@@ -173,7 +173,6 @@
       border-bottom: 1px solid rgba(255, 255, 255, 0.06);
     }
 
-    /* Perfect Image Fit: Contain prevents cropping and stretching */
     .slider-container img.slide {
       width: 100% !important;
       height: 100% !important;
@@ -490,7 +489,6 @@
 </head>
 <body>
 
-  <!-- Header -->
   <header class="header">
     <a href="index.html" class="logo">KIMIT <span>REAL ESTATE</span></a>
     <nav class="nav">
@@ -501,7 +499,6 @@
     </nav>
   </header>
 
-  <!-- Hero Section -->
   <section class="hero">
     <div class="hero-content">
       <div class="hero-badge">EXCLUSIVE PORTFOLIO</div>
@@ -510,15 +507,13 @@
     </div>
   </section>
 
-  <!-- Projects Section (Centered Layout) -->
   <section class="projects" id="featured">
     <div class="section-header">
-      <h2 class="section-title">Featured Development</h2>
+      <h2 class="section-title">Featured Developments</h2>
     </div>
 
     <div class="grid">
 
-      <!-- Shoreline Card -->
       <div class="project-card" onclick="openShorelineModal()">
         <div class="slider-container" onclick="event.stopPropagation()">
           <span class="tag-badge">Al Marjan Island</span>
@@ -574,10 +569,65 @@
         </div>
       </div>
 
+      <div class="project-card" onclick="openCostaMareModal()">
+        <div class="slider-container" onclick="event.stopPropagation()">
+          <span class="tag-badge">Al Marjan Island</span>
+          <span class="slide-counter"><span class="current-slide">1</span> / 37</span>
+          <button class="prev" onclick="moveCardSlide(this, -1)">&#10094;</button>
+          <div class="slides">
+            <img src="images17/slide1.png" class="slide active" alt="Costa Mare 1">
+            <img src="images17/slide2.png" class="slide" alt="Costa Mare 2">
+            <img src="images17/slide3.png" class="slide" alt="Costa Mare 3">
+            <img src="images17/slide4.png" class="slide" alt="Costa Mare 4">
+            <img src="images17/slide5.png" class="slide" alt="Costa Mare 5">
+            <img src="images17/slide6.png" class="slide" alt="Costa Mare 6">
+            <img src="images17/slide7.png" class="slide" alt="Costa Mare 7">
+            <img src="images17/slide8.png" class="slide" alt="Costa Mare 8">
+            <img src="images17/slide9.png" class="slide" alt="Costa Mare 9">
+            <img src="images17/slide10.png" class="slide" alt="Costa Mare 10">
+            <img src="images17/slide11.png" class="slide" alt="Costa Mare 11">
+            <img src="images17/slide12.png" class="slide" alt="Costa Mare 12">
+            <img src="images17/slide13.png" class="slide" alt="Costa Mare 13">
+            <img src="images17/slide14.png" class="slide" alt="Costa Mare 14">
+            <img src="images17/slide15.png" class="slide" alt="Costa Mare 15">
+            <img src="images17/slide16.png" class="slide" alt="Costa Mare 16">
+            <img src="images17/slide17.png" class="slide" alt="Costa Mare 17">
+            <img src="images17/slide18.png" class="slide" alt="Costa Mare 18">
+            <img src="images17/slide19.png" class="slide" alt="Costa Mare 19">
+            <img src="images17/slide20.png" class="slide" alt="Costa Mare 20">
+            <img src="images17/slide21.png" class="slide" alt="Costa Mare 21">
+            <img src="images17/slide22.png" class="slide" alt="Costa Mare 22">
+            <img src="images17/slide23.png" class="slide" alt="Costa Mare 23">
+            <img src="images17/slide24.png" class="slide" alt="Costa Mare 24">
+            <img src="images17/slide25.png" class="slide" alt="Costa Mare 25">
+            <img src="images17/slide26.png" class="slide" alt="Costa Mare 26">
+            <img src="images17/slide27.png" class="slide" alt="Costa Mare 27">
+            <img src="images17/slide28.png" class="slide" alt="Costa Mare 28">
+            <img src="images17/slide29.png" class="slide" alt="Costa Mare 29">
+            <img src="images17/slide30.png" class="slide" alt="Costa Mare 30">
+            <img src="images17/slide31.png" class="slide" alt="Costa Mare 31">
+            <img src="images17/slide32.png" class="slide" alt="Costa Mare 32">
+            <img src="images17/slide33.png" class="slide" alt="Costa Mare 33">
+            <img src="images17/slide34.png" class="slide" alt="Costa Mare 34">
+            <img src="images17/slide35.png" class="slide" alt="Costa Mare 35">
+            <img src="images17/slide36.png" class="slide" alt="Costa Mare 36">
+            <img src="images17/slide37.png" class="slide" alt="Costa Mare 37">
+          </div>
+          <button class="next" onclick="moveCardSlide(this, 1)">&#10095;</button>
+        </div>
+
+        <div class="card-info">
+          <h3>Costa Mare by Ellington</h3>
+          <p class="developer">Developer: Ellington | Waterfront</p>
+          <p class="price">Starting AED 2,566,828</p>
+          <p class="location">📍 Al Marjan Island, Ras Al Khaimah</p>
+          <div class="btn-card">View Details & Floor Plans</div>
+        </div>
+      </div>
+
     </div>
   </section>
 
-  <!-- Modal View Details -->
   <div class="modal-overlay" id="shoreline-modal" onclick="closeShorelineModal(event)">
     <div class="modal-content" onclick="event.stopPropagation()">
       <span class="close-modal" onclick="closeShorelineModal(event)">&times;</span>
@@ -672,7 +722,103 @@
     </div>
   </div>
 
-  <!-- Contact Form -->
+  <div class="modal-overlay" id="costamare-modal" onclick="closeCostaMareModal(event)">
+    <div class="modal-content" onclick="event.stopPropagation()">
+      <span class="close-modal" onclick="closeCostaMareModal(event)">&times;</span>
+      
+      <div class="slider-container" style="height: 380px !important;">
+        <span class="slide-counter"><span class="current-slide">1</span> / 37</span>
+        <button class="prev" onclick="moveCardSlide(this, -1)">&#10094;</button>
+        <div class="slides">
+          <img src="images17/slide1.png" class="slide active" alt="Costa Mare Detail 1">
+          <img src="images17/slide2.png" class="slide" alt="Costa Mare Detail 2">
+          <img src="images17/slide3.png" class="slide" alt="Costa Mare Detail 3">
+          <img src="images17/slide4.png" class="slide" alt="Costa Mare Detail 4">
+          <img src="images17/slide5.png" class="slide" alt="Costa Mare Detail 5">
+          <img src="images17/slide6.png" class="slide" alt="Costa Mare Detail 6">
+          <img src="images17/slide7.png" class="slide" alt="Costa Mare Detail 7">
+          <img src="images17/slide8.png" class="slide" alt="Costa Mare Detail 8">
+          <img src="images17/slide9.png" class="slide" alt="Costa Mare Detail 9">
+          <img src="images17/slide10.png" class="slide" alt="Costa Mare Detail 10">
+          <img src="images17/slide11.png" class="slide" alt="Costa Mare Detail 11">
+          <img src="images17/slide12.png" class="slide" alt="Costa Mare Detail 12">
+          <img src="images17/slide13.png" class="slide" alt="Costa Mare Detail 13">
+          <img src="images17/slide14.png" class="slide" alt="Costa Mare Detail 14">
+          <img src="images17/slide15.png" class="slide" alt="Costa Mare Detail 15">
+          <img src="images17/slide16.png" class="slide" alt="Costa Mare Detail 16">
+          <img src="images17/slide17.png" class="slide" alt="Costa Mare Detail 17">
+          <img src="images17/slide18.png" class="slide" alt="Costa Mare Detail 18">
+          <img src="images17/slide19.png" class="slide" alt="Costa Mare Detail 19">
+          <img src="images17/slide20.png" class="slide" alt="Costa Mare Detail 20">
+          <img src="images17/slide21.png" class="slide" alt="Costa Mare Detail 21">
+          <img src="images17/slide22.png" class="slide" alt="Costa Mare Detail 22">
+          <img src="images17/slide23.png" class="slide" alt="Costa Mare Detail 23">
+          <img src="images17/slide24.png" class="slide" alt="Costa Mare Detail 24">
+          <img src="images17/slide25.png" class="slide" alt="Costa Mare Detail 25">
+          <img src="images17/slide26.png" class="slide" alt="Costa Mare Detail 26">
+          <img src="images17/slide27.png" class="slide" alt="Costa Mare Detail 27">
+          <img src="images17/slide28.png" class="slide" alt="Costa Mare Detail 28">
+          <img src="images17/slide29.png" class="slide" alt="Costa Mare Detail 29">
+          <img src="images17/slide30.png" class="slide" alt="Costa Mare Detail 30">
+          <img src="images17/slide31.png" class="slide" alt="Costa Mare Detail 31">
+          <img src="images17/slide32.png" class="slide" alt="Costa Mare Detail 32">
+          <img src="images17/slide33.png" class="slide" alt="Costa Mare Detail 33">
+          <img src="images17/slide34.png" class="slide" alt="Costa Mare Detail 34">
+          <img src="images17/slide35.png" class="slide" alt="Costa Mare Detail 35">
+          <img src="images17/slide36.png" class="slide" alt="Costa Mare Detail 36">
+          <img src="images17/slide37.png" class="slide" alt="Costa Mare Detail 37">
+        </div>
+        <button class="next" onclick="moveCardSlide(this, 1)">&#10095;</button>
+      </div>
+
+      <div class="modal-body">
+        <h2>Costa Mare by Ellington</h2>
+
+        <div class="modal-section-title">Project General Facts</div>
+        <p class="modal-text">
+          Costa Mare is a striking waterfront development on Al Marjan Island, composed of four architecturally distinctive towers that harmonize with their natural surroundings. The design draws inspiration from both the sea and the nearby mountains, expressed through fluid forms, soft earthy tones, and expansive glazing that captures panoramic views. Each residence is thoughtfully planned to maximize light, space, and tranquility.
+        </p>
+        <p class="modal-text">
+          The lifestyle at Costa Mare is defined by a rich collection of resort-style amenities designed for both relaxation and activity. Residents enjoy direct access to a private beach, multiple infinity pools, fitness studios, jogging tracks, a padel court, a private cinema, wellness studio, and curated dining spaces.
+        </p>
+        <p class="modal-text">
+          Interiors are finished with modern design and high-quality materials. Equipped kitchens are seamlessly integrated, offering both practicality and clean aesthetics. Residences are offered unfurnished, allowing homeowners to personalize their interiors.
+        </p>
+
+        <div class="modal-section-title">Location Description & Benefits</div>
+        <p class="modal-text">
+          Al Marjan Island is a stunning man-made archipelago in Ras Al Khaimah, known for its picturesque 5.4 km white sandy beaches, luxurious resorts, and crystal-clear waters. The island consists of four primary coral-shaped islands connected by a central boulevard, offering world-class dining, private beaches, and upscale living.
+        </p>
+
+        <div class="modal-grid-specs">
+          <div class="spec-card">
+            <h4>Inventory & Parking Spec</h4>
+            <ul>
+              <li>✓ <strong>Developer:</strong> Ellington</li>
+              <li>✓ <strong>Studio, 1 Bed, 2 Bed, 2.5 Bed:</strong> 1 Parking Space</li>
+              <li>✓ <strong>3 Bed:</strong> 2 Parking Spaces</li>
+              <li>✓ <strong>Starting Price:</strong> AED 2,566,828</li>
+              <li>✓ <strong>Location:</strong> Al Marjan Island, RAK</li>
+            </ul>
+          </div>
+
+          <div class="spec-card">
+            <h4>Iconic Lifestyle Amenities</h4>
+            <ul>
+              <li>✓ Direct Private Beach Access & Infinity Pools</li>
+              <li>✓ Fitness Studios, Jogging Tracks & Padel Court</li>
+              <li>✓ Private Cinema & Wellness Studio</li>
+              <li>✓ Dedicated Kids' Play Areas & Clubhouses</li>
+              <li>✓ Curated Waterfront Dining Spaces</li>
+            </ul>
+          </div>
+        </div>
+
+        <a href="#contact" onclick="closeCostaMareModal(event);" class="btn-modal-action">Request VIP Consultation</a>
+      </div>
+    </div>
+  </div>
+
   <section class="contact-section" id="contact">
     <div class="form-container">
       <h2>Get VIP Investment Consultation</h2>
@@ -681,6 +827,7 @@
         <input type="text" placeholder="Full Name" required>
         <input type="tel" placeholder="Phone Number / WhatsApp" required>
         <select>
+          <option>Costa Mare by Ellington (RAK)</option>
           <option>Shoreline by DAMAC (RAK)</option>
           <option>Ras Al Khaimah Off-Plan Investment</option>
         </select>
@@ -714,6 +861,7 @@
       }
     }
 
+    /* Shoreline Modal */
     function openShorelineModal() {
       document.getElementById('shoreline-modal').classList.add('active');
       document.body.style.overflow = 'hidden';
@@ -722,6 +870,18 @@
     function closeShorelineModal(e) {
       if (e) e.stopPropagation();
       document.getElementById('shoreline-modal').classList.remove('active');
+      document.body.style.overflow = 'auto';
+    }
+
+    /* Costa Mare Modal */
+    function openCostaMareModal() {
+      document.getElementById('costamare-modal').classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeCostaMareModal(e) {
+      if (e) e.stopPropagation();
+      document.getElementById('costamare-modal').classList.remove('active');
       document.body.style.overflow = 'auto';
     }
   </script>
