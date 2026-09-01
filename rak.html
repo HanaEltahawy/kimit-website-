@@ -803,55 +803,26 @@
           <div class="btn-card">View Details & Floor Plans</div>
         </div>
       </div>
-    <!-- Mirasol Project Card -->
-<div class="project-card">
-  <div class="card-image-slider">
-    <span class="location-badge">MINA AL ARAB</span>
+   <!-- Project Card Template -->
+<div class="project-card" onclick="openProjectModal()">
+  <div class="slider-container" onclick="event.stopPropagation()">
+    <span class="tag-badge">Al Marjan Island</span>
+    <span class="slide-counter"><span class="current-slide">1</span> / 30</span>
+    <button class="prev" onclick="moveCardSlide(this, -1)">&#10094;</button>
     <div class="slides">
-      <img src="images22/1.png" class="active" alt="Mirasol 1">
-      <img src="images22/2.png" alt="Mirasol 2">
-      <img src="images22/3.png" alt="Mirasol 3">
-      <img src="images22/4.png" alt="Mirasol 4">
-      <img src="images22/5.png" alt="Mirasol 5">
-      <img src="images22/6.png" alt="Mirasol 6">
-      <img src="images22/7.png" alt="Mirasol 7">
-      <img src="images22/8.png" alt="Mirasol 8">
-      <img src="images22/9.png" alt="Mirasol 9">
-      <img src="images22/10.png" alt="Mirasol 10">
-      <img src="images22/11.png" alt="Mirasol 11">
-      <img src="images22/12.png" alt="Mirasol 12">
-      <img src="images22/13.png" alt="Mirasol 13">
-      <img src="images22/14.png" alt="Mirasol 14">
-      <img src="images22/15.png" alt="Mirasol 15">
-      <img src="images22/16.png" alt="Mirasol 16">
-      <img src="images22/17.png" alt="Mirasol 17">
-      <img src="images22/18.png" alt="Mirasol 18">
-      <img src="images22/19.png" alt="Mirasol 19">
-      <img src="images22/20.png" alt="Mirasol 20">
-      <img src="images22/21.png" alt="Mirasol 21">
-      <img src="images22/22.png" alt="Mirasol 22">
-      <img src="images22/23.png" alt="Mirasol 23">
-      <img src="images22/24.png" alt="Mirasol 24">
-      <img src="images22/25.png" alt="Mirasol 25">
-      <img src="images22/26.png" alt="Mirasol 26">
-      <img src="images22/27.png" alt="Mirasol 27">
-      <img src="images22/28.png" alt="Mirasol 28">
-      <img src="images22/29.png" alt="Mirasol 29">
-      <img src="images22/30.png" alt="Mirasol 30">
-      <img src="images22/31.png" alt="Mirasol 31">
+      <img src="images/slide1.png" class="slide active" alt="Slide 1">
+      <img src="images/slide2.png" class="slide" alt="Slide 2">
+      <img src="images/slide3.png" class="slide" alt="Slide 3">
     </div>
-    <button class="slider-btn prev" onclick="moveSlide(this, -1)">&#10094;</button>
-    <button class="slider-btn next" onclick="moveSlide(this, 1)">&#10095;</button>
-    <div class="slide-counter">1 / 31</div>
+    <button class="next" onclick="moveCardSlide(this, 1)">&#10095;</button>
   </div>
 
-  <div class="card-content">
-    <h3>Mirasol by RAK Properties</h3>
-    <p class="developer-info">Developer: RAK Properties | Resort-Inspired Living</p>
-    <p class="price-info">Starting AED 1,618,000</p>
-    <p class="location-info">📍 Raha Island, Mina Al Arab, RAK</p>
-
-    <button class="btn-card-action" onclick="openDetailsModal('mirasol-modal')">View Details & Floor Plans</button>
+  <div class="card-info">
+    <h3>Project Name</h3>
+    <p class="developer">Developer: Developer Name | Feature</p>
+    <p class="price">Starting AED 1,000,000</p>
+    <p class="location">📍 Location Name, Ras Al Khaimah</p>
+    <div class="btn-card">View Details & Floor Plans</div>
   </div>
 </div>
 
