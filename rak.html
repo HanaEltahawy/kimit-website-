@@ -5,9 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ras Al Khaimah Offplan Projects - Kimit Real Estate</title>
   <link rel="icon" type="image/png" href="favicon.png">
-  <link rel="stylesheet" href="style.css">
   <style>
-    /* Global Reset & Base */
+    /* ==========================================
+       RESET & BASE STYLES
+       ========================================== */
     * {
       box-sizing: border-box;
       margin: 0;
@@ -17,31 +18,31 @@
       background-color: #05070a !important;
       color: #e2e8f0;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
-      line-height: 1.5;
+      line-height: 1.6;
+      overflow-x: hidden;
     }
-    .slider-container img.slide {
-  width: 100% !important;
-  height: 100% !important;
-  object-fit: fill !important;
-}
 
-    /* Fixed Navigation Header Matching Dubai Page */
+    /* ==========================================
+       HEADER & NAVIGATION
+       ========================================== */
     .header {
       display: flex !important;
       justify-content: space-between !important;
       align-items: center !important;
-      padding: 16px 40px !important;
-      background-color: #05070a !important;
+      padding: 18px 5%;
+      background-color: rgba(5, 7, 10, 0.95) !important;
+      backdrop-filter: blur(10px);
       border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
       position: sticky !important;
       top: 0 !important;
       z-index: 1000 !important;
     }
     .logo {
-      font-size: 20px !important;
+      font-size: 22px !important;
       font-weight: 800 !important;
       color: #ffffff !important;
       letter-spacing: 2px !important;
+      text-decoration: none;
     }
     .logo span {
       color: #dfb45b !important;
@@ -50,169 +51,253 @@
     .nav {
       display: flex !important;
       align-items: center !important;
-      gap: 25px !important;
+      gap: 28px !important;
     }
     .nav a {
       color: #a0aec0 !important;
       text-decoration: none !important;
       font-size: 14px !important;
+      font-weight: 500;
       transition: color 0.3s !important;
     }
-    .nav a:hover {
-      color: #ffffff !important;
+    .nav a:hover, .nav a.active {
+      color: #dfb45b !important;
     }
     .btn-nav {
       background: linear-gradient(135deg, #dfb45b 0%, #c9a050 100%) !important;
       color: #000000 !important;
-      padding: 8px 18px !important;
+      padding: 9px 20px !important;
       border-radius: 6px !important;
-      font-weight: 600 !important;
+      font-weight: 700 !important;
+      font-size: 13px !important;
       text-decoration: none !important;
+      transition: transform 0.2s, box-shadow 0.2s !important;
+    }
+    .btn-nav:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 15px rgba(223, 180, 91, 0.3);
     }
 
-    /* Hero Banner matching Dubai style */
+    /* ==========================================
+       HERO BANNER
+       ========================================== */
     .hero {
-      background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('images3/rak-bg.jpg') center/cover no-repeat !important;
+      position: relative;
+      background: linear-gradient(180deg, rgba(5, 7, 10, 0.6) 0%, rgba(5, 7, 10, 0.95) 100%), 
+                  url('images3/rak-bg.jpg') center/cover no-repeat !important;
       text-align: center !important;
-      padding: 45px 20px 40px !important;
+      padding: 70px 20px 60px !important;
       border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
     }
     .hero-badge {
       display: inline-block !important;
-      border: 1px solid #dfb45b !important;
+      border: 1px solid rgba(223, 180, 91, 0.5) !important;
       color: #dfb45b !important;
       font-size: 11px !important;
-      font-weight: 600 !important;
+      font-weight: 700 !important;
       letter-spacing: 2px !important;
-      padding: 6px 22px !important;
+      padding: 6px 20px !important;
       border-radius: 50px !important;
       text-transform: uppercase !important;
-      margin-bottom: 16px !important;
-      background: rgba(223, 180, 91, 0.05) !important;
+      margin-bottom: 18px !important;
+      background: rgba(223, 180, 91, 0.08) !important;
     }
     .hero h1 {
-      font-size: 38px !important;
-      font-weight: 700 !important;
+      font-size: 42px !important;
+      font-weight: 800 !important;
       color: #ffffff !important;
-      margin: 0 0 10px 0 !important;
+      margin: 0 0 12px 0 !important;
       letter-spacing: -0.5px !important;
     }
     .hero p {
       color: #a0aec0 !important;
-      font-size: 15px !important;
+      font-size: 16px !important;
       margin: 0 !important;
       font-weight: 400 !important;
-    }
-
-    /* Grid & Cards Layout Matching Dubai Page */
-    .projects {
-      padding: 50px 20px !important;
-      max-width: 1200px !important;
+      max-width: 600px;
       margin: 0 auto !important;
     }
+
+    /* ==========================================
+       PROJECTS SECTION & CENTERED GRID
+       ========================================== */
+    .projects {
+      padding: 60px 20px !important;
+      max-width: 1280px !important;
+      margin: 0 auto !important;
+    }
+    .section-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .section-title {
+      font-size: 24px;
+      color: #ffffff;
+      font-weight: 700;
+    }
+    
+    /* Centered Grid prevents left-side alignment for single card */
     .grid {
       display: grid !important;
-      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)) !important;
-      gap: 30px !important;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 420px)) !important;
+      justify-content: center !important;
+      gap: 35px !important;
     }
+
+    /* ==========================================
+       LUXURY PROJECT CARD
+       ========================================== */
     .project-card {
-      background: #0c1017 !important;
-      border: 1px solid rgba(255, 255, 255, 0.08) !important;
-      border-radius: 12px !important;
+      background: #0d1117 !important;
+      border: 1px solid rgba(255, 255, 255, 0.1) !important;
+      border-radius: 14px !important;
       overflow: hidden !important;
       display: flex !important;
       flex-direction: column !important;
-      cursor: pointer !important;
-      transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease !important;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     }
     .project-card:hover {
-      transform: translateY(-5px) !important;
-      box-shadow: 0 12px 30px rgba(0,0,0,0.6) !important;
-      border-color: rgba(223, 180, 91, 0.3) !important;
+      transform: translateY(-7px) !important;
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.8), 0 0 20px rgba(223, 180, 91, 0.15) !important;
+      border-color: rgba(223, 180, 91, 0.4) !important;
     }
+
+    /* SLIDER CONTAINER */
     .slider-container {
       position: relative !important;
       width: 100% !important;
-      height: 240px !important;
+      height: 270px !important;
+      background: #080b10 !important;
       overflow: hidden !important;
-      background: #000 !important;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
     }
+
+    /* Perfect Image Fit: Contain prevents cropping and stretching */
     .slider-container img.slide {
       width: 100% !important;
       height: 100% !important;
-      object-fit: cover !important;
+      object-fit: contain !important;
+      background: radial-gradient(circle, #121722 0%, #080b10 100%) !important;
       display: none !important;
     }
     .slider-container img.slide.active {
       display: block !important;
     }
+
+    /* SLIDER CONTROLS & BADGES */
     .slider-container .prev, .slider-container .next {
       position: absolute !important;
       top: 50% !important;
       transform: translateY(-50%) !important;
-      background: rgba(0, 0, 0, 0.6) !important;
+      background: rgba(5, 7, 10, 0.75) !important;
       color: #dfb45b !important;
       border: 1px solid rgba(223, 180, 91, 0.4) !important;
       border-radius: 50% !important;
-      width: 34px !important;
-      height: 34px !important;
+      width: 36px !important;
+      height: 36px !important;
       cursor: pointer !important;
       z-index: 10 !important;
       display: flex !important;
       align-items: center !important;
       justify-content: center !important;
       user-select: none !important;
+      font-size: 14px !important;
+      transition: background 0.2s, transform 0.2s !important;
+    }
+    .slider-container .prev:hover, .slider-container .next:hover {
+      background: #dfb45b !important;
+      color: #000000 !important;
+      transform: translateY(-50%) scale(1.08);
     }
     .slider-container .prev { left: 12px !important; }
     .slider-container .next { right: 12px !important; }
 
+    .slide-counter {
+      position: absolute;
+      bottom: 10px;
+      right: 12px;
+      background: rgba(5, 7, 10, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: #dfb45b;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 20px;
+      z-index: 10;
+      letter-spacing: 1px;
+    }
+    .tag-badge {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: rgba(223, 180, 91, 0.9);
+      color: #000000;
+      font-size: 10px;
+      font-weight: 800;
+      padding: 4px 10px;
+      border-radius: 4px;
+      z-index: 10;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* CARD BODY INFO */
     .card-info {
-      padding: 22px !important;
+      padding: 24px !important;
       display: flex !important;
       flex-direction: column !important;
       flex-grow: 1 !important;
     }
     .card-info h3 {
       color: #ffffff !important;
-      font-size: 20px !important;
+      font-size: 21px !important;
       font-weight: 700 !important;
       margin: 0 0 6px 0 !important;
     }
     .card-info .developer {
-      color: #a0aec0 !important;
+      color: #8c9bae !important;
       font-size: 13px !important;
       margin-bottom: 16px !important;
     }
     .card-info .price {
       color: #dfb45b !important;
-      font-weight: 700 !important;
-      font-size: 15px !important;
+      font-weight: 800 !important;
+      font-size: 18px !important;
       margin-bottom: 4px !important;
     }
     .card-info .location {
       color: #a0aec0 !important;
       font-size: 13px !important;
       margin-bottom: 22px !important;
+      display: flex;
+      align-items: center;
+      gap: 6px;
     }
     .btn-card {
       display: block !important;
       text-align: center !important;
-      padding: 11px !important;
+      padding: 12px !important;
       border: 1px solid #dfb45b !important;
+      background: rgba(223, 180, 91, 0.05);
       color: #dfb45b !important;
-      border-radius: 6px !important;
+      border-radius: 8px !important;
       text-decoration: none !important;
-      font-weight: 600 !important;
+      font-weight: 700 !important;
       font-size: 14px !important;
       margin-top: auto !important;
       transition: all 0.3s ease !important;
+      cursor: pointer;
     }
     .btn-card:hover {
       background: #dfb45b !important;
       color: #000000 !important;
+      box-shadow: 0 4px 15px rgba(223, 180, 91, 0.3);
     }
 
-    /* Modal Overlay Styles */
+    /* ==========================================
+       MODAL OVERLAY & POPUP
+       ========================================== */
     .modal-overlay {
       display: none;
       position: fixed;
@@ -220,7 +305,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0, 0, 0, 0.85);
+      background: rgba(0, 0, 0, 0.88);
       backdrop-filter: blur(8px);
       z-index: 2000;
       align-items: center;
@@ -232,47 +317,61 @@
     }
     .modal-content {
       background: #0d1117;
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      border-radius: 12px;
-      max-width: 820px;
+      border: 1px solid rgba(223, 180, 91, 0.3);
+      border-radius: 14px;
+      max-width: 860px;
       width: 100%;
       max-height: 90vh;
       overflow-y: auto;
       position: relative;
-      box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.9);
       color: #e2e8f0;
     }
     .close-modal {
       position: absolute;
       top: 15px;
       right: 20px;
-      font-size: 30px;
+      font-size: 28px;
       color: #dfb45b;
       cursor: pointer;
       z-index: 30;
       line-height: 1;
+      width: 36px;
+      height: 36px;
+      background: rgba(0,0,0,0.6);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(223,180,91,0.3);
+      transition: 0.2s;
+    }
+    .close-modal:hover {
+      background: #dfb45b;
+      color: #000;
     }
     .modal-body {
-      padding: 30px;
+      padding: 32px;
     }
     .modal-body h2 {
-      font-size: 26px;
+      font-size: 28px;
       color: #dfb45b;
       margin-bottom: 12px;
+      font-weight: 800;
     }
     .modal-section-title {
-      font-size: 17px;
-      color: #fff;
-      margin: 25px 0 10px 0;
+      font-size: 18px;
+      color: #ffffff;
+      margin: 28px 0 12px 0;
       font-weight: 700;
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-      padding-bottom: 6px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      padding-bottom: 8px;
     }
     .modal-text {
       color: #a0aec0;
       font-size: 14px;
       line-height: 1.7;
-      margin-bottom: 15px;
+      margin-bottom: 16px;
     }
     .modal-grid-specs {
       display: grid;
@@ -284,15 +383,16 @@
       .modal-grid-specs { grid-template-columns: 1fr; }
     }
     .spec-card {
-      background: rgba(255, 255, 255, 0.03);
+      background: rgba(255, 255, 255, 0.02);
       border: 1px solid rgba(255, 255, 255, 0.08);
-      border-radius: 8px;
-      padding: 20px;
+      border-radius: 10px;
+      padding: 22px;
     }
     .spec-card h4 {
       color: #dfb45b;
-      font-size: 15px;
-      margin-bottom: 12px;
+      font-size: 16px;
+      margin-bottom: 14px;
+      font-weight: 700;
     }
     .spec-card ul {
       list-style: none;
@@ -300,79 +400,91 @@
       margin: 0;
     }
     .spec-card li {
-      font-size: 13px;
+      font-size: 13.5px;
       color: #cbd5e0;
-      margin-bottom: 8px;
+      margin-bottom: 10px;
       line-height: 1.5;
     }
     .btn-modal-action {
       display: block;
       width: 100%;
       background: linear-gradient(135deg, #dfb45b 0%, #c9a050 100%);
-      color: #000;
+      color: #000000;
       text-align: center;
-      padding: 14px;
-      border-radius: 6px;
-      font-weight: 700;
+      padding: 15px;
+      border-radius: 8px;
+      font-weight: 800;
+      font-size: 15px;
       text-decoration: none;
-      margin-top: 25px;
+      margin-top: 30px;
       transition: 0.3s;
+      box-shadow: 0 4px 20px rgba(223, 180, 91, 0.25);
+    }
+    .btn-modal-action:hover {
+      opacity: 0.95;
+      transform: translateY(-2px);
     }
 
-    /* Contact Form Styling */
+    /* ==========================================
+       CONTACT FORM
+       ========================================== */
     .contact-section {
-      padding: 60px 20px !important;
+      padding: 70px 20px !important;
       background: #080b10 !important;
       border-top: 1px solid rgba(255, 255, 255, 0.05) !important;
     }
     .form-container {
-      max-width: 550px;
+      max-width: 580px;
       margin: 0 auto;
       background: #0c1017;
-      padding: 35px;
-      border-radius: 12px;
+      padding: 40px;
+      border-radius: 14px;
       border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
     }
     .form-container h2 {
       color: #dfb45b;
-      font-size: 22px;
+      font-size: 24px;
       margin-bottom: 8px;
       text-align: center;
+      font-weight: 800;
     }
     .form-container p {
       color: #a0aec0;
       font-size: 14px;
       text-align: center;
-      margin-bottom: 25px;
+      margin-bottom: 28px;
     }
     .form-container input, .form-container select {
       width: 100%;
-      padding: 12px 15px;
-      margin-bottom: 15px;
+      padding: 14px 16px;
+      margin-bottom: 16px;
       background: #05070a;
       border: 1px solid rgba(255, 255, 255, 0.12);
-      border-radius: 6px;
+      border-radius: 8px;
       color: #fff;
       font-size: 14px;
       outline: none;
+      transition: border-color 0.3s;
     }
     .form-container input:focus, .form-container select:focus {
       border-color: #dfb45b;
     }
     .btn-submit {
       width: 100%;
-      padding: 12px;
+      padding: 14px;
       background: linear-gradient(135deg, #dfb45b 0%, #c9a050 100%);
       color: #000;
       border: none;
-      border-radius: 6px;
-      font-weight: 700;
+      border-radius: 8px;
+      font-weight: 800;
       font-size: 15px;
       cursor: pointer;
       transition: 0.3s;
     }
     .btn-submit:hover {
-      opacity: 0.9;
+      opacity: 0.95;
+      box-shadow: 0 4px 15px rgba(223, 180, 91, 0.3);
     }
   </style>
 </head>
@@ -380,10 +492,11 @@
 
   <!-- Header -->
   <header class="header">
-    <div class="logo">KIMIT <span>REAL ESTATE</span></div>
+    <a href="index.html" class="logo">KIMIT <span>REAL ESTATE</span></a>
     <nav class="nav">
       <a href="index.html">Home</a>
-      <a href="index.html#projects">Projects</a>
+      <a href="index.html#projects">Dubai Projects</a>
+      <a href="rak.html" class="active">RAK Projects</a>
       <a href="#contact" class="btn-nav">Contact Us</a>
     </nav>
   </header>
@@ -393,17 +506,23 @@
     <div class="hero-content">
       <div class="hero-badge">EXCLUSIVE PORTFOLIO</div>
       <h1>Ras Al Khaimah Offplan Projects</h1>
-      <p>Premium Off-Plan Investments in High-ROI Locations</p>
+      <p>Premium Off-Plan Investments & Luxury Waterfront Residences</p>
     </div>
   </section>
 
-  <!-- Projects Section (Grid Layout) -->
+  <!-- Projects Section (Centered Layout) -->
   <section class="projects" id="featured">
+    <div class="section-header">
+      <h2 class="section-title">Featured Development</h2>
+    </div>
+
     <div class="grid">
 
       <!-- Shoreline Card -->
       <div class="project-card" onclick="openShorelineModal()">
         <div class="slider-container" onclick="event.stopPropagation()">
+          <span class="tag-badge">Al Marjan Island</span>
+          <span class="slide-counter"><span class="current-slide">1</span> / 36</span>
           <button class="prev" onclick="moveCardSlide(this, -1)">&#10094;</button>
           <div class="slides">
             <img src="images16/slide1.png" class="slide active" alt="Shoreline 1">
@@ -448,10 +567,10 @@
 
         <div class="card-info">
           <h3>Shoreline by DAMAC</h3>
-          <p class="developer">Developer: DAMAC Properties | Luxury Beachfront</p>
-          <p class="price">Starting Price: 4,515,000 AED</p>
-          <p class="location">Al Marjan Island, Ras Al Khaimah</p>
-          <a href="javascript:void(0)" class="btn-card">Inquire & View Details</a>
+          <p class="developer">Developer: DAMAC Properties | Beachfront</p>
+          <p class="price">Starting AED 4,515,000</p>
+          <p class="location">📍 Al Marjan Island, Ras Al Khaimah</p>
+          <div class="btn-card">View Details & Floor Plans</div>
         </div>
       </div>
 
@@ -464,6 +583,7 @@
       <span class="close-modal" onclick="closeShorelineModal(event)">&times;</span>
       
       <div class="slider-container" style="height: 380px !important;">
+        <span class="slide-counter"><span class="current-slide">1</span> / 36</span>
         <button class="prev" onclick="moveCardSlide(this, -1)">&#10094;</button>
         <div class="slides">
           <img src="images16/slide1.png" class="slide active" alt="Shoreline Detail 1">
@@ -511,21 +631,15 @@
 
         <div class="modal-section-title">Project General Facts</div>
         <p class="modal-text">
-          Shoreline is a thoughtfully designed residential development that combines the comfort of private living with the atmosphere of a luxury resort. The project is centered around the concept of creating a permanent holiday lifestyle, where elegant architecture and carefully planned living spaces provide both relaxation and sophistication. Its design philosophy is heavily influenced by nature, particularly the fluidity of water and the organic beauty of sand dunes, resulting in a harmonious environment that blends contemporary architecture with natural inspiration.
+          Shoreline is a thoughtfully designed residential development that combines the comfort of private living with the atmosphere of a luxury resort. The project is centered around the concept of creating a permanent holiday lifestyle, where elegant architecture and carefully planned living spaces provide both relaxation and sophistication.
         </p>
         <p class="modal-text">
-          The development offers a resort-style living experience focused on wellness, leisure, and tranquility. Carefully designed communal spaces create a relaxing atmosphere where residents can enjoy the balance between luxury and comfort. The project's water-inspired concept extends throughout the shared areas, enhancing the sense of serenity and exclusivity. Landscaped surroundings, thoughtfully planned recreational facilities, and hospitality-oriented amenities contribute to a lifestyle that prioritizes relaxation while maintaining the conveniences of modern residential living.
-        </p>
-        <p class="modal-text">
-          The interiors feature modern finishing with high-quality materials, reflecting the project's refined and contemporary character. Soft forms, elegant details, and a carefully selected palette complement the nature-inspired design concept, creating welcoming and sophisticated living spaces. Each residence includes an equipped kitchen with appliances, while the apartments are delivered unfurnished, allowing homeowners the flexibility to personalize their interiors according to their individual preferences and lifestyle requirements.
+          The development offers a resort-style living experience focused on wellness, leisure, and tranquility. Carefully designed communal spaces create a relaxing atmosphere where residents can enjoy the balance between luxury and comfort.
         </p>
 
         <div class="modal-section-title">Location Description & Benefits</div>
         <p class="modal-text">
-          Al Marjan Island is one of the most prestigious coastal destinations in the United Arab Emirates, offering an exceptional combination of natural beauty, modern infrastructure, and resort-style living. This purpose-built island archipelago is known for its crystal-clear waters, expansive beaches, and thoughtfully designed waterfront communities, creating an atmosphere of tranquility and exclusivity that attracts both residents and international investors.
-        </p>
-        <p class="modal-text">
-          The island benefits from proximity to one of the region’s most exciting upcoming leisure destinations, the renowned Wynn Al Marjan Island Resort. The arrival of this world-class resort and entertainment destination is expected to further elevate the island’s global profile, bringing a vibrant mix of luxury hospitality, fine dining, and premium entertainment experiences. At the same time, the surrounding emirate of Ras Al Khaimah is celebrated for its diverse natural landscapes, ranging from scenic mountain ranges to vast deserts and protected coastlines, creating a truly unique environment that blends adventure with relaxation.
+          Al Marjan Island is one of the most prestigious coastal destinations in the UAE, offering an exceptional combination of natural beauty, modern infrastructure, and resort-style living. The island benefits from proximity to the upcoming Wynn Al Marjan Island Resort.
         </p>
 
         <div class="modal-grid-specs">
@@ -568,7 +682,7 @@
         <input type="tel" placeholder="Phone Number / WhatsApp" required>
         <select>
           <option>Shoreline by DAMAC (RAK)</option>
-          <option>Ras Al Khaimah Off-Plan</option>
+          <option>Ras Al Khaimah Off-Plan Investment</option>
         </select>
         <button type="submit" class="btn-submit">Submit Request</button>
       </form>
@@ -580,6 +694,7 @@
       const container = button.closest('.slider-container');
       if (!container) return;
       const slides = container.querySelectorAll('.slide');
+      const counter = container.querySelector('.current-slide');
       if (!slides.length) return;
 
       let activeIndex = -1;
@@ -593,6 +708,10 @@
       if (activeIndex === -1) activeIndex = 0;
       let newIndex = (activeIndex + direction + slides.length) % slides.length;
       slides[newIndex].classList.add('active');
+
+      if (counter) {
+        counter.textContent = newIndex + 1;
+      }
     }
 
     function openShorelineModal() {
@@ -606,6 +725,5 @@
       document.body.style.overflow = 'auto';
     }
   </script>
-  <script src="script.js"></script>
 </body>
 </html>
