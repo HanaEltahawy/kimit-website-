@@ -1188,7 +1188,7 @@
             <p style="margin: 6px 0; font-size: 0.95rem;"><strong>EMAIL:</strong> <a href="mailto:Info@kimituae.com" style="color: #d4af37; text-decoration: none; margin-left: 5px;">Info@kimituae.com</a></p>
         </div>
 
-        <form>
+        <form onsubmit="submitVipForm(event)">
             <input type="text" placeholder="Full Name" required>
             <input type="tel" placeholder="Phone Number / WhatsApp" required>
             <select>
@@ -1279,6 +1279,13 @@ document.addEventListener("DOMContentLoaded", function() {
         btn.disabled = false;
       });
     }
+        function closeModal(modalId) {
+  const modal = document.getElementById(modalId);
+  if (modal) {
+    modal.style.display = 'none';
+    modal.classList.remove('active');
+  }
+}
 </script>
     </body>
 </html>
