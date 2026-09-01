@@ -803,6 +803,32 @@
           <div class="btn-card">View Details & Floor Plans</div>
         </div>
       </div>
+      <!-- Mirasol by RAK Properties Card -->
+<div class="project-card">
+  <div class="card-image-slider">
+    <!-- أول مجموعة صور من أصل 31 صورة داخل مجلد images22 -->
+    <img src="images22/1.jpg" class="slide active" alt="Mirasol Mina Al Arab 1" loading="lazy">
+    <img src="images22/2.jpg" class="slide" alt="Mirasol Mina Al Arab 2" loading="lazy">
+    <img src="images22/3.jpg" class="slide" alt="Mirasol Mina Al Arab 3" loading="lazy">
+    <img src="images22/4.jpg" class="slide" alt="Mirasol Mina Al Arab 4" loading="lazy">
+    <img src="images22/5.jpg" class="slide" alt="Mirasol Mina Al Arab 5" loading="lazy">
+    
+    <button class="slider-btn prev" onclick="moveSlide(this, -1)">&#10094;</button>
+    <button class="slider-btn next" onclick="moveSlide(this, 1)">&#10095;</button>
+  </div>
+
+  <div class="card-content">
+    <span class="developer-badge">RAK Properties</span>
+    <h3>Mirasol</h3>
+    <p class="location"><i class="fas fa-map-marker-alt"></i> Raha Island, Mina Al Arab, RAK</p>
+    <p class="price">Starting from <strong>1,618,000 AED</strong></p>
+
+    <div class="card-buttons">
+      <button class="btn-secondary" onclick="openDetailsModal('mirasol-modal')">View Details</button>
+      <button class="btn-primary" onclick="openVipModal('Mirasol by RAK Properties')">Request VIP Consultation</button>
+    </div>
+  </div>
+</div>
 
     </div>
   </section>
@@ -1006,6 +1032,7 @@
         <input type="text" placeholder="Full Name" required>
         <input type="tel" placeholder="Phone Number / WhatsApp" required>
         <select>
+          <option>Mirasol Mina by RAK Properties (RAK)</option>
           <option>Skai Mina by RAK Properties (RAK)</option>
           <option>Address Residences by Emaar (RAK)</option>
           <option>Soto Grande by Ellington (RAK)</option>
@@ -1302,6 +1329,25 @@
         </div>
         <button class="next" onclick="moveCardSlide(this, 1)">&#10095;</button>
       </div>
+      <!-- Mirasol Details Modal -->
+<div id="mirasol-modal" class="lightbox-modal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeModal('mirasol-modal')">&times;</span>
+    <h2>Mirasol - Mina Al Arab</h2>
+    <p class="modal-developer"><strong>Developer:</strong> RAK Properties</p>
+    <p class="modal-price"><strong>Starting Price:</strong> 1,618,000 AED</p>
+    
+    <div class="modal-body">
+      <h4>Project Overview</h4>
+      <p>Mirasol is a resort-inspired residential development located on Mina Al Arab, offering a refined island lifestyle surrounded by panoramic sea views and natural beauty. The project features studios, 1 & 2-bedroom apartments, spacious 3-bedroom duplexes, and exclusive penthouses, all designed to capture breathtaking sunsets and uninterrupted waterfront vistas from cascading rooftops.</p>
+      
+      <h4>Location & Lifestyle</h4>
+      <p>Raha Island, nestled in Mina Al Arab, Ras Al-Khaimah, offers a tranquil escape with pristine beaches, azure waters, verdant mangroves, and lush palm trees. Residents enjoy access to kayaking, snorkeling, and scenic walking and cycling trails.</p>
+    </div>
+
+    <button class="btn-primary" onclick="openVipModal('Mirasol by RAK Properties')" style="margin-top: 15px; width: 100%;">Request VIP Consultation</button>
+  </div>
+</div>
 
       <div class="modal-body">
         <h2>Anantara Mina Residences by RAK Properties</h2>
