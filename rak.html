@@ -709,6 +709,51 @@
           <div class="btn-card">View Details & Floor Plans</div>
         </div>
       </div>
+      <!-- 5. Skai Mina Card -->
+      <div class="project-card" onclick="openSkaiMinaModal()">
+        <div class="slider-container" onclick="event.stopPropagation()">
+          <span class="tag-badge">Mina Al Arab</span>
+          <span class="slide-counter"><span class="current-slide">1</span> / 26</span>
+          <button class="prev" onclick="moveCardSlide(this, -1)">&#10094;</button>
+          <div class="slides">
+            <img src="images20/slide1.png" class="slide active" alt="Skai Mina 1">
+            <img src="images20/slide2.png" class="slide" alt="Skai Mina 2">
+            <img src="images20/slide3.png" class="slide" alt="Skai Mina 3">
+            <img src="images20/slide4.png" class="slide" alt="Skai Mina 4">
+            <img src="images20/slide5.png" class="slide" alt="Skai Mina 5">
+            <img src="images20/slide6.png" class="slide" alt="Skai Mina 6">
+            <img src="images20/slide7.png" class="slide" alt="Skai Mina 7">
+            <img src="images20/slide8.png" class="slide" alt="Skai Mina 8">
+            <img src="images20/slide9.png" class="slide" alt="Skai Mina 9">
+            <img src="images20/slide10.png" class="slide" alt="Skai Mina 10">
+            <img src="images20/slide11.png" class="slide" alt="Skai Mina 11">
+            <img src="images20/slide12.png" class="slide" alt="Skai Mina 12">
+            <img src="images20/slide13.png" class="slide" alt="Skai Mina 13">
+            <img src="images20/slide14.png" class="slide" alt="Skai Mina 14">
+            <img src="images20/slide15.png" class="slide" alt="Skai Mina 15">
+            <img src="images20/slide16.png" class="slide" alt="Skai Mina 16">
+            <img src="images20/slide17.png" class="slide" alt="Skai Mina 17">
+            <img src="images20/slide18.png" class="slide" alt="Skai Mina 18">
+            <img src="images20/slide19.png" class="slide" alt="Skai Mina 19">
+            <img src="images20/slide20.png" class="slide" alt="Skai Mina 20">
+            <img src="images20/slide21.png" class="slide" alt="Skai Mina 21">
+            <img src="images20/slide22.png" class="slide" alt="Skai Mina 22">
+            <img src="images20/slide23.png" class="slide" alt="Skai Mina 23">
+            <img src="images20/slide24.png" class="slide" alt="Skai Mina 24">
+            <img src="images20/slide25.png" class="slide" alt="Skai Mina 25">
+            <img src="images20/slide26.png" class="slide" alt="Skai Mina 26">
+          </div>
+          <button class="next" onclick="moveCardSlide(this, 1)">&#10095;</button>
+        </div>
+
+        <div class="card-info">
+          <h3>Skai Mina by RAK Properties</h3>
+          <p class="developer">Developer: RAK Properties | Waterfront Luxury</p>
+          <p class="price">Starting AED 1,610,000</p>
+          <p class="location">📍 Mina Al Arab, Ras Al Khaimah</p>
+          <div class="btn-card">View Details & Floor Plans</div>
+        </div>
+      </div>
 
     </div>
   </section>
@@ -912,6 +957,7 @@
         <input type="text" placeholder="Full Name" required>
         <input type="tel" placeholder="Phone Number / WhatsApp" required>
         <select>
+          <option>Skai Mina by RAK Properties (RAK)</option>
           <option>Address Residences by Emaar (RAK)</option>
           <option>Soto Grande by Ellington (RAK)</option>
           <option>Costa Mare by Ellington (RAK)</option>
@@ -1083,6 +1129,88 @@
       </div>
     </div>
   </div>
+  <!-- Modal 5: Skai Mina -->
+  <div class="modal-overlay" id="skaimina-modal" onclick="closeSkaiMinaModal(event)">
+    <div class="modal-content" onclick="event.stopPropagation()">
+      <span class="close-modal" onclick="closeSkaiMinaModal(event)">&times;</span>
+      
+      <div class="slider-container" style="height: 380px !important;">
+        <span class="slide-counter"><span class="current-slide">1</span> / 26</span>
+        <button class="prev" onclick="moveCardSlide(this, -1)">&#10094;</button>
+        <div class="slides">
+          <img src="images20/slide1.png" class="slide active" alt="Skai Mina Detail 1">
+          <img src="images20/slide2.png" class="slide" alt="Skai Mina Detail 2">
+          <img src="images20/slide3.png" class="slide" alt="Skai Mina Detail 3">
+          <img src="images20/slide4.png" class="slide" alt="Skai Mina Detail 4">
+          <img src="images20/slide5.png" class="slide" alt="Skai Mina Detail 5">
+          <img src="images20/slide6.png" class="slide" alt="Skai Mina Detail 6">
+          <img src="images20/slide7.png" class="slide" alt="Skai Mina Detail 7">
+          <img src="images20/slide8.png" class="slide" alt="Skai Mina Detail 8">
+          <img src="images20/slide9.png" class="slide" alt="Skai Mina Detail 9">
+          <img src="images20/slide10.png" class="slide" alt="Skai Mina Detail 10">
+          <img src="images20/slide11.png" class="slide" alt="Skai Mina Detail 11">
+          <img src="images20/slide12.png" class="slide" alt="Skai Mina Detail 12">
+          <img src="images20/slide13.png" class="slide" alt="Skai Mina Detail 13">
+          <img src="images20/slide14.png" class="slide" alt="Skai Mina Detail 14">
+          <img src="images20/slide15.png" class="slide" alt="Skai Mina Detail 15">
+          <img src="images20/slide16.png" class="slide" alt="Skai Mina Detail 16">
+          <img src="images20/slide17.png" class="slide" alt="Skai Mina Detail 17">
+          <img src="images20/slide18.png" class="slide" alt="Skai Mina Detail 18">
+          <img src="images20/slide19.png" class="slide" alt="Skai Mina Detail 19">
+          <img src="images20/slide20.png" class="slide" alt="Skai Mina Detail 20">
+          <img src="images20/slide21.png" class="slide" alt="Skai Mina Detail 21">
+          <img src="images20/slide22.png" class="slide" alt="Skai Mina Detail 22">
+          <img src="images20/slide23.png" class="slide" alt="Skai Mina Detail 23">
+          <img src="images20/slide24.png" class="slide" alt="Skai Mina Detail 24">
+          <img src="images20/slide25.png" class="slide" alt="Skai Mina Detail 25">
+          <img src="images20/slide26.png" class="slide" alt="Skai Mina Detail 26">
+        </div>
+        <button class="next" onclick="moveCardSlide(this, 1)">&#10095;</button>
+      </div>
+
+      <div class="modal-body">
+        <h2>Skai Mina by RAK Properties</h2>
+
+        <div class="modal-section-title">Project General Facts</div>
+        <p class="modal-text">
+          Skai Mina is a masterpiece of design inspired by the rhythm of water, located on Raha Island in Mina Al Arab. Boasting striking waterfront views, it features residences ranging from studios to 3-bedroom penthouses, each thoughtfully crafted with modern interiors, functional layouts, and private balconies.
+        </p>
+        <p class="modal-text">
+          Wellness and lifestyle are seamlessly integrated via The Skai Club, featuring a zen garden, outdoor gym, padel court, infinity pool, yoga pavilion, BBQ area, and junior playland.
+        </p>
+
+        <div class="modal-section-title">Location Description & Benefits</div>
+        <p class="modal-text">
+          Nestled along the vibrant canals of Raha Island in Mina Al Arab, this location offers a tranquil island sanctuary framed by pristine coastline. Neighboring iconic resorts such as Four Seasons, Nikki Beach, Anantara, and InterContinental, the area includes Mina Boulevard, Mina Harbour, and the upcoming Mina Yacht Club.
+        </p>
+
+        <div class="modal-grid-specs">
+          <div class="spec-card">
+            <h4>Property & Parking Overview</h4>
+            <ul>
+              <li>✓ <strong>Studio, 1 & 2 Bed:</strong> 1 Parking Space</li>
+              <li>✓ <strong>3 Bed Penthouses:</strong> 2 Parking Spaces</li>
+              <li>✓ <strong>Developer:</strong> RAK Properties</li>
+              <li>✓ <strong>Starting Price:</strong> AED 1,610,000</li>
+            </ul>
+          </div>
+
+          <div class="spec-card">
+            <h4>World-Class Amenities (The Skai Club)</h4>
+            <ul>
+              <li>✓ Infinity Pool & Zen Garden</li>
+              <li>✓ Outdoor Gym & Yoga Pavilion</li>
+              <li>✓ Padel Court & BBQ Area</li>
+              <li>✓ Junior Playland & Waterfront Promenade</li>
+              <li>✓ Floor-to-Ceiling Windows & Private Balconies</li>
+            </ul>
+          </div>
+        </div>
+
+        <a href="#contact" onclick="closeSkaiMinaModal(event);" class="btn-modal-action">Request VIP Consultation</a>
+      </div>
+    </div>
+  </div>
 
   <script>
     function moveCardSlide(button, direction) {
@@ -1161,6 +1289,17 @@ function closeAddressMarjanModal(e) {
   document.getElementById('addressmarjan-modal').classList.remove('active');
   document.body.style.overflow = 'auto';
 }
+    /* Skai Mina Modal Functions */
+    function openSkaiMinaModal() {
+      document.getElementById('skaimina-modal').classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeSkaiMinaModal(e) {
+      if (e) e.stopPropagation();
+      document.getElementById('skaimina-modal').classList.remove('active');
+      document.body.style.overflow = 'auto';
+    }
 
   </script>
   
