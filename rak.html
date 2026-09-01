@@ -7,7 +7,56 @@
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="stylesheet" href="style.css">
   <style>
-    /* Hero Tag Styling */
+    /* Fixed Header Flexbox Styles */
+    .header {
+      display: flex !important;
+      justify-content: space-between !important;
+      align-items: center !important;
+      padding: 18px 40px !important;
+      background-color: #05070a !important;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .logo {
+      font-size: 20px;
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: 2px;
+    }
+    .logo span {
+      color: #dfb45b;
+      font-weight: 300;
+    }
+    .nav {
+      display: flex !important;
+      align-items: center !important;
+      gap: 25px !important;
+    }
+    .nav a {
+      color: #a0aec0;
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.3s;
+    }
+    .nav a:hover {
+      color: #fff;
+    }
+    .btn-nav {
+      background: linear-gradient(135deg, #dfb45b 0%, #c9a050 100%) !important;
+      color: #000 !important;
+      padding: 9px 20px !important;
+      border-radius: 6px;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+    .btn-nav:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(223, 180, 91, 0.3);
+    }
+
+    /* Hero Badge */
     .hero-badge {
       display: inline-block;
       border: 1px solid #dfb45b;
@@ -34,7 +83,7 @@
     </nav>
   </header>
 
-  <!-- Hero Section (Matches Dubai Header) -->
+  <!-- Hero Section -->
   <section class="hero" style="background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('images3/rak-bg.jpg') center/cover no-repeat; text-align: center; padding: 80px 20px 60px;">
     <div class="hero-content">
       <span class="hero-badge">EXCLUSIVE PORTFOLIO</span>
@@ -121,7 +170,7 @@
     </div>
   </section>
 
-  <!-- Dedicated Slider Controller Script -->
+  <!-- Slider Script -->
   <script>
     function moveCardSlide(button, direction) {
       const container = button.closest('.slider-container');
