@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ras Al Khaimah Projects - Kimit Real Estate</title>
+  <title>Ras Al Khaimah Offplan Projects - Kimit Real Estate</title>
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="stylesheet" href="style.css">
   <style>
-    /* Navigation Header */
+    /* Fixed Navigation Header Matching Dubai Page */
     .header {
       display: flex !important;
       justify-content: space-between !important;
@@ -50,11 +50,45 @@
       border-radius: 6px;
       font-weight: 600;
       transition: 0.3s;
+      text-decoration: none;
+    }
+
+    /* Compact Hero Banner with EXCLUSIVE PORTFOLIO Badge */
+    .hero {
+      background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('images3/rak-bg.jpg') center/cover no-repeat;
+      text-align: center;
+      padding: 40px 20px 35px !important;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    .hero-badge {
+      display: inline-block;
+      border: 1px solid #dfb45b;
+      color: #dfb45b;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      padding: 5px 16px;
+      border-radius: 20px;
+      margin-bottom: 14px;
+      text-transform: uppercase;
+    }
+    .hero h1 {
+      font-size: 36px !important;
+      font-weight: 700 !important;
+      color: #ffffff !important;
+      margin: 0 0 10px 0 !important;
+      letter-spacing: -0.5px;
+    }
+    .hero p {
+      color: #a0aec0 !important;
+      font-size: 15px !important;
+      margin: 0 !important;
+      font-weight: 400;
     }
 
     /* Grid & Cards Section */
     .projects {
-      padding: 60px 20px;
+      padding: 40px 20px;
       max-width: 1280px;
       margin: 0 auto;
     }
@@ -262,14 +296,10 @@
       margin-top: 25px;
       transition: 0.3s;
     }
-    .btn-modal-action:hover {
-      box-shadow: 0 4px 15px rgba(223, 180, 91, 0.4);
-    }
   </style>
 </head>
 <body>
 
-  <!-- Navigation Header -->
   <header class="header">
     <div class="logo">KIMIT <span>REAL ESTATE</span></div>
     <nav class="nav">
@@ -279,20 +309,17 @@
     </nav>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero" style="background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('images3/rak-bg.jpg') center/cover no-repeat; text-align: center; padding: 80px 20px 60px;">
+  <section class="hero">
     <div class="hero-content">
-      <span style="display: inline-block; border: 1px solid #dfb45b; color: #dfb45b; font-size: 11px; letter-spacing: 2px; padding: 4px 14px; border-radius: 20px; text-transform: uppercase; margin-bottom: 15px; font-weight: 600;">EXCLUSIVE PORTFOLIO</span>
-      <h1 style="font-size: 38px; color: #fff; margin-bottom: 10px;">Ras Al Khaimah Offplan Projects</h1>
-      <p style="color: #a0aec0; font-size: 16px;">Premium Off-Plan Investments in High-ROI Locations</p>
+      <div class="hero-badge">EXCLUSIVE PORTFOLIO</div>
+      <h1>Ras Al Khaimah Offplan Projects</h1>
+      <p>Premium Off-Plan Investments in High-ROI Locations</p>
     </div>
   </section>
 
-  <!-- Projects Grid Section -->
   <section class="projects" id="featured">
     <div class="grid">
 
-      <!-- Shoreline Project Card -->
       <div class="project-card" onclick="openShorelineModal()">
         <div class="slider-container" onclick="event.stopPropagation()">
           <button class="prev" onclick="moveCardSlide(this, -1)">&#10094;</button>
@@ -349,12 +376,10 @@
     </div>
   </section>
 
-  <!-- POPUP MODAL FOR SHORELINE -->
   <div class="modal-overlay" id="shoreline-modal" onclick="closeShorelineModal(event)">
     <div class="modal-content" onclick="event.stopPropagation()">
       <span class="close-modal" onclick="closeShorelineModal(event)">&times;</span>
       
-      <!-- Slider Inside Modal -->
       <div class="slider-container" style="height: 380px;">
         <button class="prev" onclick="moveCardSlide(this, -1)">&#10094;</button>
         <div class="slides">
@@ -453,7 +478,6 @@
     </div>
   </div>
 
-  <!-- Lead Form Section -->
   <section class="contact-section" id="contact" style="padding: 60px 20px;">
     <div class="form-container">
       <h2>Get VIP Investment Consultation</h2>
@@ -470,7 +494,6 @@
     </div>
   </section>
 
-  <!-- JavaScript Controls -->
   <script>
     function moveCardSlide(button, direction) {
       const container = button.closest('.slider-container');
