@@ -7,27 +7,40 @@
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="stylesheet" href="style.css">
   <style>
+    /* Global Reset & Base */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background-color: #05070a !important;
+      color: #e2e8f0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
+      line-height: 1.5;
+    }
+
     /* Fixed Navigation Header Matching Dubai Page */
     .header {
       display: flex !important;
       justify-content: space-between !important;
       align-items: center !important;
-      padding: 18px 40px !important;
+      padding: 16px 40px !important;
       background-color: #05070a !important;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+      position: sticky !important;
+      top: 0 !important;
+      z-index: 1000 !important;
     }
     .logo {
-      font-size: 20px;
-      font-weight: 800;
-      color: #fff;
-      letter-spacing: 2px;
+      font-size: 20px !important;
+      font-weight: 800 !important;
+      color: #ffffff !important;
+      letter-spacing: 2px !important;
     }
     .logo span {
-      color: #dfb45b;
-      font-weight: 300;
+      color: #dfb45b !important;
+      font-weight: 300 !important;
     }
     .nav {
       display: flex !important;
@@ -35,94 +48,95 @@
       gap: 25px !important;
     }
     .nav a {
-      color: #a0aec0;
-      text-decoration: none;
-      font-size: 14px;
-      transition: color 0.3s;
+      color: #a0aec0 !important;
+      text-decoration: none !important;
+      font-size: 14px !important;
+      transition: color 0.3s !important;
     }
     .nav a:hover {
-      color: #fff;
+      color: #ffffff !important;
     }
     .btn-nav {
       background: linear-gradient(135deg, #dfb45b 0%, #c9a050 100%) !important;
-      color: #000 !important;
-      padding: 9px 20px !important;
-      border-radius: 6px;
-      font-weight: 600;
-      transition: 0.3s;
-      text-decoration: none;
+      color: #000000 !important;
+      padding: 8px 18px !important;
+      border-radius: 6px !important;
+      font-weight: 600 !important;
+      text-decoration: none !important;
     }
 
-    /* Compact Hero Banner with EXCLUSIVE PORTFOLIO Badge */
+    /* Hero Banner matching Dubai style */
     .hero {
-      background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('images3/rak-bg.jpg') center/cover no-repeat;
-      text-align: center;
-      padding: 40px 20px 35px !important;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('images3/rak-bg.jpg') center/cover no-repeat !important;
+      text-align: center !important;
+      padding: 45px 20px 40px !important;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
     }
     .hero-badge {
-      display: inline-block;
-      border: 1px solid #dfb45b;
-      color: #dfb45b;
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 2px;
-      padding: 5px 16px;
-      border-radius: 20px;
-      margin-bottom: 14px;
-      text-transform: uppercase;
+      display: inline-block !important;
+      border: 1px solid #dfb45b !important;
+      color: #dfb45b !important;
+      font-size: 11px !important;
+      font-weight: 600 !important;
+      letter-spacing: 2px !important;
+      padding: 6px 22px !important;
+      border-radius: 50px !important;
+      text-transform: uppercase !important;
+      margin-bottom: 16px !important;
+      background: rgba(223, 180, 91, 0.05) !important;
     }
     .hero h1 {
-      font-size: 36px !important;
+      font-size: 38px !important;
       font-weight: 700 !important;
       color: #ffffff !important;
       margin: 0 0 10px 0 !important;
-      letter-spacing: -0.5px;
+      letter-spacing: -0.5px !important;
     }
     .hero p {
       color: #a0aec0 !important;
       font-size: 15px !important;
       margin: 0 !important;
-      font-weight: 400;
+      font-weight: 400 !important;
     }
 
-    /* Grid & Cards Section */
+    /* Grid & Cards Layout Matching Dubai Page */
     .projects {
-      padding: 40px 20px;
-      max-width: 1280px;
-      margin: 0 auto;
+      padding: 50px 20px !important;
+      max-width: 1200px !important;
+      margin: 0 auto !important;
     }
     .grid {
       display: grid !important;
-      grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)) !important;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)) !important;
       gap: 30px !important;
     }
     .project-card {
-      background: #0b0e14 !important;
+      background: #0c1017 !important;
       border: 1px solid rgba(255, 255, 255, 0.08) !important;
       border-radius: 12px !important;
       overflow: hidden !important;
       display: flex !important;
       flex-direction: column !important;
-      cursor: pointer;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer !important;
+      transition: transform 0.3s ease, box-shadow 0.3s ease !important;
     }
     .project-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+      transform: translateY(-5px) !important;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.6) !important;
+      border-color: rgba(223, 180, 91, 0.3) !important;
     }
     .slider-container {
       position: relative !important;
       width: 100% !important;
-      height: 250px !important;
+      height: 240px !important;
       overflow: hidden !important;
-      background: #000;
+      background: #000 !important;
     }
     .slider-container img.slide {
       width: 100% !important;
       height: 100% !important;
       object-fit: cover !important;
-      display: none;
+      display: none !important;
     }
     .slider-container img.slide.active {
       display: block !important;
@@ -133,7 +147,7 @@
       transform: translateY(-50%) !important;
       background: rgba(0, 0, 0, 0.6) !important;
       color: #dfb45b !important;
-      border: 1px solid rgba(223, 180, 91, 0.5) !important;
+      border: 1px solid rgba(223, 180, 91, 0.4) !important;
       border-radius: 50% !important;
       width: 34px !important;
       height: 34px !important;
@@ -142,52 +156,55 @@
       display: flex !important;
       align-items: center !important;
       justify-content: center !important;
+      user-select: none !important;
     }
     .slider-container .prev { left: 12px !important; }
     .slider-container .next { right: 12px !important; }
 
     .card-info {
-      padding: 24px !important;
+      padding: 22px !important;
       display: flex !important;
       flex-direction: column !important;
       flex-grow: 1 !important;
     }
     .card-info h3 {
-      color: #fff !important;
+      color: #ffffff !important;
       font-size: 20px !important;
-      margin: 0 0 8px 0 !important;
+      font-weight: 700 !important;
+      margin: 0 0 6px 0 !important;
     }
     .card-info .developer {
       color: #a0aec0 !important;
       font-size: 13px !important;
-      margin-bottom: 15px !important;
+      margin-bottom: 16px !important;
     }
     .card-info .price {
       color: #dfb45b !important;
       font-weight: 700 !important;
       font-size: 15px !important;
-      margin-bottom: 6px !important;
+      margin-bottom: 4px !important;
     }
     .card-info .location {
-      color: #718096 !important;
+      color: #a0aec0 !important;
       font-size: 13px !important;
       margin-bottom: 22px !important;
     }
     .btn-card {
       display: block !important;
       text-align: center !important;
-      padding: 12px !important;
+      padding: 11px !important;
       border: 1px solid #dfb45b !important;
       color: #dfb45b !important;
       border-radius: 6px !important;
       text-decoration: none !important;
       font-weight: 600 !important;
+      font-size: 14px !important;
       margin-top: auto !important;
-      transition: 0.3s !important;
+      transition: all 0.3s ease !important;
     }
     .btn-card:hover {
       background: #dfb45b !important;
-      color: #000 !important;
+      color: #000000 !important;
     }
 
     /* Modal Overlay Styles */
@@ -296,10 +313,67 @@
       margin-top: 25px;
       transition: 0.3s;
     }
+
+    /* Contact Form Styling */
+    .contact-section {
+      padding: 60px 20px !important;
+      background: #080b10 !important;
+      border-top: 1px solid rgba(255, 255, 255, 0.05) !important;
+    }
+    .form-container {
+      max-width: 550px;
+      margin: 0 auto;
+      background: #0c1017;
+      padding: 35px;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .form-container h2 {
+      color: #dfb45b;
+      font-size: 22px;
+      margin-bottom: 8px;
+      text-align: center;
+    }
+    .form-container p {
+      color: #a0aec0;
+      font-size: 14px;
+      text-align: center;
+      margin-bottom: 25px;
+    }
+    .form-container input, .form-container select {
+      width: 100%;
+      padding: 12px 15px;
+      margin-bottom: 15px;
+      background: #05070a;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 6px;
+      color: #fff;
+      font-size: 14px;
+      outline: none;
+    }
+    .form-container input:focus, .form-container select:focus {
+      border-color: #dfb45b;
+    }
+    .btn-submit {
+      width: 100%;
+      padding: 12px;
+      background: linear-gradient(135deg, #dfb45b 0%, #c9a050 100%);
+      color: #000;
+      border: none;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 15px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .btn-submit:hover {
+      opacity: 0.9;
+    }
   </style>
 </head>
 <body>
 
+  <!-- Header -->
   <header class="header">
     <div class="logo">KIMIT <span>REAL ESTATE</span></div>
     <nav class="nav">
@@ -309,6 +383,7 @@
     </nav>
   </header>
 
+  <!-- Hero Section -->
   <section class="hero">
     <div class="hero-content">
       <div class="hero-badge">EXCLUSIVE PORTFOLIO</div>
@@ -317,9 +392,11 @@
     </div>
   </section>
 
+  <!-- Projects Section (Grid Layout) -->
   <section class="projects" id="featured">
     <div class="grid">
 
+      <!-- Shoreline Card -->
       <div class="project-card" onclick="openShorelineModal()">
         <div class="slider-container" onclick="event.stopPropagation()">
           <button class="prev" onclick="moveCardSlide(this, -1)">&#10094;</button>
@@ -376,11 +453,12 @@
     </div>
   </section>
 
+  <!-- Modal View Details -->
   <div class="modal-overlay" id="shoreline-modal" onclick="closeShorelineModal(event)">
     <div class="modal-content" onclick="event.stopPropagation()">
       <span class="close-modal" onclick="closeShorelineModal(event)">&times;</span>
       
-      <div class="slider-container" style="height: 380px;">
+      <div class="slider-container" style="height: 380px !important;">
         <button class="prev" onclick="moveCardSlide(this, -1)">&#10094;</button>
         <div class="slides">
           <img src="images16/slide1.png" class="slide active" alt="Shoreline Detail 1">
@@ -444,9 +522,6 @@
         <p class="modal-text">
           The island benefits from proximity to one of the region’s most exciting upcoming leisure destinations, the renowned Wynn Al Marjan Island Resort. The arrival of this world-class resort and entertainment destination is expected to further elevate the island’s global profile, bringing a vibrant mix of luxury hospitality, fine dining, and premium entertainment experiences. At the same time, the surrounding emirate of Ras Al Khaimah is celebrated for its diverse natural landscapes, ranging from scenic mountain ranges to vast deserts and protected coastlines, creating a truly unique environment that blends adventure with relaxation.
         </p>
-        <p class="modal-text">
-          Connectivity is another significant advantage of the area. The island enjoys convenient access to Ras Al Khaimah International Airport, as well as quick links to major transportation routes leading to Dubai and other key emirates. This accessibility allows residents to enjoy a peaceful seaside lifestyle while remaining closely connected to the region’s main business, cultural, and entertainment hubs. Combined with the island’s growing collection of luxury resorts, waterfront promenades, marinas, and leisure attractions, the location offers an exceptional environment for both lifestyle living and long-term investment potential.
-        </p>
 
         <div class="modal-grid-specs">
           <div class="spec-card">
@@ -473,12 +548,13 @@
           </div>
         </div>
 
-        <a href="#contact" onclick="closeShorelineModal(); openConsultation('Shoreline - DAMAC RAK');" class="btn-modal-action">Request VIP Consultation</a>
+        <a href="#contact" onclick="closeShorelineModal(event);" class="btn-modal-action">Request VIP Consultation</a>
       </div>
     </div>
   </div>
 
-  <section class="contact-section" id="contact" style="padding: 60px 20px;">
+  <!-- Contact Form -->
+  <section class="contact-section" id="contact">
     <div class="form-container">
       <h2>Get VIP Investment Consultation</h2>
       <p>Leave your details and our senior property consultants will reach out directly.</p>
