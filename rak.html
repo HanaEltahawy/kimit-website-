@@ -803,7 +803,7 @@
           <div class="btn-card">View Details & Floor Plans</div>
         </div>
       </div>
-   <div class="project-card" onclick="openModal('mirasol-modal')">
+   <div class="project-card" onclick="openMirasolModal()">
     <div class="slider-container" onclick="event.stopPropagation()">
       <span class="tag-badge">Mina Al Arab</span>
       <span class="slide-counter"><span class="current-slide">1</span> / 31</span>
@@ -1431,25 +1431,28 @@
       </div>
     </div>
   </div>
-  <div id="mirasol-modal" class="lightbox-modal">
-    <div class="modal-content">
-      <span class="close-btn" onclick="closeModal('mirasol-modal')">&times;</span>
-      <h2>Mirasol - Mina Al Arab</h2>
-      <p class="modal-developer"><strong>Developer:</strong> RAK Properties</p>
-      <p class="modal-price"><strong>Starting Price:</strong> 1,618,000 AED</p>
+  <!-- Mirasol Details Modal -->
+<div id="mirasolModal" class="project-modal" style="display: none;">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeMirasolModal()">&times;</span>
+    <h2>Mirasol by RAK Properties</h2>
+    <p class="modal-developer"><strong>Developer:</strong> RAK Properties | Waterfront</p>
+    <p class="modal-price"><strong>Starting Price:</strong> AED 1,618,000</p>
 
-      <div class="modal-body">
+    <div class="modal-body">
+      <div class="spec-card">
         <h4>Project Overview</h4>
         <p>Mirasol is a resort-inspired residential development located on Mina Al Arab, offering a refined island lifestyle surrounded by panoramic sea views and natural beauty.</p>
-
+      </div>
+      <div class="spec-card">
         <h4>Location & Lifestyle</h4>
         <p>Raha Island, nestled in Mina Al Arab, Ras Al Khaimah, offers a tranquil escape with pristine beaches, azure waters, verdant mangroves, and lush palm trees.</p>
       </div>
-
-      <button class="btn-primary" onclick="openVipModal('Mirasol by RAK Properties')" style="margin-top: 15px; width: 100%;">Request VIP Consultation</button>
     </div>
-  </div>
 
+    <a href="#contact" onclick="closeMirasolModal(event);" class="btn-modal-action">Request VIP Consultation</a>
+  </div>
+</div>
   <script>
     function moveCardSlide(button, direction) {
       const container = button.closest('.slider-container');
@@ -1549,6 +1552,17 @@ function closeAddressMarjanModal(e) {
       document.getElementById('anantaramina-modal').classList.remove('active');
       document.body.style.overflow = 'auto';
     }
+    /* Mirasol Modal Functions */
+function openMirasolModal() {
+  document.getElementById('mirasolModal').classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeMirasolModal(e) {
+  if (e) e.stopPropagation();
+  document.getElementById('mirasolModal').classList.remove('active');
+  document.body.style.overflow = 'auto';
+}
 
   </script>
   
