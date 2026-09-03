@@ -852,6 +852,59 @@
       <div class="btn-card">View Details & Floor Plans</div>
     </div>
   </div>
+      <!-- 8. Nura Project Card -->
+  <div class="project-card" onclick="openNuraModal()">
+    <div class="slider-container" onclick="event.stopPropagation()">
+      <span class="tag-badge">Mina Al Arab</span>
+      <span class="slide-counter"><span class="current-slide">1</span> / 34</span>
+      <button class="prev" onclick="moveCardSlide(this, -1)">&#10094;</button>
+      <div class="slides">
+        <img src="images23/slide1.png" class="slide active" alt="Nura 1">
+        <img src="images23/slide2.png" class="slide" alt="Nura 2">
+        <img src="images23/slide3.png" class="slide" alt="Nura 3">
+        <img src="images23/slide4.png" class="slide" alt="Nura 4">
+        <img src="images23/slide5.png" class="slide" alt="Nura 5">
+        <img src="images23/slide6.png" class="slide" alt="Nura 6">
+        <img src="images23/slide7.png" class="slide" alt="Nura 7">
+        <img src="images23/slide8.png" class="slide" alt="Nura 8">
+        <img src="images23/slide9.png" class="slide" alt="Nura 9">
+        <img src="images23/slide10.png" class="slide" alt="Nura 10">
+        <img src="images23/slide11.png" class="slide" alt="Nura 11">
+        <img src="images23/slide12.png" class="slide" alt="Nura 12">
+        <img src="images23/slide13.png" class="slide" alt="Nura 13">
+        <img src="images23/slide14.png" class="slide" alt="Nura 14">
+        <img src="images23/slide15.png" class="slide" alt="Nura 15">
+        <img src="images23/slide16.png" class="slide" alt="Nura 16">
+        <img src="images23/slide17.png" class="slide" alt="Nura 17">
+        <img src="images23/slide18.png" class="slide" alt="Nura 18">
+        <img src="images23/slide19.png" class="slide" alt="Nura 19">
+        <img src="images23/slide20.png" class="slide" alt="Nura 20">
+        <img src="images23/slide21.png" class="slide" alt="Nura 21">
+        <img src="images23/slide22.png" class="slide" alt="Nura 22">
+        <img src="images23/slide23.png" class="slide" alt="Nura 23">
+        <img src="images23/slide24.png" class="slide" alt="Nura 24">
+        <img src="images23/slide25.png" class="slide" alt="Nura 25">
+        <img src="images23/slide26.png" class="slide" alt="Nura 26">
+        <img src="images23/slide27.png" class="slide" alt="Nura 27">
+        <img src="images23/slide28.png" class="slide" alt="Nura 28">
+        <img src="images23/slide29.png" class="slide" alt="Nura 29">
+        <img src="images23/slide30.png" class="slide" alt="Nura 30">
+        <img src="images23/slide31.png" class="slide" alt="Nura 31">
+        <img src="images23/slide32.png" class="slide" alt="Nura 32">
+        <img src="images23/slide33.png" class="slide" alt="Nura 33">
+        <img src="images23/slide34.png" class="slide" alt="Nura 34">
+      </div>
+      <button class="next" onclick="moveCardSlide(this, 1)">&#10095;</button>
+    </div>
+
+    <div class="card-info">
+      <h3>Nura by RAK Properties</h3>
+      <p class="developer">Developer: RAK Properties | Coastal Urban</p>
+      <p class="price">Starting AED 1,297,000</p>
+      <p class="location">📍 Downtown Mina, Mina Al Arab, RAK</p>
+      <div class="btn-card">View Details & Floor Plans</div>
+    </div>
+  </div>
 
     </div>
   </section>
@@ -1055,6 +1108,7 @@
         <input type="text" placeholder="Full Name" required>
         <input type="tel" placeholder="Phone Number / WhatsApp" required>
         <select>
+          <option>Nura by RAK Properties (RAK)</option>
           <option>Mirasol Mina by RAK Properties (RAK)</option>
           <option>Skai Mina by RAK Properties (RAK)</option>
           <option>Address Residences by Emaar (RAK)</option>
@@ -1387,6 +1441,35 @@
     <button class="btn-modal-action" onclick="openVipModal('Mirasol by RAK Properties')">Request VIP Consultation</button>
   </div>
 </div>
+      <!-- 8. Nura Details Modal -->
+  <div id="nuraModal" class="project-modal" style="display: none;">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeNuraModal()">&times;</span>
+      <h2>Nura by RAK Properties</h2>
+      <p class="modal-developer"><strong>Developer:</strong> RAK Properties | Downtown Mina</p>
+      <p class="modal-price"><strong>Starting Price:</strong> AED 1,297,000</p>
+
+      <div class="modal-body">
+        <div class="spec-card">
+          <h4>Project Overview</h4>
+          <p>Nura is a distinctive residential development in Downtown Mina, offering a lifestyle where coastal calm meets contemporary urban rhythm. Features studios to penthouses with expansive glazing, natural light, and refined modern aesthetics.</p>
+        </div>
+        <div class="spec-card">
+          <h4>Location & Amenities</h4>
+          <p>Situated in Mina Al Arab with direct links to the harbour, park, and boulevard. Includes access to waterfront cafés, boutiques, marina, biking/hiking trails, and natural wetlands along Sheikh Muhammad Bin Salem Road.</p>
+        </div>
+        <div class="spec-card">
+          <h4>Unit Types & Parking</h4>
+          <ul>
+            <li><strong>1 Parking:</strong> Studio, 1 Bed, 2 Bed, 2.5 Bed</li>
+            <li><strong>2 Parkings:</strong> 3.5 Bed, 4.5 Bed & Penthouses</li>
+          </ul>
+        </div>
+      </div>
+
+      <button class="btn-modal-action" onclick="openVipModal('Nura by RAK Properties')">Request VIP Consultation</button>
+    </div>
+  </div>
 
       <div class="modal-body">
         <h2>Anantara Mina Residences by RAK Properties</h2>
@@ -1561,6 +1644,17 @@ function openMirasolModal() {
 function closeMirasolModal(e) {
   if (e) e.stopPropagation();
   document.getElementById('mirasolModal').classList.remove('active');
+  document.body.style.overflow = 'auto';
+}
+    /* Nura Modal Functions */
+function openNuraModal() {
+  document.getElementById('nuraModal').classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeNuraModal(e) {
+  if (e) e.stopPropagation();
+  document.getElementById('nuraModal').classList.remove('active');
   document.body.style.overflow = 'auto';
 }
 
