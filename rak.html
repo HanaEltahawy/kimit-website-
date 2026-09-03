@@ -1514,28 +1514,47 @@
       </div>
     </div>
   </div>
-  <!-- Mirasol Details Modal -->
-<div id="mirasolModal" class="project-modal" style="display: none;">
-  <div class="modal-content">
-    <span class="close-btn" onclick="closeMirasolModal()">&times;</span>
-    <h2>Mirasol by RAK Properties</h2>
-    <p class="modal-developer"><strong>Developer:</strong> RAK Properties | Waterfront</p>
-    <p class="modal-price"><strong>Starting Price:</strong> AED 1,618,000</p>
+  <!-- 8. Nura Details Modal -->
+  <div id="nura-modal" class="lightbox-modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeNuraModal(event)">&times;</span>
+      <h2>Nura by RAK Properties</h2>
+      <p class="modal-developer"><strong>Developer:</strong> RAK Properties | Coastal Urban</p>
+      <p class="modal-price"><strong>Starting Price:</strong> AED 1,297,000</p>
 
-    <div class="modal-body">
-      <div class="spec-card">
-        <h4>Project Overview</h4>
-        <p>Mirasol is a resort-inspired residential development located on Mina Al Arab, offering a refined island lifestyle surrounded by panoramic sea views and natural beauty.</p>
+      <div class="modal-body">
+        <div class="modal-section-title">Project General Facts</div>
+        <p class="modal-text">
+          Nura is a distinctive residential development located at the heart of Downtown Mina, the newly emerging urban center of Mina Island. It represents the island’s transformation from a tranquil shoreline retreat into a vibrant, connected city district. Surrounded by a dynamic boulevard with cafés, boutiques, landscaped courtyards, and walkable public spaces, Nura offers residents a balanced lifestyle where coastal calm meets contemporary urban rhythm.
+        </p>
+        <p class="modal-text">
+          Designed as the residential address rising in this new district, Nura provides a lifestyle shaped by light, open views, and thoughtful architectural expression. Its location links the harbour, the park, and the boulevard into one cohesive living experience, with tree-lined paths, social spaces, and cultural energy defining daily life. The project includes a diverse mix of residences - from studios to penthouses - each crafted to deliver natural light, well-proportioned layouts, and a timeless sense of comfort.
+        </p>
+        <p class="modal-text">
+          Nura embraces a refined contemporary aesthetic defined by clean architectural lines, expansive glazing, and a harmonious interplay of light and shadow. The interiors are composed in a serene palette of soft neutrals and warm natural tones, creating an atmosphere of calm sophistication. Textured surfaces, elegant detailing, and thoughtfully balanced proportions enhance the sense of openness, while the building’s minimalist forms and transparent façades capture the essence of modern coastal living. Every design element works together to evoke understated luxury and a timeless, welcoming ambiance.
+        </p>
+
+        <div class="modal-section-title">Location Description & Benefits</div>
+        <p class="modal-text">
+          Mina Al Arab is a waterfront community in Ras Al Khaimah. It is situated along the shoreline, surrounded by wetlands and beaches. This is a community for individuals who desire to live near the ocean. Mina Al Arab is an idyllic twin-island destination with a prime location, just off the coast of central Ras Al Khaimah.
+        </p>
+        <p class="modal-text">
+          Mina Al Arab has been developed keeping in mind the natural surroundings, with a keen focus on preserving the natural wetlands and dunes that surround the community. The area attracts various marine life species which in turn attracts many tourists to the area. There are various trails within the community, which have been constructed for those who love hiking and biking through trails. The community is ideally located alongside Sheikh Muhammad Bin Salem Road.
+        </p>
+        <p class="modal-text">
+          Appealing to aspirational travellers and residents alike, the two manmade islands, which are beautifully landscaped, feature a marina, waterfront cafés and boutiques, and even a running track, as well as high-end resorts and residences with a range of world-class facilities, from spas to restaurants.
+        </p>
+
+        <div class="modal-section-title">Parking Allocation</div>
+        <p class="modal-text">
+          • <strong>1 Parking:</strong> Studio, 1 Bed, 2 Bed, 2.5 Bed<br>
+          • <strong>2 Parkings:</strong> 3.5 Bed, 4.5 Bed
+        </p>
       </div>
-      <div class="spec-card">
-        <h4>Location & Lifestyle</h4>
-        <p>Raha Island, nestled in Mina Al Arab, Ras Al Khaimah, offers a tranquil escape with pristine beaches, azure waters, verdant mangroves, and lush palm trees.</p>
-      </div>
+
+      <button class="btn-modal-action" onclick="openVipModal('Nura by RAK Properties')">Request VIP Consultation</button>
     </div>
-
-    <a href="#contact" onclick="closeMirasolModal(event);" class="btn-modal-action">Request VIP Consultation</a>
   </div>
-</div>
   <script>
     function moveCardSlide(button, direction) {
       const container = button.closest('.slider-container');
@@ -1635,26 +1654,27 @@ function closeAddressMarjanModal(e) {
       document.getElementById('anantaramina-modal').classList.remove('active');
       document.body.style.overflow = 'auto';
     }
-    /* Mirasol Modal Functions */
+   /* Mirasol Modal Functions */
 function openMirasolModal() {
-  document.getElementById('mirasolModal').classList.add('active');
+  document.getElementById('mirasol-modal').classList.add('active');
   document.body.style.overflow = 'hidden';
 }
 
 function closeMirasolModal(e) {
   if (e) e.stopPropagation();
-  document.getElementById('mirasolModal').classList.remove('active');
+  document.getElementById('mirasol-modal').classList.remove('active');
   document.body.style.overflow = 'auto';
 }
-    /* Nura Modal Functions */
+
+/* Nura Modal Functions */
 function openNuraModal() {
-  document.getElementById('nuraModal').classList.add('active');
+  document.getElementById('nura-modal').classList.add('active');
   document.body.style.overflow = 'hidden';
 }
 
 function closeNuraModal(e) {
   if (e) e.stopPropagation();
-  document.getElementById('nuraModal').classList.remove('active');
+  document.getElementById('nura-modal').classList.remove('active');
   document.body.style.overflow = 'auto';
 }
 
