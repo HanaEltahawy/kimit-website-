@@ -1654,30 +1654,45 @@ function closeAddressMarjanModal(e) {
       document.getElementById('anantaramina-modal').classList.remove('active');
       document.body.style.overflow = 'auto';
     }
-   /* Mirasol Modal Functions */
+  /* Mirasol Modal Functions */
 function openMirasolModal() {
-  document.getElementById('mirasol-modal').classList.add('active');
-  document.body.style.overflow = 'hidden';
+  const modal = document.getElementById('mirasol-modal');
+  if (modal) {
+    modal.classList.add('active');
+    modal.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+  }
 }
 
 function closeMirasolModal(e) {
   if (e) e.stopPropagation();
-  document.getElementById('mirasol-modal').classList.remove('active');
+  const modal = document.getElementById('mirasol-modal');
+  if (modal) {
+    modal.classList.remove('active');
+    modal.style.display = 'none';
+  }
   document.body.style.overflow = 'auto';
 }
 
 /* Nura Modal Functions */
 function openNuraModal() {
-  document.getElementById('nura-modal').classList.add('active');
-  document.body.style.overflow = 'hidden';
+  const modal = document.getElementById('nura-modal');
+  if (modal) {
+    modal.classList.add('active');
+    modal.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+  }
 }
 
 function closeNuraModal(e) {
   if (e) e.stopPropagation();
-  document.getElementById('nura-modal').classList.remove('active');
+  const modal = document.getElementById('nura-modal');
+  if (modal) {
+    modal.classList.remove('active');
+    modal.style.display = 'none';
+  }
   document.body.style.overflow = 'auto';
 }
-
   </script>
   
 </body>
