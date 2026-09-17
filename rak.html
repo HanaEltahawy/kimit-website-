@@ -1441,35 +1441,44 @@
     <button class="btn-modal-action" onclick="openVipModal('Mirasol by RAK Properties')">Request VIP Consultation</button>
   </div>
 </div>
-      <!-- 8. Nura Details Modal -->
-  <div id="nuraModal" class="project-modal" style="display: none;">
-    <div class="modal-content">
-      <span class="close-btn" onclick="closeNuraModal()">&times;</span>
-      <h2>Nura by RAK Properties</h2>
-      <p class="modal-developer"><strong>Developer:</strong> RAK Properties | Downtown Mina</p>
-      <p class="modal-price"><strong>Starting Price:</strong> AED 1,297,000</p>
+     <!-- Nura Details Modal -->
+<div class="modal-overlay" id="nura-modal" onclick="closeModal('nura-modal')">
+  <div class="modal-content" onclick="event.stopPropagation()">
+    <span class="close-modal" onclick="closeModal('nura-modal')">&times;</span>
 
-      <div class="modal-body">
-        <div class="spec-card">
-          <h4>Project Overview</h4>
-          <p>Nura is a distinctive residential development in Downtown Mina, offering a lifestyle where coastal calm meets contemporary urban rhythm. Features studios to penthouses with expansive glazing, natural light, and refined modern aesthetics.</p>
-        </div>
-        <div class="spec-card">
-          <h4>Location & Amenities</h4>
-          <p>Situated in Mina Al Arab with direct links to the harbour, park, and boulevard. Includes access to waterfront cafés, boutiques, marina, biking/hiking trails, and natural wetlands along Sheikh Muhammad Bin Salem Road.</p>
-        </div>
-        <div class="spec-card">
-          <h4>Unit Types & Parking</h4>
-          <ul>
-            <li><strong>1 Parking:</strong> Studio, 1 Bed, 2 Bed, 2.5 Bed</li>
-            <li><strong>2 Parkings:</strong> 3.5 Bed, 4.5 Bed & Penthouses</li>
-          </ul>
-        </div>
-      </div>
+    <h2>Nura by RAK Properties</h2>
+    <p class="modal-subtitle">📍 Downtown Mina, Mina Al Arab, RAK | Starting AED 1,297,000</p>
 
-      <button class="btn-modal-action" onclick="openVipModal('Nura by RAK Properties')">Request VIP Consultation</button>
+    <div class="modal-body">
+      <div class="modal-section-title">Project General Facts</div>
+      <p class="modal-text">
+        Nura is a distinctive residential development located at the heart of Downtown Mina, the newly emerging urban center of Mina Island. It represents the island’s transformation from a tranquil shoreline retreat into a vibrant, connected city district. Surrounded by a dynamic boulevard with cafés, boutiques, landscaped courtyards, and walkable public spaces, Nura offers residents a balanced lifestyle where coastal calm meets contemporary urban rhythm.
+      </p>
+      <p class="modal-text">
+        Designed as the residential address rising in this new district, Nura provides a lifestyle shaped by light, open views, and thoughtful architectural expression. Its location links the harbour, the park, and the boulevard into one cohesive living experience, with tree-lined paths, social spaces, and cultural energy defining daily life. The project includes a diverse mix of residences - from studios to penthouses - each crafted to deliver natural light, well-proportioned layouts, and a timeless sense of comfort.
+      </p>
+      <p class="modal-text">
+        Nura embraces a refined contemporary aesthetic defined by clean architectural lines, expansive glazing, and a harmonious interplay of light and shadow. The interiors are composed in a serene palette of soft neutrals and warm natural tones, creating an atmosphere of calm sophistication. Textured surfaces, elegant detailing, and thoughtfully balanced proportions enhance the sense of openness, while the building’s minimalist forms and transparent façades capture the essence of modern coastal living.
+      </p>
+
+      <div class="modal-section-title">Location Description & Benefits</div>
+      <p class="modal-text">
+        Mina Al Arab is a waterfront community in Ras Al Khaimah. It is situated along the shoreline, surrounded by wetlands and beaches. This is a community for individuals who desire to live near the ocean. Mina Al Arab is an idyllic twin-island destination with a prime location, just off the coast of central Ras Al Khaimah.
+      </p>
+      <p class="modal-text">
+        Mina Al Arab has been developed keeping in mind the natural surroundings, with a keen focus on preserving the natural wetlands and dunes that surround the community. The area attracts various marine life species which in turn attracts many tourists to the area.
+      </p>
+
+      <div class="modal-section-title">Parking Allocation</div>
+      <p class="modal-text">
+        • <strong>1 Parking:</strong> Studio, 1 Bed, 2 Bed, 2.5 Bed<br>
+        • <strong>2 Parkings:</strong> 3.5 Bed, 4.5 Bed
+      </p>
     </div>
+
+    <a href="#contact" class="btn-modal-action" onclick="closeModal('nura-modal')">Request VIP Consultation</a>
   </div>
+</div>
 
       <div class="modal-body">
         <h2>Anantara Mina Residences by RAK Properties</h2>
@@ -1514,47 +1523,87 @@
       </div>
     </div>
   </div>
-  <!-- 8. Nura Details Modal -->
-  <div id="nura-modal" class="lightbox-modal">
-    <div class="modal-content">
-      <span class="close-btn" onclick="closeNuraModal(event)">&times;</span>
-      <h2>Nura by RAK Properties</h2>
-      <p class="modal-developer"><strong>Developer:</strong> RAK Properties | Coastal Urban</p>
-      <p class="modal-price"><strong>Starting Price:</strong> AED 1,297,000</p>
+<!-- 8. Nura Details Modal -->
+<div id="nura-modal" class="project-modal" style="display: none;">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeNuraModal()">&times;</span>
 
-      <div class="modal-body">
-        <div class="modal-section-title">Project General Facts</div>
-        <p class="modal-text">
-          Nura is a distinctive residential development located at the heart of Downtown Mina, the newly emerging urban center of Mina Island. It represents the island’s transformation from a tranquil shoreline retreat into a vibrant, connected city district. Surrounded by a dynamic boulevard with cafés, boutiques, landscaped courtyards, and walkable public spaces, Nura offers residents a balanced lifestyle where coastal calm meets contemporary urban rhythm.
-        </p>
-        <p class="modal-text">
-          Designed as the residential address rising in this new district, Nura provides a lifestyle shaped by light, open views, and thoughtful architectural expression. Its location links the harbour, the park, and the boulevard into one cohesive living experience, with tree-lined paths, social spaces, and cultural energy defining daily life. The project includes a diverse mix of residences - from studios to penthouses - each crafted to deliver natural light, well-proportioned layouts, and a timeless sense of comfort.
-        </p>
-        <p class="modal-text">
-          Nura embraces a refined contemporary aesthetic defined by clean architectural lines, expansive glazing, and a harmonious interplay of light and shadow. The interiors are composed in a serene palette of soft neutrals and warm natural tones, creating an atmosphere of calm sophistication. Textured surfaces, elegant detailing, and thoughtfully balanced proportions enhance the sense of openness, while the building’s minimalist forms and transparent façades capture the essence of modern coastal living. Every design element works together to evoke understated luxury and a timeless, welcoming ambiance.
-        </p>
-
-        <div class="modal-section-title">Location Description & Benefits</div>
-        <p class="modal-text">
-          Mina Al Arab is a waterfront community in Ras Al Khaimah. It is situated along the shoreline, surrounded by wetlands and beaches. This is a community for individuals who desire to live near the ocean. Mina Al Arab is an idyllic twin-island destination with a prime location, just off the coast of central Ras Al Khaimah.
-        </p>
-        <p class="modal-text">
-          Mina Al Arab has been developed keeping in mind the natural surroundings, with a keen focus on preserving the natural wetlands and dunes that surround the community. The area attracts various marine life species which in turn attracts many tourists to the area. There are various trails within the community, which have been constructed for those who love hiking and biking through trails. The community is ideally located alongside Sheikh Muhammad Bin Salem Road.
-        </p>
-        <p class="modal-text">
-          Appealing to aspirational travellers and residents alike, the two manmade islands, which are beautifully landscaped, feature a marina, waterfront cafés and boutiques, and even a running track, as well as high-end resorts and residences with a range of world-class facilities, from spas to restaurants.
-        </p>
-
-        <div class="modal-section-title">Parking Allocation</div>
-        <p class="modal-text">
-          • <strong>1 Parking:</strong> Studio, 1 Bed, 2 Bed, 2.5 Bed<br>
-          • <strong>2 Parkings:</strong> 3.5 Bed, 4.5 Bed
-        </p>
+    <!-- Slider Inside Modal -->
+    <div class="slider-container">
+      <span class="slide-counter"><span class="current-slide">1</span> / 34</span>
+      <button class="prev" onclick="moveCardSlide(this, -1)">&#10094;</button>
+      <div class="slides">
+        <img src="images23/slide1.png" class="slide active" alt="Nura 1">
+        <img src="images23/slide2.png" class="slide" alt="Nura 2">
+        <img src="images23/slide3.png" class="slide" alt="Nura 3">
+        <img src="images23/slide4.png" class="slide" alt="Nura 4">
+        <img src="images23/slide5.png" class="slide" alt="Nura 5">
+        <img src="images23/slide6.png" class="slide" alt="Nura 6">
+        <img src="images23/slide7.png" class="slide" alt="Nura 7">
+        <img src="images23/slide8.png" class="slide" alt="Nura 8">
+        <img src="images23/slide9.png" class="slide" alt="Nura 9">
+        <img src="images23/slide10.png" class="slide" alt="Nura 10">
+        <img src="images23/slide11.png" class="slide" alt="Nura 11">
+        <img src="images23/slide12.png" class="slide" alt="Nura 12">
+        <img src="images23/slide13.png" class="slide" alt="Nura 13">
+        <img src="images23/slide14.png" class="slide" alt="Nura 14">
+        <img src="images23/slide15.png" class="slide" alt="Nura 15">
+        <img src="images23/slide16.png" class="slide" alt="Nura 16">
+        <img src="images23/slide17.png" class="slide" alt="Nura 17">
+        <img src="images23/slide18.png" class="slide" alt="Nura 18">
+        <img src="images23/slide19.png" class="slide" alt="Nura 19">
+        <img src="images23/slide20.png" class="slide" alt="Nura 20">
+        <img src="images23/slide21.png" class="slide" alt="Nura 21">
+        <img src="images23/slide22.png" class="slide" alt="Nura 22">
+        <img src="images23/slide23.png" class="slide" alt="Nura 23">
+        <img src="images23/slide24.png" class="slide" alt="Nura 24">
+        <img src="images23/slide25.png" class="slide" alt="Nura 25">
+        <img src="images23/slide26.png" class="slide" alt="Nura 26">
+        <img src="images23/slide27.png" class="slide" alt="Nura 27">
+        <img src="images23/slide28.png" class="slide" alt="Nura 28">
+        <img src="images23/slide29.png" class="slide" alt="Nura 29">
+        <img src="images23/slide30.png" class="slide" alt="Nura 30">
+        <img src="images23/slide31.png" class="slide" alt="Nura 31">
+        <img src="images23/slide32.png" class="slide" alt="Nura 32">
+        <img src="images23/slide33.png" class="slide" alt="Nura 33">
+        <img src="images23/slide34.png" class="slide" alt="Nura 34">
       </div>
-
-      <button class="btn-modal-action" onclick="openVipModal('Nura by RAK Properties')">Request VIP Consultation</button>
+      <button class="next" onclick="moveCardSlide(this, 1)">&#10095;</button>
     </div>
+
+    <h2>Nura by RAK Properties</h2>
+
+    <div class="modal-body">
+      <h4>Project General Facts</h4>
+      <p>Nura is a distinctive residential development located at the heart of Downtown Mina, the newly emerging urban center of Mina Island. It represents the island’s transformation from a tranquil shoreline retreat into a vibrant, connected city district. Surrounded by a dynamic boulevard with cafés, boutiques, landscaped courtyards, and walkable public spaces, Nura offers residents a balanced lifestyle where coastal calm meets contemporary urban rhythm.</p>
+      <p>Designed as the residential address rising in this new district, Nura provides a lifestyle shaped by light, open views, and thoughtful architectural expression. Its location links the harbour, the park, and the boulevard into one cohesive living experience, with tree-lined paths, social spaces, and cultural energy defining daily life. The project includes a diverse mix of residences - from studios to penthouses - each crafted to deliver natural light, well-proportioned layouts, and a timeless sense of comfort.</p>
+      <p>Nura embraces a refined contemporary aesthetic defined by clean architectural lines, expansive glazing, and a harmonious interplay of light and shadow. The interiors are composed in a serene palette of soft neutrals and warm natural tones, creating an atmosphere of calm sophistication. Textured surfaces, elegant detailing, and thoughtfully balanced proportions enhance the sense of openness, while the building’s minimalist forms and transparent façades capture the essence of modern coastal living.</p>
+
+      <h4>Location Description & Benefits</h4>
+      <p>Mina Al Arab is a waterfront community in Ras Al Khaimah. It is situated along the shoreline, surrounded by wetlands and beaches. This is a community for individuals who desire to live near the ocean. Mina Al Arab is an idyllic twin-island destination with a prime location, just off the coast of central Ras Al Khaimah.</p>
+      <p>Mina Al Arab has been developed keeping in mind the natural surroundings, with a keen focus on preserving the natural wetlands and dunes that surround the community. The area attracts various marine life species which in turn attracts many tourists to the area. There are various trails within the community, which have been constructed for those who love hiking and biking through trails.</p>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 20px;">
+        <div class="spec-card">
+          <h4>Property & Parking Overview</h4>
+          <p>✓ <strong>1 Parking:</strong> Studio, 1 Bed, 2 Bed, 2.5 Bed</p>
+          <p>✓ <strong>2 Parkings:</strong> 3.5 Bed, 4.5 Bed</p>
+          <p>✓ <strong>Developer:</strong> RAK Properties</p>
+          <p>✓ <strong>Starting Price:</strong> AED 1,297,000</p>
+        </div>
+        <div class="spec-card">
+          <h4>World-Class Amenities & Location</h4>
+          <p>✓ Waterfront Boulevard & Marina</p>
+          <p>✓ Hiking & Biking Trails</p>
+          <p>✓ Natural Wetlands & Dune Preservation</p>
+          <p>✓ High-End Resorts, Spas & Dining</p>
+        </div>
+      </div>
+    </div>
+
+    <a href="#contact" class="btn-modal-action" onclick="closeNuraModal()" style="display:block; text-align:center; text-decoration:none;">Request VIP Consultation</a>
   </div>
+</div>
   <script>
     function moveCardSlide(button, direction) {
       const container = button.closest('.slider-container');
