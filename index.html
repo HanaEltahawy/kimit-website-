@@ -6,16 +6,19 @@
     <meta name="description" content="Discover exclusive luxury off-plan properties and prime real estate investment opportunities in Dubai & UAE. Contact Kimit Real Estate for VIP consultations.">
     <title>Kimit Real Estate Broker | Luxury Dubai & Coastal Properties</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="favicon.png">
-<link rel="apple-touch-icon" href="favicon.png">
+    <link rel="apple-touch-icon" href="favicon.png">
 </head>
 <body>
 
     <!-- Header Navigation -->
     <header class="navbar">
-        <div class="logo">KIMIT <span>REAL ESTATE</span></div>
+        <a href="index.html" class="logo">KIMIT <span>REAL ESTATE</span></a>
         <nav>
+            <a href="index.html" class="active">Home</a>
             <a href="#featured">Projects</a>
             <a href="why-us.html">Why Us</a>
             <a href="#contact" class="btn-primary">Contact Us</a>
@@ -30,9 +33,9 @@
             <h1>Discover Premium Properties in Dubai & Premier Coasts</h1>
             <p>Exclusive Off-Plan & Ready Investments | High ROI & Golden Visa Eligibility</p>
             <div class="hero-btns">
-    <a href="#contact" class="btn-gold">Request Brochure</a>
-    <a href="https://wa.me/971503515900" class="btn-outline" target="_blank">WhatsApp Consultation</a>
-</div>
+                <a href="#contact" class="btn-gold">Request Brochure</a>
+                <a href="https://wa.me/971503515900" class="btn-outline" target="_blank" rel="noopener">WhatsApp Consultation</a>
+            </div>
         </div>
     </section>
 
@@ -43,148 +46,150 @@
         <div class="item"><strong>Golden Visa</strong> Approved</div>
         <div class="item"><strong>Flexible</strong> Payment Plans</div>
     </section>
+
     <!-- Offplan Projects by Region Section (3 Cities) -->
-<section class="offplan-regions">
-    <div class="section-title-wrapper">
-        <h2>Offplan Projects</h2>
-        <p>New off-plan developments</p>
-    </div>
-    <div class="regions-grid">
-        <!-- Dubai -->
-        <a href="dubai.html" class="region-card">
-            <img src="images3/dubai-bg.jpg" alt="Dubai">
-            <div class="region-label">DUBAI</div>
-        </a>
+    <section class="offplan-regions">
+        <div class="section-title-wrapper">
+            <h2>Offplan Projects</h2>
+            <p>New off-plan developments</p>
+        </div>
+        <div class="regions-grid">
+            <!-- Dubai -->
+            <a href="dubai.html" class="region-card">
+                <img src="images3/dubai-bg.jpg" alt="Dubai" loading="lazy" decoding="async">
+                <div class="region-label">DUBAI</div>
+            </a>
 
-        <!-- Sharjah -->
-        <a href="sharjah.html" class="region-card">
-            <img src="images3/sharjah-bg.jpg" alt="Sharjah">
-            <div class="region-label">SHARJAH</div>
-        </a>
+            <!-- Sharjah -->
+            <a href="sharjah.html" class="region-card">
+                <img src="images3/sharjah-bg.jpg" alt="Sharjah" loading="lazy" decoding="async">
+                <div class="region-label">SHARJAH</div>
+            </a>
 
-        <!-- Ras Al Khaimah -->
-        <a href="rak.html" class="region-card">
-            <img src="images3/rak-bg.jpg" alt="Ras Al Khaimah">
-            <div class="region-label">RAS AL KHAIMAH</div>
-        </a>
-    </div>
-</section>
+            <!-- Ras Al Khaimah -->
+            <a href="rak.html" class="region-card">
+                <img src="images3/rak-bg.jpg" alt="Ras Al Khaimah" loading="lazy" decoding="async">
+                <div class="region-label">RAS AL KHAIMAH</div>
+            </a>
+        </div>
+    </section>
 
     <!-- Featured Projects Grid -->
     <section class="projects" id="featured">
         <h2>Featured Luxury Projects</h2>
         <div class="grid">
             <!-- Project: Royal Yacht Club Residence -->
-<div class="card" id="royalYachtClubCard">
-    <div class="slider-container">
-        <div class="slides">
-            <img src="images9/slide1.png" class="slide active" alt="Royal Yacht Club 1" onclick="openModal('royalYachtClubModal', 0)">
-            <img src="images9/slide2.png" class="slide" alt="Royal Yacht Club 2" onclick="openModal('royalYachtClubModal', 1)">
-            <img src="images9/slide3.png" class="slide" alt="Royal Yacht Club 3" onclick="openModal('royalYachtClubModal', 2)">
-            <img src="images9/slide4.png" class="slide" alt="Royal Yacht Club 4" onclick="openModal('royalYachtClubModal', 3)">
-            <img src="images9/slide5.png" class="slide" alt="Royal Yacht Club 5" onclick="openModal('royalYachtClubModal', 4)">
-            <img src="images9/slide6.png" class="slide" alt="Royal Yacht Club 6" onclick="openModal('royalYachtClubModal', 5)">
-            <img src="images9/slide7.png" class="slide" alt="Royal Yacht Club 7" onclick="openModal('royalYachtClubModal', 6)">
-            <img src="images9/slide8.png" class="slide" alt="Royal Yacht Club 8" onclick="openModal('royalYachtClubModal', 7)">
-            <img src="images9/slide9.png" class="slide" alt="Royal Yacht Club 9" onclick="openModal('royalYachtClubModal', 8)">
-            <img src="images9/slide10.png" class="slide" alt="Royal Yacht Club 10" onclick="openModal('royalYachtClubModal', 9)">
-            <img src="images9/slide11.png" class="slide" alt="Royal Yacht Club 11" onclick="openModal('royalYachtClubModal', 10)">
-            <img src="images9/slide12.png" class="slide" alt="Royal Yacht Club 12" onclick="openModal('royalYachtClubModal', 11)">
-            <img src="images9/slide13.png" class="slide" alt="Royal Yacht Club 13" onclick="openModal('royalYachtClubModal', 12)">
-            <img src="images9/slide14.png" class="slide" alt="Royal Yacht Club 14" onclick="openModal('royalYachtClubModal', 13)">
-            <img src="images9/slide15.png" class="slide" alt="Royal Yacht Club 15" onclick="openModal('royalYachtClubModal', 14)">
-            <img src="images9/slide16.png" class="slide" alt="Royal Yacht Club 16" onclick="openModal('royalYachtClubModal', 15)">
-            <img src="images9/slide17.png" class="slide" alt="Royal Yacht Club 17" onclick="openModal('royalYachtClubModal', 16)">
-            <img src="images9/slide18.png" class="slide" alt="Royal Yacht Club 18" onclick="openModal('royalYachtClubModal', 17)">
-            <img src="images9/slide19.png" class="slide" alt="Royal Yacht Club 19" onclick="openModal('royalYachtClubModal', 18)">
-            <img src="images9/slide20.png" class="slide" alt="Royal Yacht Club 20" onclick="openModal('royalYachtClubModal', 19)">
-            <img src="images9/slide21.png" class="slide" alt="Royal Yacht Club 21" onclick="openModal('royalYachtClubModal', 20)">
-        </div>
-        <button class="prev" onclick="moveCardSlide(this, -1)">&#10094;</button>
-        <button class="next" onclick="moveCardSlide(this, 1)">&#10095;</button>
-    </div>
-    <div class="card-info">
-        <h3>Royal Yacht Club Residence</h3>
-        <p>Refined Waterfront Living & Marina Promenade Views</p>
-        <span class="price">Starting Price: 2,411,735 AED</span>
-        <span class="sub-price">Dubai Islands</span>
-        <button onclick="openModal('royalYachtClubModal', 0)" class="btn-card">Inquire & View Details</button>
-    </div>
-</div>
+            <div class="card" id="royalYachtClubCard">
+                <div class="slider-container">
+                    <div class="slides">
+                        <img loading="lazy" decoding="async" src="images9/slide1.png" class="slide active" alt="Royal Yacht Club 1">
+                        <img loading="lazy" decoding="async" src="images9/slide2.png" class="slide" alt="Royal Yacht Club 2">
+                        <img loading="lazy" decoding="async" src="images9/slide3.png" class="slide" alt="Royal Yacht Club 3">
+                        <img loading="lazy" decoding="async" src="images9/slide4.png" class="slide" alt="Royal Yacht Club 4">
+                        <img loading="lazy" decoding="async" src="images9/slide5.png" class="slide" alt="Royal Yacht Club 5">
+                        <img loading="lazy" decoding="async" src="images9/slide6.png" class="slide" alt="Royal Yacht Club 6">
+                        <img loading="lazy" decoding="async" src="images9/slide7.png" class="slide" alt="Royal Yacht Club 7">
+                        <img loading="lazy" decoding="async" src="images9/slide8.png" class="slide" alt="Royal Yacht Club 8">
+                        <img loading="lazy" decoding="async" src="images9/slide9.png" class="slide" alt="Royal Yacht Club 9">
+                        <img loading="lazy" decoding="async" src="images9/slide10.png" class="slide" alt="Royal Yacht Club 10">
+                        <img loading="lazy" decoding="async" src="images9/slide11.png" class="slide" alt="Royal Yacht Club 11">
+                        <img loading="lazy" decoding="async" src="images9/slide12.png" class="slide" alt="Royal Yacht Club 12">
+                        <img loading="lazy" decoding="async" src="images9/slide13.png" class="slide" alt="Royal Yacht Club 13">
+                        <img loading="lazy" decoding="async" src="images9/slide14.png" class="slide" alt="Royal Yacht Club 14">
+                        <img loading="lazy" decoding="async" src="images9/slide15.png" class="slide" alt="Royal Yacht Club 15">
+                        <img loading="lazy" decoding="async" src="images9/slide16.png" class="slide" alt="Royal Yacht Club 16">
+                        <img loading="lazy" decoding="async" src="images9/slide17.png" class="slide" alt="Royal Yacht Club 17">
+                        <img loading="lazy" decoding="async" src="images9/slide18.png" class="slide" alt="Royal Yacht Club 18">
+                        <img loading="lazy" decoding="async" src="images9/slide19.png" class="slide" alt="Royal Yacht Club 19">
+                        <img loading="lazy" decoding="async" src="images9/slide20.png" class="slide" alt="Royal Yacht Club 20">
+                        <img loading="lazy" decoding="async" src="images9/slide21.png" class="slide" alt="Royal Yacht Club 21">
+                    </div>
+                    <button type="button" class="prev" aria-label="Previous image">&#10094;</button>
+                    <button type="button" class="next" aria-label="Next image">&#10095;</button>
+                </div>
+                <div class="card-info">
+                    <h3>Royal Yacht Club Residence</h3>
+                    <p>Refined Waterfront Living & Marina Promenade Views</p>
+                    <span class="price">Starting Price: 2,411,735 AED</span>
+                    <span class="sub-price">Dubai Islands</span>
+                    <button type="button" class="btn-card">Inquire & View Details</button>
+                </div>
+            </div>
+
             <!-- Project: Damac Islands -->
-<div class="card" id="damacIslandsCard">
-    <div class="slider-container">
-        <div class="slides">
-            <img src="images5/slide1.png" class="slide active" alt="Damac Islands 1" onclick="openModal('damacIslandsModal', 0)">
-            <img src="images5/slide2.png" class="slide" alt="Damac Islands 2" onclick="openModal('damacIslandsModal', 1)">
-            <img src="images5/slide3.png" class="slide" alt="Damac Islands 3" onclick="openModal('damacIslandsModal', 2)">
-            <img src="images5/slide4.png" class="slide" alt="Damac Islands 4" onclick="openModal('damacIslandsModal', 3)">
-            <img src="images5/slide5.png" class="slide" alt="Damac Islands 5" onclick="openModal('damacIslandsModal', 4)">
-            <img src="images5/slide6.png" class="slide" alt="Damac Islands 6" onclick="openModal('damacIslandsModal', 5)">
-            <img src="images5/slide7.png" class="slide" alt="Damac Islands 7" onclick="openModal('damacIslandsModal', 6)">
-            <img src="images5/slide8.png" class="slide" alt="Damac Islands 8" onclick="openModal('damacIslandsModal', 7)">
-            <img src="images5/slide9.png" class="slide" alt="Damac Islands 9" onclick="openModal('damacIslandsModal', 8)">
-            <img src="images5/slide10.png" class="slide" alt="Damac Islands 10" onclick="openModal('damacIslandsModal', 9)">
-            <img src="images5/slide11.png" class="slide" alt="Damac Islands 11" onclick="openModal('damacIslandsModal', 10)">
-            <img src="images5/slide12.png" class="slide" alt="Damac Islands 12" onclick="openModal('damacIslandsModal', 11)">
-            <img src="images5/slide13.png" class="slide" alt="Damac Islands 13" onclick="openModal('damacIslandsModal', 12)">
-            <img src="images5/slide14.png" class="slide" alt="Damac Islands 14" onclick="openModal('damacIslandsModal', 13)">
-            <img src="images5/slide15.png" class="slide" alt="Damac Islands 15" onclick="openModal('damacIslandsModal', 14)">
-            <img src="images5/slide16.png" class="slide" alt="Damac Islands 16" onclick="openModal('damacIslandsModal', 15)">
-            <img src="images5/slide17.png" class="slide" alt="Damac Islands 17" onclick="openModal('damacIslandsModal', 16)">
-            <img src="images5/slide18.png" class="slide" alt="Damac Islands 18" onclick="openModal('damacIslandsModal', 17)">
-            <img src="images5/slide19.png" class="slide" alt="Damac Islands 19" onclick="openModal('damacIslandsModal', 18)">
-            <img src="images5/slide20.png" class="slide" alt="Damac Islands 20" onclick="openModal('damacIslandsModal', 19)">
-            <img src="images5/slide21.png" class="slide" alt="Damac Islands 21" onclick="openModal('damacIslandsModal', 20)">
-            <img src="images5/slide22.png" class="slide" alt="Damac Islands 22" onclick="openModal('damacIslandsModal', 21)">
-            <img src="images5/slide23.png" class="slide" alt="Damac Islands 23" onclick="openModal('damacIslandsModal', 22)">
-            <img src="images5/slide24.png" class="slide" alt="Damac Islands 24" onclick="openModal('damacIslandsModal', 23)">
-            <img src="images5/slide25.png" class="slide" alt="Damac Islands 25" onclick="openModal('damacIslandsModal', 24)">
-            <img src="images5/slide26.png" class="slide" alt="Damac Islands 26" onclick="openModal('damacIslandsModal', 25)">
-        </div>
-        <button class="prev" onclick="moveCardSlide(this, -1)">&#10094;</button>
-        <button class="next" onclick="moveCardSlide(this, 1)">&#10095;</button>
-    </div>
-    <div class="card-info">
-        <h3>Damac Islands</h3>
-        <p>Tropical Resort-Style Living & Waterfront Villas</p>
-        <span class="price">Starting Price: 2,995,000 AED</span>
-        <span class="sub-price">Dubailand • Damac Properties</span>
-        <button onclick="openModal('damacIslandsModal', 0)" class="btn-card">Inquire & View Details</button>
-    </div>
-</div>
+            <div class="card" id="damacIslandsCard">
+                <div class="slider-container">
+                    <div class="slides">
+                        <img loading="lazy" decoding="async" src="images5/slide1.png" class="slide active" alt="Damac Islands 1">
+                        <img loading="lazy" decoding="async" src="images5/slide2.png" class="slide" alt="Damac Islands 2">
+                        <img loading="lazy" decoding="async" src="images5/slide3.png" class="slide" alt="Damac Islands 3">
+                        <img loading="lazy" decoding="async" src="images5/slide4.png" class="slide" alt="Damac Islands 4">
+                        <img loading="lazy" decoding="async" src="images5/slide5.png" class="slide" alt="Damac Islands 5">
+                        <img loading="lazy" decoding="async" src="images5/slide6.png" class="slide" alt="Damac Islands 6">
+                        <img loading="lazy" decoding="async" src="images5/slide7.png" class="slide" alt="Damac Islands 7">
+                        <img loading="lazy" decoding="async" src="images5/slide8.png" class="slide" alt="Damac Islands 8">
+                        <img loading="lazy" decoding="async" src="images5/slide9.png" class="slide" alt="Damac Islands 9">
+                        <img loading="lazy" decoding="async" src="images5/slide10.png" class="slide" alt="Damac Islands 10">
+                        <img loading="lazy" decoding="async" src="images5/slide11.png" class="slide" alt="Damac Islands 11">
+                        <img loading="lazy" decoding="async" src="images5/slide12.png" class="slide" alt="Damac Islands 12">
+                        <img loading="lazy" decoding="async" src="images5/slide13.png" class="slide" alt="Damac Islands 13">
+                        <img loading="lazy" decoding="async" src="images5/slide14.png" class="slide" alt="Damac Islands 14">
+                        <img loading="lazy" decoding="async" src="images5/slide15.png" class="slide" alt="Damac Islands 15">
+                        <img loading="lazy" decoding="async" src="images5/slide16.png" class="slide" alt="Damac Islands 16">
+                        <img loading="lazy" decoding="async" src="images5/slide17.png" class="slide" alt="Damac Islands 17">
+                        <img loading="lazy" decoding="async" src="images5/slide18.png" class="slide" alt="Damac Islands 18">
+                        <img loading="lazy" decoding="async" src="images5/slide19.png" class="slide" alt="Damac Islands 19">
+                        <img loading="lazy" decoding="async" src="images5/slide20.png" class="slide" alt="Damac Islands 20">
+                        <img loading="lazy" decoding="async" src="images5/slide21.png" class="slide" alt="Damac Islands 21">
+                        <img loading="lazy" decoding="async" src="images5/slide22.png" class="slide" alt="Damac Islands 22">
+                        <img loading="lazy" decoding="async" src="images5/slide23.png" class="slide" alt="Damac Islands 23">
+                        <img loading="lazy" decoding="async" src="images5/slide24.png" class="slide" alt="Damac Islands 24">
+                        <img loading="lazy" decoding="async" src="images5/slide25.png" class="slide" alt="Damac Islands 25">
+                        <img loading="lazy" decoding="async" src="images5/slide26.png" class="slide" alt="Damac Islands 26">
+                    </div>
+                    <button type="button" class="prev" aria-label="Previous image">&#10094;</button>
+                    <button type="button" class="next" aria-label="Next image">&#10095;</button>
+                </div>
+                <div class="card-info">
+                    <h3>Damac Islands</h3>
+                    <p>Tropical Resort-Style Living & Waterfront Villas</p>
+                    <span class="price">Starting Price: 2,995,000 AED</span>
+                    <span class="sub-price">Dubailand • Damac Properties</span>
+                    <button type="button" class="btn-card">Inquire & View Details</button>
+                </div>
+            </div>
 
             <!-- Project 1: Valia Dubai by Emaar -->
             <div class="card" id="valiaCard">
                 <div class="slider-container">
                     <div class="slides">
-                        <img src="images2/slide1.png" class="slide active" alt="Valia Slide 1" onclick="openModal('valiaModal', 0)">
-                        <img src="images2/slide2.png" class="slide" alt="Valia Slide 2" onclick="openModal('valiaModal', 1)">
-                        <img src="images2/slide3.png" class="slide" alt="Valia Slide 3" onclick="openModal('valiaModal', 2)">
-                        <img src="images2/slide4.png" class="slide" alt="Valia Slide 4" onclick="openModal('valiaModal', 3)">
-                        <img src="images2/slide5.png" class="slide" alt="Valia Slide 5" onclick="openModal('valiaModal', 4)">
-                        <img src="images2/slide6.png" class="slide" alt="Valia Slide 6" onclick="openModal('valiaModal', 5)">
-                        <img src="images2/slide7.png" class="slide" alt="Valia Slide 7" onclick="openModal('valiaModal', 6)">
-                        <img src="images2/slide8.png" class="slide" alt="Valia Slide 8" onclick="openModal('valiaModal', 7)">
-                        <img src="images2/slide9.png" class="slide" alt="Valia Slide 9" onclick="openModal('valiaModal', 8)">
-                        <img src="images2/slide10.png" class="slide" alt="Valia Slide 10" onclick="openModal('valiaModal', 9)">
-                        <img src="images2/slide11.png" class="slide" alt="Valia Slide 11" onclick="openModal('valiaModal', 10)">
-                        <img src="images2/slide12.png" class="slide" alt="Valia Slide 12" onclick="openModal('valiaModal', 11)">
-                        <img src="images2/slide13.png" class="slide" alt="Valia Slide 13" onclick="openModal('valiaModal', 12)">
-                        <img src="images2/slide14.png" class="slide" alt="Valia Slide 14" onclick="openModal('valiaModal', 13)">
-                        <img src="images2/slide15.png" class="slide" alt="Valia Slide 15" onclick="openModal('valiaModal', 14)">
-                        <img src="images2/slide16.png" class="slide" alt="Valia Slide 16" onclick="openModal('valiaModal', 15)">
-                        <img src="images2/slide17.png" class="slide" alt="Valia Slide 17" onclick="openModal('valiaModal', 16)">
+                        <img loading="lazy" decoding="async" src="images2/slide1.png" class="slide active" alt="Valia Slide 1">
+                        <img loading="lazy" decoding="async" src="images2/slide2.png" class="slide" alt="Valia Slide 2">
+                        <img loading="lazy" decoding="async" src="images2/slide3.png" class="slide" alt="Valia Slide 3">
+                        <img loading="lazy" decoding="async" src="images2/slide4.png" class="slide" alt="Valia Slide 4">
+                        <img loading="lazy" decoding="async" src="images2/slide5.png" class="slide" alt="Valia Slide 5">
+                        <img loading="lazy" decoding="async" src="images2/slide6.png" class="slide" alt="Valia Slide 6">
+                        <img loading="lazy" decoding="async" src="images2/slide7.png" class="slide" alt="Valia Slide 7">
+                        <img loading="lazy" decoding="async" src="images2/slide8.png" class="slide" alt="Valia Slide 8">
+                        <img loading="lazy" decoding="async" src="images2/slide9.png" class="slide" alt="Valia Slide 9">
+                        <img loading="lazy" decoding="async" src="images2/slide10.png" class="slide" alt="Valia Slide 10">
+                        <img loading="lazy" decoding="async" src="images2/slide11.png" class="slide" alt="Valia Slide 11">
+                        <img loading="lazy" decoding="async" src="images2/slide12.png" class="slide" alt="Valia Slide 12">
+                        <img loading="lazy" decoding="async" src="images2/slide13.png" class="slide" alt="Valia Slide 13">
+                        <img loading="lazy" decoding="async" src="images2/slide14.png" class="slide" alt="Valia Slide 14">
+                        <img loading="lazy" decoding="async" src="images2/slide15.png" class="slide" alt="Valia Slide 15">
+                        <img loading="lazy" decoding="async" src="images2/slide16.png" class="slide" alt="Valia Slide 16">
+                        <img loading="lazy" decoding="async" src="images2/slide17.png" class="slide" alt="Valia Slide 17">
                     </div>
-                    <button class="prev" onclick="moveCardSlide(this, -1)">&#10094;</button>
-                    <button class="next" onclick="moveCardSlide(this, 1)">&#10095;</button>
+                    <button type="button" class="prev" aria-label="Previous image">&#10094;</button>
+                    <button type="button" class="next" aria-label="Next image">&#10095;</button>
                 </div>
                 <div class="card-info">
                     <h3>Valia Dubai by Emaar</h3>
                     <p>Waterfront living Next the iconic tower</p>
                     <span class="price">Starting Price: 1,900,000 AED</span>
                     <span class="sub-price">Dubai Creek Harbour • Emaar Properties</span>
-                    <button onclick="openModal('valiaModal', 0)" class="btn-card">Inquire & View Details</button>
+                    <button type="button" class="btn-card">Inquire & View Details</button>
                 </div>
             </div>
 
@@ -192,45 +197,45 @@
             <div class="card" id="greenzCard">
                 <div class="slider-container">
                     <div class="slides">
-                        <img src="images/slide5.png" class="slide active" alt="Slide 5" onclick="openModal('greenzModal', 0)">
-                        <img src="images/slide6.png" class="slide" alt="Slide 6" onclick="openModal('greenzModal', 1)">
-                        <img src="images/slide7.png" class="slide" alt="Slide 7" onclick="openModal('greenzModal', 2)">
-                        <img src="images/slide8.png" class="slide" alt="Slide 8" onclick="openModal('greenzModal', 3)">
-                        <img src="images/slide9.png" class="slide" alt="Slide 9" onclick="openModal('greenzModal', 4)">
-                        <img src="images/slide10.png" class="slide" alt="Slide 10" onclick="openModal('greenzModal', 5)">
-                        <img src="images/slide11.png" class="slide" alt="Slide 11" onclick="openModal('greenzModal', 6)">
-                        <img src="images/slide12.png" class="slide" alt="Slide 12" onclick="openModal('greenzModal', 7)">
-                        <img src="images/slide13.png" class="slide" alt="Slide 13" onclick="openModal('greenzModal', 8)">
-                        <img src="images/slide14.png" class="slide" alt="Slide 14" onclick="openModal('greenzModal', 9)">
-                        <img src="images/slide15.png" class="slide" alt="Slide 15" onclick="openModal('greenzModal', 10)">
-                        <img src="images/slide16.png" class="slide" alt="Slide 16" onclick="openModal('greenzModal', 11)">
-                        <img src="images/slide17.png" class="slide" alt="Slide 17" onclick="openModal('greenzModal', 12)">
-                        <img src="images/slide18.png" class="slide" alt="Slide 18" onclick="openModal('greenzModal', 13)">
-                        <img src="images/slide19.png" class="slide" alt="Slide 19" onclick="openModal('greenzModal', 14)">
-                        <img src="images/slide20.png" class="slide" alt="Slide 20" onclick="openModal('greenzModal', 15)">
-                        <img src="images/slide21.png" class="slide" alt="Slide 21" onclick="openModal('greenzModal', 16)">
-                        <img src="images/slide22.png" class="slide" alt="Slide 22" onclick="openModal('greenzModal', 17)">
-                        <img src="images/slide23.png" class="slide" alt="Slide 23" onclick="openModal('greenzModal', 18)">
-                        <img src="images/slide24.png" class="slide" alt="Slide 24" onclick="openModal('greenzModal', 19)">
-                        <img src="images/slide25.png" class="slide" alt="Slide 25" onclick="openModal('greenzModal', 20)">
-                        <img src="images/slide26.png" class="slide" alt="Slide 26" onclick="openModal('greenzModal', 21)">
-                        <img src="images/slide27.png" class="slide" alt="Slide 27" onclick="openModal('greenzModal', 22)">
-                        <img src="images/slide28.png" class="slide" alt="Slide 28" onclick="openModal('greenzModal', 23)">
-                        <img src="images/slide29.png" class="slide" alt="Slide 29" onclick="openModal('greenzModal', 24)">
-                        <img src="images/slide1.png" class="slide" alt="Slide 1" onclick="openModal('greenzModal', 25)">
-                        <img src="images/slide2.png" class="slide" alt="Slide 2" onclick="openModal('greenzModal', 26)">
-                        <img src="images/slide3.png" class="slide" alt="Slide 3" onclick="openModal('greenzModal', 27)">
-                        <img src="images/slide4.png" class="slide" alt="Slide 4" onclick="openModal('greenzModal', 28)">
+                        <img loading="lazy" decoding="async" src="images/slide5.png" class="slide active" alt="Slide 5">
+                        <img loading="lazy" decoding="async" src="images/slide6.png" class="slide" alt="Slide 6">
+                        <img loading="lazy" decoding="async" src="images/slide7.png" class="slide" alt="Slide 7">
+                        <img loading="lazy" decoding="async" src="images/slide8.png" class="slide" alt="Slide 8">
+                        <img loading="lazy" decoding="async" src="images/slide9.png" class="slide" alt="Slide 9">
+                        <img loading="lazy" decoding="async" src="images/slide10.png" class="slide" alt="Slide 10">
+                        <img loading="lazy" decoding="async" src="images/slide11.png" class="slide" alt="Slide 11">
+                        <img loading="lazy" decoding="async" src="images/slide12.png" class="slide" alt="Slide 12">
+                        <img loading="lazy" decoding="async" src="images/slide13.png" class="slide" alt="Slide 13">
+                        <img loading="lazy" decoding="async" src="images/slide14.png" class="slide" alt="Slide 14">
+                        <img loading="lazy" decoding="async" src="images/slide15.png" class="slide" alt="Slide 15">
+                        <img loading="lazy" decoding="async" src="images/slide16.png" class="slide" alt="Slide 16">
+                        <img loading="lazy" decoding="async" src="images/slide17.png" class="slide" alt="Slide 17">
+                        <img loading="lazy" decoding="async" src="images/slide18.png" class="slide" alt="Slide 18">
+                        <img loading="lazy" decoding="async" src="images/slide19.png" class="slide" alt="Slide 19">
+                        <img loading="lazy" decoding="async" src="images/slide20.png" class="slide" alt="Slide 20">
+                        <img loading="lazy" decoding="async" src="images/slide21.png" class="slide" alt="Slide 21">
+                        <img loading="lazy" decoding="async" src="images/slide22.png" class="slide" alt="Slide 22">
+                        <img loading="lazy" decoding="async" src="images/slide23.png" class="slide" alt="Slide 23">
+                        <img loading="lazy" decoding="async" src="images/slide24.png" class="slide" alt="Slide 24">
+                        <img loading="lazy" decoding="async" src="images/slide25.png" class="slide" alt="Slide 25">
+                        <img loading="lazy" decoding="async" src="images/slide26.png" class="slide" alt="Slide 26">
+                        <img loading="lazy" decoding="async" src="images/slide27.png" class="slide" alt="Slide 27">
+                        <img loading="lazy" decoding="async" src="images/slide28.png" class="slide" alt="Slide 28">
+                        <img loading="lazy" decoding="async" src="images/slide29.png" class="slide" alt="Slide 29">
+                        <img loading="lazy" decoding="async" src="images/slide1.png" class="slide" alt="Slide 1">
+                        <img loading="lazy" decoding="async" src="images/slide2.png" class="slide" alt="Slide 2">
+                        <img loading="lazy" decoding="async" src="images/slide3.png" class="slide" alt="Slide 3">
+                        <img loading="lazy" decoding="async" src="images/slide4.png" class="slide" alt="Slide 4">
                     </div>
-                    <button class="prev" onclick="moveCardSlide(this, -1)">&#10094;</button>
-                    <button class="next" onclick="moveCardSlide(this, 1)">&#10095;</button>
+                    <button type="button" class="prev" aria-label="Previous image">&#10094;</button>
+                    <button type="button" class="next" aria-label="Next image">&#10095;</button>
                 </div>
                 <div class="card-info">
                     <h3>Greenz by Danube</h3>
                     <p>Fully Furnished Luxury Apartments & Villas</p>
                     <span class="price">Flexible Payment Plan</span>
                     <span class="sub-price">Starting Price: 3,500,000 AED</span>
-                    <button onclick="openModal('greenzModal', 0)" class="btn-card">Inquire & View Details</button>
+                    <button type="button" class="btn-card">Inquire & View Details</button>
                 </div>
             </div>
 
@@ -240,14 +245,14 @@
     <!-- Modal 1: Valia Dubai by Emaar -->
     <div id="valiaModal" class="lightbox-modal">
         <div class="lightbox-container">
-            <span class="close-lightbox" onclick="closeModal('valiaModal')">&times;</span>
+            <span class="close-lightbox" role="button" aria-label="Close">&times;</span>
             
             <div class="lightbox-slider">
-                <button class="modal-prev" onclick="moveModalSlide(-1)">&#10094;</button>
+                <button type="button" class="modal-prev" aria-label="Previous image">&#10094;</button>
                 <div class="lightbox-img-wrapper">
                     <img class="lightboxImg" src="" alt="Valia Property View">
                 </div>
-                <button class="modal-next" onclick="moveModalSlide(1)">&#10095;</button>
+                <button type="button" class="modal-next" aria-label="Next image">&#10095;</button>
             </div>
 
             <div class="lightbox-description">
@@ -292,8 +297,18 @@
                     <p>• <strong>40 Mins</strong> to Al Maktoum Intl Airport</p>
                 </div>
 
-                <div class="modal-cta">
-                    <a href="#contact" onclick="closeModal('valiaModal')" class="btn-gold block">Request VIP Consultation</a>
+                <div class="modal-inquiry-box">
+                    <h3>Inquire About Valia Dubai by Emaar</h3>
+                    <p>Receive floor plans, availability & payment plan directly from our VIP advisor.</p>
+                    <form class="modal-lead-form" data-project="Valia Dubai by Emaar (Home)">
+                        <div class="modal-form-row">
+                            <input type="text" name="fullName" placeholder="Full Name" required>
+                            <input type="tel" name="phone" placeholder="Phone / WhatsApp" required>
+                        </div>
+                        <textarea name="notes" placeholder="Preferred unit size or questions (Optional)" rows="2"></textarea>
+                        <button type="submit" class="btn-gold block">Request VIP Consultation</button>
+                        <p class="modal-form-status"></p>
+                    </form>
                 </div>
             </div>
         </div>
@@ -302,14 +317,14 @@
     <!-- Modal 2: Greenz by Danube -->
     <div id="greenzModal" class="lightbox-modal">
         <div class="lightbox-container">
-            <span class="close-lightbox" onclick="closeModal('greenzModal')">&times;</span>
+            <span class="close-lightbox" role="button" aria-label="Close">&times;</span>
             
             <div class="lightbox-slider">
-                <button class="modal-prev" onclick="moveModalSlide(-1)">&#10094;</button>
+                <button type="button" class="modal-prev" aria-label="Previous image">&#10094;</button>
                 <div class="lightbox-img-wrapper">
                     <img class="lightboxImg" src="" alt="Greenz Property View">
                 </div>
-                <button class="modal-next" onclick="moveModalSlide(1)">&#10095;</button>
+                <button type="button" class="modal-next" aria-label="Next image">&#10095;</button>
             </div>
 
             <div class="lightbox-description">
@@ -357,138 +372,163 @@
                     <p>Located in a master-planned villa community, this property benefits from landscaped parks, walking paths, and central amenity hubs. Access roads connect to key parts of Dubai, with links towards major business and leisure districts.</p>
                 </div>
 
-                <div class="modal-cta">
-                    <a href="#contact" onclick="closeModal('greenzModal')" class="btn-gold block">Request VIP Consultation</a>
+                <div class="modal-inquiry-box">
+                    <h3>Inquire About Greenz by Danube</h3>
+                    <p>Receive floor plans, availability & payment plan directly from our VIP advisor.</p>
+                    <form class="modal-lead-form" data-project="Greenz by Danube (Home)">
+                        <div class="modal-form-row">
+                            <input type="text" name="fullName" placeholder="Full Name" required>
+                            <input type="tel" name="phone" placeholder="Phone / WhatsApp" required>
+                        </div>
+                        <textarea name="notes" placeholder="Preferred unit size or questions (Optional)" rows="2"></textarea>
+                        <button type="submit" class="btn-gold block">Request VIP Consultation</button>
+                        <p class="modal-form-status"></p>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
+
     <!-- Modal: Damac Islands Details -->
-<div id="damacIslandsModal" class="lightbox-modal">
-    <div class="lightbox-container">
-        <span class="close-lightbox" onclick="closeModal('damacIslandsModal')">&times;</span>
-        <div class="lightbox-slider">
-            <button class="modal-prev" onclick="moveModalSlide(-1)">&#10094;</button>
-            <div class="lightbox-img-wrapper">
-                <img class="lightboxImg" src="" alt="Damac Islands View">
+    <div id="damacIslandsModal" class="lightbox-modal">
+        <div class="lightbox-container">
+            <span class="close-lightbox" role="button" aria-label="Close">&times;</span>
+            <div class="lightbox-slider">
+                <button type="button" class="modal-prev" aria-label="Previous image">&#10094;</button>
+                <div class="lightbox-img-wrapper">
+                    <img class="lightboxImg" src="" alt="Damac Islands View">
+                </div>
+                <button type="button" class="modal-next" aria-label="Next image">&#10095;</button>
             </div>
-            <button class="modal-next" onclick="moveModalSlide(1)">&#10095;</button>
-        </div>
 
-        <div class="lightbox-description">
-            <h2>Damac Islands</h2>
-            <p class="intro-p">
-                A master-planned island community in Dubailand inspired by iconic tropical destinations. Offering fully finished townhouses, villas, and apartments centered around crystal lagoons, lush greenery, and world-class resort amenities.
-            </p>
-            <div class="features-amenities-grid">
-                <div class="feature-box">
-                    <h3>Unit Types & Parking Spec</h3>
-                    <ul>
-                        <li><strong>4 & 5 Bedrooms:</strong> Townhouses & Villas (1 Parking)</li>
-                        <li><strong>6 Bedrooms:</strong> Premium Villas (2 Parkings)</li>
-                        <li><strong>7 Bedrooms:</strong> Grand Mansions (9 Parkings)</li>
-                        <li><strong>Starting Price:</strong> AED 2,995,000</li>
-                        <li><strong>Finishing:</strong> Fully Finished with Equipped Kitchens</li>
-                    </ul>
+            <div class="lightbox-description">
+                <h2>Damac Islands</h2>
+                <p class="intro-p">
+                    A master-planned island community in Dubailand inspired by iconic tropical destinations. Offering fully finished townhouses, villas, and apartments centered around crystal lagoons, lush greenery, and world-class resort amenities.
+                </p>
+                <div class="features-amenities-grid">
+                    <div class="feature-box">
+                        <h3>Unit Types & Parking Spec</h3>
+                        <ul>
+                            <li><strong>4 & 5 Bedrooms:</strong> Townhouses & Villas (1 Parking)</li>
+                            <li><strong>6 Bedrooms:</strong> Premium Villas (2 Parkings)</li>
+                            <li><strong>7 Bedrooms:</strong> Grand Mansions (9 Parkings)</li>
+                            <li><strong>Starting Price:</strong> AED 2,995,000</li>
+                            <li><strong>Finishing:</strong> Fully Finished with Equipped Kitchens</li>
+                        </ul>
+                    </div>
+                    <div class="feature-box">
+                        <h3>Resort Lifestyle & Amenities</h3>
+                        <ul>
+                            <li>Aqua Dome, Wildlife Park & Jungle River</li>
+                            <li>Kayaking, Paddle Boarding & Ziplining</li>
+                            <li>Hot Spring Spa & Overwater Floating Decks</li>
+                            <li>Outdoor Calisthenics & Fitness Zones</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="feature-box">
-                    <h3>Resort Lifestyle & Amenities</h3>
-                    <ul>
-                        <li>Aqua Dome, Wildlife Park & Jungle River</li>
-                        <li>Kayaking, Paddle Boarding & Ziplining</li>
-                        <li>Hot Spring Spa & Overwater Floating Decks</li>
-                        <li>Outdoor Calisthenics & Fitness Zones</li>
-                    </ul>
+                <div class="modal-inquiry-box">
+                    <h3>Inquire About Damac Islands</h3>
+                    <p>Receive floor plans, availability & payment plan directly from our VIP advisor.</p>
+                    <form class="modal-lead-form" data-project="Damac Islands (Home)">
+                        <div class="modal-form-row">
+                            <input type="text" name="fullName" placeholder="Full Name" required>
+                            <input type="tel" name="phone" placeholder="Phone / WhatsApp" required>
+                        </div>
+                        <textarea name="notes" placeholder="Preferred unit size or questions (Optional)" rows="2"></textarea>
+                        <button type="submit" class="btn-gold block">Request VIP Consultation</button>
+                        <p class="modal-form-status"></p>
+                    </form>
                 </div>
-            </div>
-            <div class="modal-cta">
-                <a href="#contact" onclick="closeModal('damacIslandsModal')" class="btn-gold block">Request VIP Consultation</a>
             </div>
         </div>
     </div>
-</div>
+
     <!-- Modal: Royal Yacht Club Residence Details -->
-<div id="royalYachtClubModal" class="lightbox-modal">
-    <div class="lightbox-container">
-        <span class="close-lightbox" onclick="closeModal('royalYachtClubModal')">&times;</span>
-        <div class="lightbox-slider">
-            <button class="modal-prev" onclick="moveModalSlide(-1)">&#10094;</button>
-            <div class="lightbox-img-wrapper">
-                <img class="lightboxImg" src="" alt="Royal Yacht Club View">
+    <div id="royalYachtClubModal" class="lightbox-modal">
+        <div class="lightbox-container">
+            <span class="close-lightbox" role="button" aria-label="Close">&times;</span>
+            <div class="lightbox-slider">
+                <button type="button" class="modal-prev" aria-label="Previous image">&#10094;</button>
+                <div class="lightbox-img-wrapper">
+                    <img class="lightboxImg" src="" alt="Royal Yacht Club View">
+                </div>
+                <button type="button" class="modal-next" aria-label="Next image">&#10095;</button>
             </div>
-            <button class="modal-next" onclick="moveModalSlide(1)">&#10095;</button>
-        </div>
 
-        <div class="lightbox-description">
-            <h2>Royal Yacht Club Residence</h2>
-            <p class="intro-p">
-                A refined waterfront development set on Dubai Islands with two elegant towers overlooking the yacht harbor and open sea. Combining contemporary coastal design with resort-style living, panoramic views, and seamless city connectivity.
-            </p>
-            <div class="features-amenities-grid">
-                <div class="feature-box">
-                    <h3>Unit Types & Parking Spec</h3>
-                    <ul>
-                        <li><strong>1, 2 & 2.5 Bed:</strong> 1 Parking Space</li>
-                        <li><strong>3, 3.5, 4 & 4.5 Bed:</strong> 2 Parking Spaces</li>
-                        <li><strong>Starting Price:</strong> AED 2,411,735</li>
-                        <li><strong>Location:</strong> Dubai Islands (Marina & Beach Views)</li>
-                    </ul>
+            <div class="lightbox-description">
+                <h2>Royal Yacht Club Residence</h2>
+                <p class="intro-p">
+                    A refined waterfront development set on Dubai Islands with two elegant towers overlooking the yacht harbor and open sea. Combining contemporary coastal design with resort-style living, panoramic views, and seamless city connectivity.
+                </p>
+                <div class="features-amenities-grid">
+                    <div class="feature-box">
+                        <h3>Unit Types & Parking Spec</h3>
+                        <ul>
+                            <li><strong>1, 2 & 2.5 Bed:</strong> 1 Parking Space</li>
+                            <li><strong>3, 3.5, 4 & 4.5 Bed:</strong> 2 Parking Spaces</li>
+                            <li><strong>Starting Price:</strong> AED 2,411,735</li>
+                            <li><strong>Location:</strong> Dubai Islands (Marina & Beach Views)</li>
+                        </ul>
+                    </div>
+                    <div class="feature-box">
+                        <h3>Iconic Features & Amenities</h3>
+                        <ul>
+                            <li>Marina Views & Direct Beachfront Access</li>
+                            <li>Infinity Pool & Dedicated Family Pool</li>
+                            <li>Fitness Center, Indoor Yoga & Yoga Terraces</li>
+                            <li>Community Lounge & Ground Level Retail Promenade</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="feature-box">
-                    <h3>Iconic Features & Amenities</h3>
-                    <ul>
-                        <li>Marina Views & Direct Beachfront Access</li>
-                        <li>Infinity Pool & Dedicated Family Pool</li>
-                        <li>Fitness Center, Indoor Yoga & Yoga Terraces</li>
-                        <li>Community Lounge & Ground Level Retail Promenade</li>
-                    </ul>
+                <div class="modal-inquiry-box">
+                    <h3>Inquire About Royal Yacht Club Residence</h3>
+                    <p>Receive floor plans, availability & payment plan directly from our VIP advisor.</p>
+                    <form class="modal-lead-form" data-project="Royal Yacht Club Residence (Home)">
+                        <div class="modal-form-row">
+                            <input type="text" name="fullName" placeholder="Full Name" required>
+                            <input type="tel" name="phone" placeholder="Phone / WhatsApp" required>
+                        </div>
+                        <textarea name="notes" placeholder="Preferred unit size or questions (Optional)" rows="2"></textarea>
+                        <button type="submit" class="btn-gold block">Request VIP Consultation</button>
+                        <p class="modal-form-status"></p>
+                    </form>
                 </div>
-            </div>
-            <div class="modal-cta">
-                <a href="#contact" onclick="closeModal('royalYachtClubModal')" class="btn-gold block">Request VIP Consultation</a>
             </div>
         </div>
     </div>
-</div>
-    
 
-   <!-- Lead Form & Contact Section -->
-<section class="contact-section" id="contact">
-    <div class="form-container">
-        <h2>Get VIP Investment Consultation</h2>
-        <p>Leave your details and our senior property consultants will reach out directly.</p>
-        
-        <!-- Direct Contact Details -->
-        <div class="contact-details-box" style="margin: 20px 0; text-align: center; border-bottom: 1px solid rgba(212, 175, 55, 0.2); padding-bottom: 15px;">
-            <p style="margin: 6px 0; font-size: 0.95rem;"><strong>PHONE:</strong> <a href="tel:+971503515900" style="color: #d4af37; text-decoration: none; margin-left: 5px;">+971 50 351 5900</a></p>
-            <p style="margin: 6px 0; font-size: 0.95rem;"><strong>EMAIL:</strong> <a href="mailto:Info@kimituae.com" style="color: #d4af37; text-decoration: none; margin-left: 5px;">Info@kimituae.com</a></p>
+    <!-- Lead Form & Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="form-container">
+            <h2>Get VIP Investment Consultation</h2>
+            <p>Leave your details and our senior property consultants will reach out directly.</p>
+            
+            <!-- Direct Contact Details -->
+            <div class="contact-details-box">
+                <p><strong>PHONE:</strong> <a href="tel:+971503515900">+971 50 351 5900</a></p>
+                <p><strong>EMAIL:</strong> <a href="mailto:Info@kimituae.com">Info@kimituae.com</a></p>
+            </div>
+
+            <form id="leadForm">
+                <input type="text" id="fullName" placeholder="Full Name" required>
+                <input type="tel" id="phone" placeholder="Phone Number / WhatsApp" required>
+                <select id="project" required>
+                    <option value="" disabled selected>Select Preferred Location / Project</option>
+                    <option value="Dubai">Dubai</option>
+                    <option value="Sharjah">Sharjah</option>
+                    <option value="Ras Alkhaimah">Ras Alkhaimah</option>
+                </select>
+                
+                <!-- Request / Comment Box -->
+                <textarea id="notes" placeholder="Your Request / Comment or Notes" rows="4"></textarea>
+                
+                <button type="submit" id="submitBtn" class="btn-gold block">Register Interest</button>
+                <p id="formStatus" class="form-status"></p>
+            </form>
         </div>
+    </section>
 
-        <form id="leadForm">
-      <input type="text" id="fullName" placeholder="Full Name" required>
-      <input type="tel" id="phone" placeholder="Phone Number / WhatsApp" required>
-      <select id="project" required>
-        <option value="" disabled selected>Select Preferred Location / Project</option>
-        <option value="Dubai">Dubai</option>
-        <option value="Sharjah">Sharjah</option>
-        <option value="Ras Alkhaimah">Ras Alkhaimah</option>
-      </select>
-      
-      <!-- Request / Comment Box -->
-      <textarea id="notes" placeholder="Your Request / Comment or Notes" rows="4" style="width:100%; padding: 12px; margin-bottom: 15px; border-radius: 6px; border: 1px solid #333; background: #111; color: #fff;"></textarea>
-      
-      <button type="submit" id="submitBtn" class="btn-primary block" style="width: 100%; margin-top: 10px;">Register Interest</button>
-      <p id="formStatus" style="display:none; color: #d4af37; margin-top: 10px; text-align: center;"></p>
-    </form>
-    </div>
-</section>
-
-    <script src="script.js"></script>
-    <script>
-document.addEventListener("DOMContentLoaded", function() {
-    const imgs = document.querySelectorAll('.slides img:not(.active)');
-    imgs.forEach(img => img.setAttribute('loading', 'lazy'));
-});
-</script>
+    <script src="script.js" defer></script>
 </body>
 </html>
